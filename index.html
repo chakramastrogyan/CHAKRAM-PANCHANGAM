@@ -14,7 +14,1665 @@ body.locked{overflow:hidden}
 body::before{content:"";position:fixed;inset:-8%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23FFD700' stroke-width='1.1' opacity='0.6'%3E%3Ccircle cx='60' cy='60' r='24'/%3E%3Ccircle cx='60' cy='60' r='8'/%3E%3Cpath d='M60 18c8 14 8 28 0 42-8-14-8-28 0-42z'/%3E%3Cpath d='M60 102c-8-14-8-28 0-42 8 14 8 28 0 42z'/%3E%3Cpath d='M18 60c14-8 28-8 42 0-14 8-28 8-42 0z'/%3E%3Cpath d='M102 60c-14 8-28 8-42 0 14-8 28-8 42 0z'/%3E%3Cpath d='M30 30c10 6 20 18 30 30M90 90c-10-6-20-18-30-30M90 30c-10 6-20 18-30 30M30 90c10-6 20-18 30-30'/%3E%3C/g%3E%3C/svg%3E");background-size:150px 150px;opacity:.085;pointer-events:none;z-index:0}
 body::after{content:"ॐ";position:fixed;bottom:-160px;left:50%;transform:translateX(-50%);font-family:var(--serif);font-size:520px;line-height:1;color:rgba(255,215,0,.045);pointer-events:none;z-index:0}
 .bg-glow{position:fixed;left:50%;bottom:-22%;width:150vw;max-width:900px;height:62vh;background:radial-gradient(ellipse at center,rgba(255,175,45,.32),rgba(255,120,20,.10) 45%,transparent 72%);filter:blur(26px);pointer-events:none;z-index:0;animation:breathe 9s ease-in-out infinite}
-@keyframes breathe{0%,100%{opacity:.55;transform:translateX(-50%) scale(1)}50%{opacity:.95;transform:translateX(-50%) scale(1.09)}}
+@keyframes breathe{0%,100%{opacity:.55;transform:translateX(-50%) sca<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>చక్రం వైదిక పంచాంగం - Chakram Vedic Panchangam</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gidugu&family=Noto+Sans+Telugu:wght@400;600;700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: '#D97706',
+                        maroon: '#4A0E17',
+                        deepMaroon: '#2B060B',
+                        sacredGold: '#B8860B',
+                        brightGold: '#D4AF37',
+                        crimson: '#800000',
+                        vermilion: '#B91C1C',
+                        darkGreen: '#166534',
+                        lightYellow: '#FFFDF0',
+                        parchment: '#FAF3E0',
+                        warmGoldBg: '#FEF3C7'
+                    },
+                    fontFamily: {
+                        telugu: ['"Noto Sans Telugu"', 'Gidugu', 'sans-serif'],
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans Telugu', 'Poppins', sans-serif;
+            background-color: #FAF3E0;
+            color: #2B060B;
+            overflow-x: hidden;
+        }
+
+        /* Devotional Light Yellow Textured Background */
+        .devotional-bg {
+            background: linear-gradient(135deg, rgba(255, 253, 240, 0.96) 0%, rgba(250, 243, 224, 0.98) 100%),
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><polygon points="40,0 80,40 40,80 0,40" fill="none" stroke="%23B8860B" stroke-width="0.35" opacity="0.12"/><circle cx="40" cy="40" r="24" fill="none" stroke="%23D97706" stroke-width="0.35" opacity="0.12"/></svg>');
+            background-size: cover, 50px 50px;
+        }
+
+        /* Continuous Smooth Rotation for Astrolabe Emblem */
+        .astrolabe-spin {
+            animation: spinAstrolabe 20s linear infinite;
+        }
+
+        @keyframes spinAstrolabe {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .mandala-rotate {
+            animation: rotateMandala 60s linear infinite;
+        }
+
+        @keyframes rotateMandala {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .glow-gold {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.45);
+        }
+
+        .text-glow-dark {
+            text-shadow: 0 0 2px rgba(184, 134, 11, 0.3);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF3E0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #B8860B;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D97706;
+        }
+
+        .gold-border {
+            border: 1px solid rgba(184, 134, 11, 0.4);
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #D4AF37 0%, #F59E0B 50%, #B8860B 100%);
+        }
+        .maroon-card {
+            background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF0 100%);
+            border: 1px solid rgba(184, 134, 11, 0.35);
+            box-shadow: 0 4px 15px rgba(74, 14, 23, 0.06);
+        }
+        .tab-btn.active {
+            background: linear-gradient(135deg, #4A0E17 0%, #2B060B 100%);
+            color: #FFD700;
+            font-weight: 800;
+            box-shadow: 0 0 15px rgba(74, 14, 23, 0.3);
+        }
+    </style>
+</head>
+<body class="devotional-bg min-h-screen text-maroon">
+
+    <!-- ========================================== -->
+    <!-- 1. LANDING / SPLASH SCREEN (INTRO)         -->
+    <!-- ========================================== -->
+    <div id="splashScreen" class="fixed inset-0 z-50 flex flex-col items-center justify-center p-4 transition-all duration-700 devotional-bg">
+        <!-- Rotating Mandala Background Effect -->
+        <div class="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none opacity-25">
+            <svg class="w-[600px] h-[600px] sm:w-[800px] sm:h-[800px] mandala-rotate text-sacredGold" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2,2" />
+                <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="1" />
+                <polygon points="100,10 126,70 190,70 138,108 158,170 100,130 42,170 62,108 10,70 74,70" fill="none" stroke="currentColor" stroke-width="0.8" />
+                <polygon points="100,20 120,75 180,75 130,110 148,165 100,132 52,165 70,110 20,75 80,75" fill="none" stroke="currentColor" stroke-width="0.5" />
+            </svg>
+        </div>
+
+        <div class="relative z-10 text-center max-w-xl mx-auto px-4 flex flex-col items-center">
+            
+            <!-- ROTATING GOLDEN ASTROLABE / COMPASS EMBLEM (LOGO_2.png) DIRECTLY ABOVE ENTER BUTTON -->
+            <div class="relative mb-6 flex items-center justify-center">
+                <!-- Glowing Aura Behind Rotating Astrolabe -->
+                <div class="absolute inset-0 rounded-full bg-brightGold opacity-30 blur-2xl animate-pulse"></div>
+                
+                <!-- Continuously Rotating Emblem Wrapper -->
+                <div class="w-40 h-40 sm:w-52 sm:h-52 rounded-full border-4 border-sacredGold flex items-center justify-center bg-deepMaroon glow-gold relative p-2 shadow-2xl filter drop-shadow-[0_0_15px_rgba(212,175,55,0.6)]">
+                    <!-- High Detailed Astrolabe SVG Rotating Continuously -->
+                    <svg class="w-full h-full astrolabe-spin" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="goldGradSplash" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#FFF8C6" />
+                                <stop offset="35%" stop-color="#FFD700" />
+                                <stop offset="70%" stop-color="#D4AF37" />
+                                <stop offset="100%" stop-color="#7A5600" />
+                            </radialGradient>
+                            <radialGradient id="spaceGradSplash" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#24102C" />
+                                <stop offset="75%" stop-color="#0E0414" />
+                                <stop offset="100%" stop-color="#040008" />
+                            </radialGradient>
+                            <filter id="splashGlow">
+                                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <!-- Outer Engraved Metallic Bezel -->
+                        <circle cx="200" cy="200" r="190" fill="none" stroke="url(#goldGradSplash)" stroke-width="14" />
+                        <circle cx="200" cy="200" r="178" fill="none" stroke="#2B060B" stroke-width="4" />
+                        <circle cx="200" cy="200" r="172" fill="none" stroke="url(#goldGradSplash)" stroke-width="3" stroke-dasharray="4,3" />
+
+                        <!-- Astrolabe Dark Celestial Core -->
+                        <circle cx="200" cy="200" r="162" fill="url(#spaceGradSplash)" stroke="url(#goldGradSplash)" stroke-width="6" />
+
+                        <!-- Inner Engraved Concentric Rings -->
+                        <circle cx="200" cy="200" r="140" fill="none" stroke="url(#goldGradSplash)" stroke-width="2" opacity="0.8" />
+                        <circle cx="200" cy="200" r="128" fill="none" stroke="url(#goldGradSplash)" stroke-width="1.5" stroke-dasharray="2,4" />
+                        <circle cx="200" cy="200" r="105" fill="none" stroke="url(#goldGradSplash)" stroke-width="3" />
+
+                        <!-- 4 Outer Cardinal Celestial Orbs -->
+                        <!-- Top -->
+                        <circle cx="200" cy="22" r="14" fill="url(#spaceGradSplash)" stroke="url(#goldGradSplash)" stroke-width="4" />
+                        <circle cx="200" cy="22" r="6" fill="url(#goldGradSplash)" />
+                        <!-- Bottom -->
+                        <circle cx="200" cy="378" r="14" fill="url(#spaceGradSplash)" stroke="url(#goldGradSplash)" stroke-width="4" />
+                        <circle cx="200" cy="378" r="6" fill="url(#goldGradSplash)" />
+                        <!-- Left -->
+                        <circle cx="22" cy="200" r="14" fill="url(#spaceGradSplash)" stroke="url(#goldGradSplash)" stroke-width="4" />
+                        <circle cx="22" cy="200" r="6" fill="url(#goldGradSplash)" />
+                        <!-- Right -->
+                        <circle cx="378" cy="200" r="14" fill="url(#spaceGradSplash)" stroke="url(#goldGradSplash)" stroke-width="4" />
+                        <circle cx="378" cy="200" r="6" fill="url(#goldGradSplash)" />
+
+                        <!-- Celestial Star Dots & Planetary Orbs -->
+                        <circle cx="150" cy="130" r="5" fill="url(#goldGradSplash)" />
+                        <circle cx="260" cy="160" r="4" fill="url(#goldGradSplash)" />
+                        <circle cx="130" cy="260" r="6" fill="url(#goldGradSplash)" />
+                        <circle cx="270" cy="250" r="5" fill="url(#goldGradSplash)" />
+
+                        <!-- 8-Pointed Golden Compass / Astrolabe Star -->
+                        <!-- Primary 4 Main Points -->
+                        <polygon points="200,45 214,175 355,200 214,225 200,355 186,225 45,200 186,175" fill="url(#goldGradSplash)" stroke="#5A3E00" stroke-width="1" filter="url(#splashGlow)" />
+                        <!-- Secondary 4 Diagonal Points -->
+                        <polygon points="200,80 210,180 320,200 210,220 200,320 190,220 80,200 190,180" transform="rotate(45 200 200)" fill="url(#goldGradSplash)" opacity="0.85" />
+
+                        <!-- Central Glowing Solar Sun Disk -->
+                        <circle cx="200" cy="200" r="28" fill="url(#goldGradSplash)" stroke="#FFFFFF" stroke-width="2" filter="url(#splashGlow)" />
+                        <circle cx="200" cy="200" r="16" fill="#FFF" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Header Titles -->
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-maroon mb-2 font-telugu tracking-wide">
+                చక్రం వైదిక పంచాంగం
+            </h1>
+            <h2 class="text-lg sm:text-xl text-saffron tracking-widest font-bold uppercase mb-4">
+                CHAKRAM VEDIC PANCHANGAM
+            </h2>
+            <p class="text-sm sm:text-base text-maroon/80 mb-8 max-w-md font-telugu font-semibold">
+                త్యంబకం యజామహే సుగంధిం పుష్టివర్ధనమ్ |<br>
+                సంపూర్ణ తిథి, నక్షత్ర, యోగ, కరణ, శ్రేష్ఠ ముహూర్త సమాచారం.
+            </p>
+
+            <!-- Enter Button -->
+            <button onclick="enterApp()" class="group relative inline-flex items-center justify-center px-10 py-4 text-xl font-bold text-amber-50 transition-all duration-300 bg-gradient-to-r from-maroon via-deepMaroon to-crimson rounded-full shadow-2xl hover:scale-105 hover:shadow-maroon/50 active:scale-95 border-2 border-brightGold">
+                <i class="fa-solid fa-om mr-3 text-2xl text-brightGold group-hover:rotate-180 transition-transform duration-500"></i>
+                <span id="splashEnterBtn" class="font-telugu">ప్రవేశించండి (ENTER)</span>
+                <i class="fa-solid fa-arrow-right ml-3 text-brightGold group-hover:translate-x-1 transition-transform"></i>
+            </button>
+        </div>
+
+        <div class="absolute bottom-4 text-xs text-maroon/70 font-telugu font-bold">
+            © చక్రం జ్యోతిష్య పరిషత్ • వేద సాంప్రదాయ పంచాంగం
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- 2. MAIN APPLICATION DASHBOARD               -->
+    <!-- ========================================== -->
+    <div id="mainApp" class="hidden min-h-screen flex flex-col transition-opacity duration-700 opacity-0">
+        
+        <!-- TOP HEADER BAR -->
+        <header class="sticky top-0 z-40 bg-maroon text-amber-50 border-b-2 border-sacredGold shadow-xl">
+            <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+                <!-- Branding / Title -->
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('home')">
+                    <div class="w-10 h-10 rounded-full border border-sacredGold bg-deepMaroon flex items-center justify-center text-sacredGold glow-gold p-1">
+                        <!-- Mini Rotating Astrolabe Logo -->
+                        <svg class="w-full h-full astrolabe-spin" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="200" cy="200" r="180" fill="none" stroke="#FFD700" stroke-width="20" />
+                            <circle cx="200" cy="200" r="150" fill="#2B060B" stroke="#D4AF37" stroke-width="8" />
+                            <polygon points="200,50 215,175 350,200 215,225 200,350 185,225 50,200 185,175" fill="#FFD700" />
+                            <circle cx="200" cy="200" r="30" fill="#FFF" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-lg sm:text-xl font-bold text-brightGold font-telugu leading-tight">
+                            చక్రం వైదిక పంచాంగం
+                        </h1>
+                        <p class="text-[10px] sm:text-xs text-amber-200 tracking-wider">CHAKRAM VEDIC PANCHANGAM</p>
+                    </div>
+                </div>
+
+                <!-- Top Right Controls (Location, Clock, Language & Astrology Link) -->
+                <div class="flex items-center flex-wrap gap-2 sm:gap-3">
+                    
+                    <!-- Dynamic Location Indicator & Selector -->
+                    <div class="relative">
+                        <button onclick="toggleLocationMenu()" class="flex items-center space-x-1.5 bg-deepMaroon/80 hover:bg-deepMaroon border border-brightGold/50 px-2.5 py-1.5 rounded-lg text-xs font-semibold text-brightGold transition">
+                            <i class="fa-solid fa-location-dot text-saffron animate-bounce"></i>
+                            <span id="currentLocationName">హైదరాబాద్ (Hyderabad)</span>
+                            <i class="fa-solid fa-chevron-down text-[10px] opacity-70"></i>
+                        </button>
+                        <div id="locationDropdown" class="hidden absolute right-0 mt-2 w-56 bg-maroon border border-sacredGold rounded-xl shadow-2xl z-50 p-2 space-y-1 text-amber-50">
+                            <div class="text-[10px] text-brightGold font-bold px-2 py-1 uppercase border-b border-sacredGold/30 flex justify-between items-center">
+                                <span>ప్రదేశము ఎంచుకోండి</span>
+                                <button onclick="detectUserGeoLocation()" class="text-brightGold hover:underline" title="Auto Detect"><i class="fa-solid fa-crosshairs"></i> GPS</button>
+                            </div>
+                            <div id="cityListOptions" class="max-h-48 overflow-y-auto space-y-0.5 text-xs text-amber-100 font-telugu">
+                                <!-- Populated dynamically by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Time Display Badge -->
+                    <div class="hidden sm:flex items-center bg-deepMaroon/80 px-3 py-1.5 rounded-lg border border-brightGold/30 text-xs text-amber-200">
+                        <i class="fa-regular fa-clock text-brightGold mr-2"></i>
+                        <span id="headerLiveTime" class="font-mono">--:--:-- PM</span>
+                    </div>
+
+                    <!-- Language Selector Selector -->
+                    <div class="relative">
+                        <button onclick="toggleLangMenu()" class="flex items-center space-x-2 bg-deepMaroon/80 hover:bg-deepMaroon border border-brightGold/50 px-3 py-1.5 rounded-lg text-xs font-semibold text-brightGold transition">
+                            <i class="fa-solid fa-globe text-saffron"></i>
+                            <span id="currentLangLabel">తెలుగు</span>
+                            <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </button>
+                        <div id="langDropdown" class="hidden absolute right-0 mt-2 w-32 bg-maroon border border-sacredGold rounded-lg shadow-2xl z-50 overflow-hidden text-amber-50">
+                            <button onclick="changeLanguage('te')" class="w-full text-left px-4 py-2 text-xs text-amber-100 hover:bg-sacredGold/20 flex items-center justify-between font-telugu">
+                                <span>తెలుగు</span> <span class="text-[10px] opacity-60">TE</span>
+                            </button>
+                            <button onclick="changeLanguage('en')" class="w-full text-left px-4 py-2 text-xs text-amber-100 hover:bg-sacredGold/20 flex items-center justify-between font-sans">
+                                <span>English</span> <span class="text-[10px] opacity-60">EN</span>
+                            </button>
+                            <button onclick="changeLanguage('hi')" class="w-full text-left px-4 py-2 text-xs text-amber-100 hover:bg-sacredGold/20 flex items-center justify-between font-sans">
+                                <span>हिन्दी</span> <span class="text-[10px] opacity-60">HI</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- External Astrology Web Button -->
+                    <a href="https://chakramastrogyan.github.io/my-website/" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-1.5 bg-gradient-to-r from-brightGold to-saffron text-maroon hover:brightness-110 font-bold px-3 py-1.5 rounded-lg text-xs shadow-md transition transform active:scale-95">
+                        <i class="fa-solid fa-star-of-david"></i>
+                        <span id="astrologyBtnText" class="font-telugu">జ్యోతిష్యం</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- NAVIGATION TABS -->
+            <nav class="bg-deepMaroon border-t border-sacredGold/40 px-2">
+                <div class="max-w-7xl mx-auto flex items-center justify-center sm:justify-start space-x-1 sm:space-x-3 overflow-x-auto py-2 no-scrollbar">
+                    <button onclick="switchTab('home')" id="tab-home" class="tab-btn active px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold flex items-center whitespace-nowrap transition">
+                        <i class="fa-solid fa-house-chimney text-base mr-2"></i>
+                        <span id="navHome">గృహము (HOME)</span>
+                    </button>
+                    <button onclick="switchTab('calendar')" id="tab-calendar" class="tab-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-amber-200 hover:bg-sacredGold/20 flex items-center whitespace-nowrap transition">
+                        <i class="fa-solid fa-calendar-days text-base mr-2"></i>
+                        <span id="navCalendar">క్యాలెండర్ (CALENDAR)</span>
+                    </button>
+                    <button onclick="switchTab('festivals')" id="tab-festivals" class="tab-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-amber-200 hover:bg-sacredGold/20 flex items-center whitespace-nowrap transition">
+                        <i class="fa-solid fa-om text-base mr-2"></i>
+                        <span id="navFestivals">పండుగలు (FESTIVALS)</span>
+                    </button>
+                    <button onclick="switchTab('muhurtam')" id="tab-muhurtam" class="tab-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-amber-200 hover:bg-sacredGold/20 flex items-center whitespace-nowrap transition">
+                        <i class="fa-solid fa-clock text-base mr-2"></i>
+                        <span id="navMuhurtam">ముహూర్తం (MUHURTAM)</span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT AREA CONTAINER -->
+        <main class="flex-grow max-w-7xl w-full mx-auto p-3 sm:p-6 space-y-6">
+
+            <!-- DATE SELECTION HEADER STRIP -->
+            <div class="maroon-card rounded-2xl p-4 shadow-md flex flex-wrap items-center justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    <div class="p-3 bg-warmGoldBg rounded-xl border border-sacredGold text-maroon">
+                        <i class="fa-solid fa-sun text-2xl animate-pulse text-saffron"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-saffron uppercase font-bold tracking-wider" id="lblSelectedDateHeader">ఎంచుకున్న తేదీ వివరాలు</div>
+                        <div id="displayFullDate" class="text-lg sm:text-xl font-extrabold text-maroon font-telugu">
+                            -- -- ----
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Date Picker Controls -->
+                <div class="flex items-center space-x-2">
+                    <label for="panchangDateInput" class="text-xs text-maroon font-bold hidden sm:inline" id="lblChooseDate">తేదీ ఎంచుకోండి:</label>
+                    <input type="date" id="panchangDateInput" onchange="onDateChanged(this.value)" class="bg-lightYellow border border-sacredGold text-maroon text-xs sm:text-sm rounded-lg px-3 py-2 outline-none font-bold focus:border-maroon">
+                    <button onclick="resetToToday()" class="bg-maroon text-brightGold border border-sacredGold px-3 py-2 rounded-lg text-xs font-semibold transition hover:bg-deepMaroon" id="btnToday">
+                        ఈరోజు (Today)
+                    </button>
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- TAB 1: HOME PAGE (Detailed Panchangam)     -->
+            <!-- ========================================== -->
+            <section id="content-home" class="space-y-6">
+                
+                <!-- TOP CARD: SAMVATSARA, MASA, RITU & SUNRISE/SUNSET -->
+                <div class="maroon-card rounded-2xl p-5 sm:p-6 text-center relative overflow-hidden shadow-lg border-2 border-sacredGold/50">
+                    <!-- Subtle Background Pattern Overlay -->
+                    <div class="absolute right-4 top-4 opacity-5 text-sacredGold pointer-events-none">
+                        <i class="fa-solid fa-sun text-9xl"></i>
+                    </div>
+
+                    <!-- Year, Month, Ritu Banner -->
+                    <div class="space-y-1 mb-4">
+                        <div class="text-xs sm:text-sm text-saffron tracking-widest font-bold uppercase" id="lblVedicYearTitle">శ్రీ శోభకృత్ / క్రోధి నామ సంవత్సరం</div>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-maroon font-telugu text-glow-dark" id="txtSamvatMasaRitu">
+                            క్రోధి నామ సంవత్సరం | కార్తీక మాసము | శరదృతువు
+                        </h2>
+                    </div>
+
+                    <!-- Stylized Decorative Dash Divider -->
+                    <div class="flex items-center justify-center my-4">
+                        <div class="h-0.5 w-16 bg-gradient-to-r from-transparent via-sacredGold to-transparent"></div>
+                        <div class="mx-3 text-sacredGold text-sm font-bold">✦ ౧౦౮ ✦</div>
+                        <div class="h-0.5 w-16 bg-gradient-to-r from-transparent via-sacredGold to-transparent"></div>
+                    </div>
+
+                    <!-- Sunrise & Sunset Timings Strip -->
+                    <div class="grid grid-cols-2 max-w-md mx-auto gap-4 mt-4">
+                        <div class="bg-warmGoldBg border border-saffron/40 p-3 rounded-xl flex items-center justify-center space-x-3">
+                            <i class="fa-solid fa-sun text-2xl text-saffron"></i>
+                            <div class="text-left">
+                                <span class="block text-[11px] text-maroon/80 font-bold" id="lblSunrise">సూర్యోదయం (Sunrise)</span>
+                                <span id="txtSunrise" class="text-sm sm:text-base font-bold text-maroon">06:18 AM</span>
+                            </div>
+                        </div>
+                        <div class="bg-warmGoldBg border border-vermilion/40 p-3 rounded-xl flex items-center justify-center space-x-3">
+                            <i class="fa-solid fa-moon text-2xl text-maroon"></i>
+                            <div class="text-left">
+                                <span class="block text-[11px] text-maroon/80 font-bold" id="lblSunset">సూర్యాస్తమయం (Sunset)</span>
+                                <span id="txtSunset" class="text-sm sm:text-base font-bold text-maroon">05:48 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DETAILED PANCHANGAM GRID CARDS (Tithi, Nakshatram, Yogam, Karanam, Paksham & Varam) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <!-- 1. TITHI CARD -->
+                    <div class="maroon-card p-4 rounded-xl space-y-2 border-l-4 border-l-saffron">
+                        <div class="flex items-center justify-between border-b border-sacredGold/20 pb-2">
+                            <span class="text-xs font-bold text-saffron uppercase flex items-center">
+                                <i class="fa-solid fa-certificate mr-1.5"></i> <span id="lblTithiHeader">1. తిథి (Tithi)</span>
+                            </span>
+                            <span id="valPakshaBadge" class="text-[10px] px-2 py-0.5 bg-maroon text-brightGold rounded font-bold">శుక్ల పక్షం</span>
+                        </div>
+                        <div class="text-lg font-bold text-maroon font-telugu" id="valTithiName">సప్తమి</div>
+                        <div class="text-xs text-maroon/90 space-y-1">
+                            <p><strong id="lblStartTime1">ప్రారంభం:</strong> <span id="valTithiStart">08:14 AM (నిన్న)</span></p>
+                            <p><strong id="lblEndTime1">ముగింపు:</strong> <span id="valTithiEnd">10:25 AM (ఈరోజు)</span></p>
+                            <p class="text-saffron pt-1"><strong id="lblNext1">తరువాత తిథి:</strong> <span id="valTithiNext">అష్టమి</span></p>
+                        </div>
+                    </div>
+
+                    <!-- 2. NAKSHATRAM CARD -->
+                    <div class="maroon-card p-4 rounded-xl space-y-2 border-l-4 border-l-sacredGold">
+                        <div class="flex items-center justify-between border-b border-sacredGold/20 pb-2">
+                            <span class="text-xs font-bold text-sacredGold uppercase flex items-center">
+                                <i class="fa-solid fa-star mr-1.5"></i> <span id="lblNakshatraHeader">2. నక్షత్రం (Nakshatram)</span>
+                            </span>
+                            <span id="valVaramBadge" class="text-[10px] px-2 py-0.5 bg-saffron text-amber-50 rounded font-bold">సోమవారం</span>
+                        </div>
+                        <div class="text-lg font-bold text-maroon font-telugu" id="valNakshatraName">శ్రవణం</div>
+                        <div class="text-xs text-maroon/90 space-y-1">
+                            <p><strong id="lblStartTime2">ప్రారంభం:</strong> <span id="valNakshatraStart">11:40 AM (నిన్న)</span></p>
+                            <p><strong id="lblEndTime2">ముగింపు:</strong> <span id="valNakshatraEnd">01:15 PM (ఈరోజు)</span></p>
+                            <p class="text-saffron pt-1"><strong id="lblNext2">తరువాత నక్షత్రం:</strong> <span id="valNakshatraNext">ధనిష్ఠ</span></p>
+                        </div>
+                    </div>
+
+                    <!-- 3. YOGAM CARD -->
+                    <div class="maroon-card p-4 rounded-xl space-y-2 border-l-4 border-l-maroon">
+                        <div class="flex items-center justify-between border-b border-sacredGold/20 pb-2">
+                            <span class="text-xs font-bold text-maroon uppercase flex items-center">
+                                <i class="fa-solid fa-ankh mr-1.5"></i> <span id="lblYogamHeader">3. యోగం (Yogam)</span>
+                            </span>
+                        </div>
+                        <div class="text-lg font-bold text-maroon font-telugu" id="valYogamName">వృద్ధి</div>
+                        <div class="text-xs text-maroon/90 space-y-1">
+                            <p><strong id="lblStartTime3">ప్రారంభం:</strong> <span id="valYogamStart">06:20 AM</span></p>
+                            <p><strong id="lblEndTime3">ముగింపు:</strong> <span id="valYogamEnd">04:45 AM (రేపు)</span></p>
+                            <p class="text-saffron pt-1"><strong id="lblNext3">తరువాత యోగం:</strong> <span id="valYogamNext">ధ్రువ</span></p>
+                        </div>
+                    </div>
+
+                    <!-- 4. KARANAM CARD -->
+                    <div class="maroon-card p-4 rounded-xl space-y-2 border-l-4 border-l-amber-600">
+                        <div class="flex items-center justify-between border-b border-sacredGold/20 pb-2">
+                            <span class="text-xs font-bold text-amber-700 uppercase flex items-center">
+                                <i class="fa-solid fa-shapes mr-1.5"></i> <span id="lblKaranamHeader">4. కరణం (Karanam)</span>
+                            </span>
+                        </div>
+                        <div class="text-lg font-bold text-maroon font-telugu" id="valKaranamName">గరజ</div>
+                        <div class="text-xs text-maroon/90 space-y-1">
+                            <p><strong id="lblStartTime4">ప్రారంభం:</strong> <span id="valKaranamStart">10:25 AM</span></p>
+                            <p><strong id="lblEndTime4">ముగింపు:</strong> <span id="valKaranamEnd">09:10 PM</span></p>
+                            <p class="text-saffron pt-1"><strong id="lblNext4">తరువాత కరణం:</strong> <span id="valKaranamNext">వణిజ</span></p>
+                        </div>
+                    </div>
+
+                    <!-- 5. PAKSHAM & VARAM CARD -->
+                    <div class="maroon-card p-4 rounded-xl space-y-2 border-l-4 border-l-orange-500 md:col-span-2 lg:col-span-2">
+                        <div class="flex items-center justify-between border-b border-sacredGold/20 pb-2">
+                            <span class="text-xs font-bold text-orange-600 uppercase flex items-center">
+                                <i class="fa-solid fa-calendar-day mr-1.5"></i> <span id="lblPakshamVaramHeader">5. పక్షము & వారము (Paksham & Varam)</span>
+                            </span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 pt-1">
+                            <div>
+                                <span class="text-[11px] text-maroon/70 block font-bold" id="lblPakshamTitle">పక్షము:</span>
+                                <span class="text-base font-bold text-maroon font-telugu" id="valPakshamFull">శుక్ల పక్షము (Shukla Paksham)</span>
+                            </div>
+                            <div>
+                                <span class="text-[11px] text-maroon/70 block font-bold" id="lblVaramTitle">వారము (రోజు):</span>
+                                <span class="text-base font-bold text-maroon font-telugu" id="valVaramFull">ఇందువాసరః (సోమవారం)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- SHUBA PHALAM & ASHUBA KALAM SECTION -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- SHUBA PHALAM BOX -->
+                    <div class="maroon-card p-5 rounded-2xl border-t-4 border-t-darkGreen shadow-md space-y-4">
+                        <div class="flex items-center space-x-2 text-darkGreen border-b border-sacredGold/20 pb-3">
+                            <i class="fa-solid fa-circle-check text-xl"></i>
+                            <h3 class="text-lg font-extrabold font-telugu" id="titleShubaPhalam">శుభ ఫలం / శుభ సమయాలు (Shuba Phalam)</h3>
+                        </div>
+
+                        <div class="space-y-3">
+                            <!-- Amrutha Kalam -->
+                            <div class="bg-emerald-50 p-3 rounded-xl border border-darkGreen/30 flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-jar-wheat text-darkGreen text-lg"></i>
+                                    <div>
+                                        <span class="block text-xs font-bold text-darkGreen font-telugu" id="lblAmruthaKalam">అమృత కాలం (Amrutha Kalam)</span>
+                                        <span class="text-xs text-maroon font-mono font-bold" id="valAmruthaKalam">06:15 AM - 07:48 AM</span>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] bg-darkGreen text-amber-50 px-2 py-1 rounded font-bold">అతి శుభం</span>
+                            </div>
+
+                            <!-- Brahma Muhurtham -->
+                            <div class="bg-emerald-50 p-3 rounded-xl border border-darkGreen/30 flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-dharmachakra text-darkGreen text-lg"></i>
+                                    <div>
+                                        <span class="block text-xs font-bold text-darkGreen font-telugu" id="lblBrahmaMuhurtham">బ్రహ్మ ముహూర్తం (Brahma Muhurtham)</span>
+                                        <span class="text-xs text-maroon font-mono font-bold" id="valBrahmaMuhurtham">04:42 AM - 05:30 AM</span>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] bg-darkGreen text-amber-50 px-2 py-1 rounded font-bold">ఉత్తమ దైవము</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ASHUBA KALAM BOX -->
+                    <div class="maroon-card p-5 rounded-2xl border-t-4 border-t-vermilion shadow-md space-y-4">
+                        <div class="flex items-center space-x-2 text-vermilion border-b border-sacredGold/20 pb-3">
+                            <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+                            <h3 class="text-lg font-extrabold font-telugu" id="titleAshubaKalam">అశుభ కాలం / వర్జ్య సమయాలు (Ashuba Kalam)</h3>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <!-- Rahu Kalam -->
+                            <div class="bg-red-50 p-3 rounded-xl border border-vermilion/30">
+                                <span class="block text-xs font-bold text-vermilion font-telugu" id="lblRahuKalam">రాహు కాలం (Rahu Kalam)</span>
+                                <span class="text-xs text-maroon font-mono font-bold" id="valRahuKalam">07:30 AM - 09:00 AM</span>
+                            </div>
+
+                            <!-- Yama Gandam -->
+                            <div class="bg-red-50 p-3 rounded-xl border border-vermilion/30">
+                                <span class="block text-xs font-bold text-vermilion font-telugu" id="lblYamaGandam">యమగండం (Yama Gandam)</span>
+                                <span class="text-xs text-maroon font-mono font-bold" id="valYamaGandam">01:30 PM - 03:00 PM</span>
+                            </div>
+
+                            <!-- Durmuhurtam -->
+                            <div class="bg-red-50 p-3 rounded-xl border border-vermilion/30">
+                                <span class="block text-xs font-bold text-vermilion font-telugu" id="lblDurmuhurtam">దుర్ముహూర్తం (Durmuhurtam)</span>
+                                <span class="text-xs text-maroon font-mono font-bold" id="valDurmuhurtam">12:24 PM - 01:12 PM</span>
+                            </div>
+
+                            <!-- Varjyam -->
+                            <div class="bg-red-50 p-3 rounded-xl border border-vermilion/30">
+                                <span class="block text-xs font-bold text-vermilion font-telugu" id="lblVarjyam">వర్జ్యం (Varjyam)</span>
+                                <span class="text-xs text-maroon font-mono font-bold" id="valVarjyam">08:40 PM - 10:12 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- VISUAL DIVIDER BREAK -->
+                <div class="flex items-center justify-center py-2">
+                    <div class="w-full h-px bg-sacredGold/40"></div>
+                    <span class="px-4 text-sacredGold font-bold text-xs whitespace-nowrap font-telugu">వేద శాస్త్ర విశ్లేషణ</span>
+                    <div class="w-full h-px bg-sacredGold/40"></div>
+                </div>
+
+                <!-- 2 SIDE-BY-SIDE EXPANDABLE BOXES: HOROSCOPE & TODAY'S IMPORTANCE -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    
+                    <!-- BOX 1: HOROSCOPE DETAILS (రాశి ఫలాలు) -->
+                    <div class="maroon-card rounded-2xl overflow-hidden shadow-md border border-sacredGold">
+                        <button onclick="toggleAccordion('horoscopeBox')" class="w-full p-4 bg-warmGoldBg hover:bg-amber-200 flex items-center justify-between border-b border-sacredGold/30 transition">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-ring text-saffron text-xl"></i>
+                                <span class="text-base sm:text-lg font-bold text-maroon font-telugu" id="titleHoroscope">ద్వాదశ రాశి ఫలాలు (Horoscope Details)</span>
+                            </div>
+                            <span class="text-xs text-maroon font-bold flex items-center">
+                                <span class="mr-1 hidden sm:inline" id="lblClickToExpand1">వివరాలకు నొక్కండి</span>
+                                <i id="iconHoroscopeBox" class="fa-solid fa-chevron-down transition-transform"></i>
+                            </span>
+                        </button>
+                        
+                        <div id="horoscopeBox" class="hidden p-4 space-y-3 bg-lightYellow max-h-[450px] overflow-y-auto">
+                            <!-- 12 Rashis dynamic rendering container -->
+                            <div id="rashiGridContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                <!-- Dynamic standard content filled by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOX 2: TODAY'S IMPORTANCE & FESTIVALS ACCORDING TO VEDA SASTRA -->
+                    <div class="maroon-card rounded-2xl overflow-hidden shadow-md border border-sacredGold">
+                        <button onclick="toggleAccordion('importanceBox')" class="w-full p-4 bg-warmGoldBg hover:bg-amber-200 flex items-center justify-between border-b border-sacredGold/30 transition">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-scroll text-saffron text-xl"></i>
+                                <span class="text-base sm:text-lg font-bold text-maroon font-telugu" id="titleImportance">వేద శాస్త్ర ప్రాముఖ్యత & పండుగలు</span>
+                            </div>
+                            <span class="text-xs text-maroon font-bold flex items-center">
+                                <span class="mr-1 hidden sm:inline" id="lblClickToExpand2">వివరాలకు నొక్కండి</span>
+                                <i id="iconImportanceBox" class="fa-solid fa-chevron-down transition-transform"></i>
+                            </span>
+                        </button>
+
+                        <div id="importanceBox" class="hidden p-5 space-y-4 bg-lightYellow text-xs sm:text-sm text-maroon font-telugu">
+                            <div class="p-3 bg-warmGoldBg rounded-xl border border-sacredGold/40">
+                                <h4 class="font-bold text-maroon mb-1 flex items-center" id="lblDeityTitle">
+                                    <i class="fa-solid fa-om mr-2 text-saffron"></i>ఈరోజు పూజించాల్సిన దైవం:
+                                </h4>
+                                <p id="valTodayDeity" class="text-maroon/90 font-bold">శ్రీ పరమేశ్వరుడు & పరమపావని గౌరీ దేవి (శివార్చన అభీష్టసిద్ధి)</p>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-saffron mb-1" id="lblVedicImportanceTitle">శాస్త్రోక్త విశేషము:</h4>
+                                <p id="valVedicSignificance" class="leading-relaxed">
+                                    కార్తీక సోమవారవ్రతం అత్యంత విశిష్టమైనది. ఈరోజు ఉదయాన్నే నదీ స్నానం చేసి శివలింగానికి బిల్వపత్రములతో రుద్రాభిషేకం చేయడం వల్ల జన్మజన్మాంతర పాపాలు నశించి కుటుంబంలో ఆయురారోగ్యాలు, ఐశ్వర్యాలు సిద్ధిస్తాయి. సాయంత్రం దీపారాధన చేయడం శుభకరం.
+                                </p>
+                            </div>
+
+                            <div class="border-t border-sacredGold/30 pt-3">
+                                <h4 class="font-bold text-maroon mb-1" id="lblPoojaVidhiTitle">విహిత విధులు / విధివిధానం:</h4>
+                                <ul class="list-disc list-inside space-y-1 text-maroon/90" id="valPoojaRules">
+                                    <li>ఉదయం 06:00 కి పూర్వమే సూర్య నమస్కారాలు.</li>
+                                    <li>శివాష్టకం మరియు లింగాష్టకం పారాయణం.</li>
+                                    <li>తులసీ మాల ధారణ & సాయంత్రం 365 వత్తుల దీపారాధన.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- VISUAL DIVIDER BREAK -->
+                <div class="flex items-center justify-center py-2">
+                    <div class="w-full h-px bg-sacredGold/40"></div>
+                    <span class="px-4 text-sacredGold font-bold text-xs whitespace-nowrap font-telugu">నవగ్రహ స్థితి చక్రము</span>
+                    <div class="w-full h-px bg-sacredGold/40"></div>
+                </div>
+
+                <!-- GRAHA PLACES (గ్రహ స్థితులు) EXPANDABLE BOX -->
+                <div class="maroon-card rounded-2xl overflow-hidden shadow-md border border-sacredGold">
+                    <button onclick="toggleAccordion('grahaPlacesBox')" class="w-full p-4 bg-warmGoldBg hover:bg-amber-200 flex items-center justify-between transition">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-earth-asia text-saffron text-xl"></i>
+                            <span class="text-base sm:text-lg font-bold text-maroon font-telugu" id="titleGrahaPlaces">గ్రహ స్థితులు (Planetary Positions)</span>
+                        </div>
+                        <span class="text-xs text-maroon font-bold flex items-center">
+                            <span class="mr-1 hidden sm:inline" id="lblClickToExpand3">గ్రహ స్థితుల వివరాలు</span>
+                            <i id="iconGrahaPlacesBox" class="fa-solid fa-chevron-down transition-transform"></i>
+                        </span>
+                    </button>
+
+                    <div id="grahaPlacesBox" class="hidden p-5 bg-lightYellow border-t border-sacredGold/30">
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-9 gap-3 text-center">
+                            <!-- Sun -->
+                            <div class="bg-warmGoldBg p-3 rounded-xl border border-saffron/40">
+                                <span class="text-xs text-saffron font-bold block" id="grahaSun">సూర్యుడు</span>
+                                <span class="text-sm font-bold text-maroon font-telugu">తులా</span>
+                                <span class="text-[10px] text-maroon/80 block">16° 24'</span>
+                            </div>
+                            <!-- Moon -->
+                            <div class="bg-warmGoldBg p-3 rounded-xl border border-sacredGold/40">
+                                <span class="text-xs text-maroon font-bold block" id="grahaMoon">చంద్రుడు</span>
+                                <span class="text-sm font-bold text-maroon font-telugu">మకరం</span>
+                                <span class="text-[10px] text-maroon/80 block">08° 12'</span>
+                            </div>
+                            <!-- Mars -->
+                            <div class="bg-warmGoldBg p-3 rounded-xl border border-vermilion/40">
+                                <span class="text-xs text-vermilion font-bold block" id="grahaMars">కుజుడు</span>
+                                <span class="text-sm font-bold text-maroon font-telugu">కర్కాటకం</span>
+                                <span class="text-[10px] text-maroon/80 block">02° 45'</span>
+                            </div>
+                            <!-- Mercury -->
+                            <div class="bg-warmGoldBg p-3 rounded-xl border border-darkGreen/40">
+                                <span class="text-xs text-darkGreen font-bold block" id="grahaMercury">బుధుడు</span>
+                                <span class="text-sm font-bold text-maroon font-telugu">వృశ్చికం</span>
+                                <span class="text-[10px] text-maroon/80 block">19° 50'</span>
+                            </div>
+                            <!-- Jupiter -->
+                            <div class="bg-warmGoldBg p-3 rounded-xl border border-saffron/40">
+                                <span class="text-xs text-saffron font-bold block" id="grahaJupiter">గురుడు</span>
+                                <span class="text-sm font-bold text-maroon font-telugu">వృషభం</span>
+                                <span class="text-[10px] text-maroon/80 block">25° 08' (వ)</span>
+                            </div>
+                            <!-- Venus -->
+                            <div class="bg-warmGoldBg p-3 rounded-xl border border-pink-600/40">
+                                <span class="text-xs text-pink-700 font-bold block" id="grahaVenus">శుక్రుడు</span>
+                                <span class="text-sm font-bold text-maroon font-telugu">ధనుస్సు</span>
+                                <span class="text-[10px] text-maroon/80 block">11° 30'</span>
+                            </div>
+                            <!-- Saturn -->
+                            <div class="bg-warmGoldBg p-3 rounded-xl border border-blue-600/40">
+                                <span class="text-xs text-blue-700 font-bold block" id="grahaSaturn">శని</span>
+                                <span class="text-sm font-bold text-maroon font-telugu">కుంభం</span>
+                                <span class="text-[10px] text-maroon/80 block">18° 14' (వ)</span>
+                            </div>
+                            <!-- Rahu -->
+                            <div class="bg-warmGoldBg p-3 rounded-xl border border-purple-600/40">
+                                <span class="text-xs text-purple-700 font-bold block" id="grahaRahu">రాహువు</span>
+                                <span class="text-sm font-bold text-maroon font-telugu">మీనం</span>
+                                <span class="text-[10px] text-maroon/80 block">10° 05'</span>
+                            </div>
+                            <!-- Ketu -->
+                            <div class="bg-warmGoldBg p-3 rounded-xl border border-gray-600/40">
+                                <span class="text-xs text-gray-700 font-bold block" id="grahaKetu">కేతువు</span>
+                                <span class="text-sm font-bold text-maroon font-telugu">కన్య</span>
+                                <span class="text-[10px] text-maroon/80 block">10° 05'</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ========================================== -->
+            <!-- TAB 2: CALENDAR TAB PAGE                   -->
+            <!-- ========================================== -->
+            <section id="content-calendar" class="hidden space-y-6">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <!-- LEFT 2 COLUMNS: VEDIC MONTHLY CALENDAR GRID -->
+                    <div class="lg:col-span-2 maroon-card p-4 sm:p-6 rounded-2xl shadow-md space-y-4">
+                        
+                        <!-- Month Navigation Header -->
+                        <div class="flex items-center justify-between border-b border-sacredGold/30 pb-4">
+                            <button onclick="changeMonth(-1)" class="p-2 bg-maroon text-brightGold hover:bg-deepMaroon rounded-lg transition">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <h3 id="calendarMonthYear" class="text-xl sm:text-2xl font-extrabold text-maroon font-telugu text-glow-dark">
+                                కార్తీక మాసం 2026
+                            </h3>
+                            <button onclick="changeMonth(1)" class="p-2 bg-maroon text-brightGold hover:bg-deepMaroon rounded-lg transition">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- Days of Week Header -->
+                        <div class="grid grid-cols-7 gap-1 text-center font-bold text-xs sm:text-sm text-saffron py-2 border-b border-sacredGold/30">
+                            <div>ఆది</div>
+                            <div>సోమ</div>
+                            <div>మంగళ</div>
+                            <div>బుధ</div>
+                            <div>గురు</div>
+                            <div>శుక్ర</div>
+                            <div>శని</div>
+                        </div>
+
+                        <!-- 42 Cells Calendar Dynamic Grid -->
+                        <div id="calendarGrid" class="grid grid-cols-7 gap-1.5 text-center">
+                            <!-- Filled dynamically by JS -->
+                        </div>
+
+                        <!-- Calendar Legend -->
+                        <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-maroon font-bold pt-2 border-t border-sacredGold/30">
+                            <span class="flex items-center"><i class="fa-solid fa-sun text-saffron mr-1"></i> పౌర్ణమి (Pournami)</span>
+                            <span class="flex items-center"><i class="fa-solid fa-moon text-gray-600 mr-1"></i> అమావాస్య (Amavasya)</span>
+                            <span class="flex items-center"><i class="fa-solid fa-om text-maroon mr-1"></i> ఏకాదశి / పండుగ</span>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: TODAY'S RASHI CHAKRA & SELECTED DAY DETAILS -->
+                    <div class="space-y-6">
+                        
+                        <!-- RASHI CHAKRA (రాశి చక్రం) GRAPHICAL DIAGRAM -->
+                        <div class="maroon-card p-5 rounded-2xl shadow-md border border-sacredGold text-center">
+                            <h4 class="text-lg font-bold text-maroon font-telugu mb-3 flex items-center justify-center">
+                                <i class="fa-solid fa-compass text-saffron mr-2"></i>
+                                <span id="lblRashiChakraTitle">నేటి రాశి చక్రం (Rashi Chakra)</span>
+                            </h4>
+
+                            <!-- South Indian Style Kundali Chart Grid -->
+                            <div class="grid grid-cols-4 grid-rows-4 gap-1 w-full max-w-[280px] h-[280px] mx-auto bg-sacredGold/40 p-1 rounded-xl border-2 border-sacredGold">
+                                <!-- Row 1 -->
+                                <div class="bg-warmGoldBg flex flex-col items-center justify-center p-1 border border-sacredGold/40 text-[10px]">
+                                    <span class="text-maroon font-bold">మీనం</span>
+                                    <span class="text-purple-700 font-bold">రాహు</span>
+                                </div>
+                                <div class="bg-warmGoldBg flex flex-col items-center justify-center p-1 border border-sacredGold/40 text-[10px]">
+                                    <span class="text-maroon font-bold">మేషం</span>
+                                </div>
+                                <div class="bg-warmGoldBg flex flex-col items-center justify-center p-1 border border-sacredGold/40 text-[10px]">
+                                    <span class="text-maroon font-bold">వృషభం</span>
+                                    <span class="text-saffron font-bold">గురు(వ)</span>
+                                </div>
+                                <div class="bg-warmGoldBg flex flex-col items-center justify-center p-1 border border-sacredGold/40 text-[10px]">
+                                    <span class="text-maroon font-bold">మిథునం</span>
+                                </div>
+
+                                <!-- Row 2 -->
+                                <div class="bg-warmGoldBg flex flex-col items-center justify-center p-1 border border-sacredGold/40 text-[10px]">
+                                    <span class="text-maroon font-bold">కుంభం</span>
+                                    <span class="text-blue-700 font-bold">శని</span>
+                                </div>
+                                <!-- Center Kundali Core -->
+                                <div class="col-span-2 row-span-2 bg-maroon text-amber-50 flex flex-col items-center justify-center border-2 border-sacredGold p-2">
+                                    <i class="fa-solid fa-dharmachakra text-3xl text-brightGold mandala-rotate mb-1"></i>
+                                    <span class="text-xs font-bold text-brightGold font-telugu">లగ్నం: ధనుస్సు</span>
+                                    <span class="text-[9px] text-amber-200">గ్రహ దశా చక్రం</span>
+                                </div>
+                                <div class="bg-warmGoldBg flex flex-col items-center justify-center p-1 border border-sacredGold/40 text-[10px]">
+                                    <span class="text-maroon font-bold">కర్కాటకం</span>
+                                    <span class="text-vermilion font-bold">కుజ</span>
+                                </div>
+
+                                <!-- Row 3 -->
+                                <div class="bg-warmGoldBg flex flex-col items-center justify-center p-1 border border-sacredGold/40 text-[10px]">
+                                    <span class="text-maroon font-bold">మకరం</span>
+                                    <span class="text-maroon font-bold">చంద్ర</span>
+                                </div>
+                                <div class="bg-warmGoldBg flex flex-col items-center justify-center p-1 border border-sacredGold/40 text-[10px]">
+                                    <span class="text-maroon font-bold">సింహం</span>
+                                </div>
+
+                                <!-- Row 4 -->
+                                <div class="bg-warmGoldBg flex flex-col items-center justify-center p-1 border border-sacredGold/40 text-[10px]">
+                                    <span class="text-maroon font-bold">ధనుస్సు</span>
+                                    <span class="text-pink-700 font-bold">శుక్ర</span>
+                                </div>
+                                <div class="bg-warmGoldBg flex flex-col items-center justify-center p-1 border border-sacredGold/40 text-[10px]">
+                                    <span class="text-maroon font-bold">వృశ్చికం</span>
+                                    <span class="text-darkGreen font-bold">బుధ</span>
+                                </div>
+                                <div class="bg-warmGoldBg flex flex-col items-center justify-center p-1 border border-sacredGold/40 text-[10px]">
+                                    <span class="text-maroon font-bold">తులా</span>
+                                    <span class="text-saffron font-bold">సూర్య</span>
+                                </div>
+                                <div class="bg-warmGoldBg flex flex-col items-center justify-center p-1 border border-sacredGold/40 text-[10px]">
+                                    <span class="text-maroon font-bold">కన్య</span>
+                                    <span class="text-gray-700 font-bold">కేతు</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SELECTED CALENDAR DATE PANCHANGAM BREAKDOWN -->
+                        <div class="maroon-card p-5 rounded-2xl shadow-md space-y-3">
+                            <h4 class="text-base font-bold text-maroon font-telugu border-b border-sacredGold/30 pb-2 flex items-center">
+                                <i class="fa-solid fa-list-check text-saffron mr-2"></i>
+                                <span id="lblSelectedDateDetail">ఎంచుకున్న తేది పంచాంగము</span>
+                            </h4>
+                            
+                            <div class="space-y-2 text-xs text-maroon font-telugu" id="selectedDateDetailContent">
+                                <p><strong>తేదీ:</strong> <span id="calSelDate">--</span></p>
+                                <p><strong>తిథి:</strong> <span id="calSelTithi">సప్తమి (10:25 AM వరకు)</span></p>
+                                <p><strong>నక్షత్రం:</strong> <span id="calSelNakshatra">శ్రవణం (01:15 PM వరకు)</span></p>
+                                <p><strong>విశేషం:</strong> <span id="calSelFestival" class="text-saffron font-bold">కార్తీక సోమవారం / శ్రవణ నక్షత్ర యుక్త కార్తీక వ్రతం</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================================== -->
+            <!-- TAB 3: FESTIVALS TAB PAGE                  -->
+            <!-- ========================================== -->
+            <section id="content-festivals" class="hidden space-y-6">
+                
+                <div class="maroon-card p-6 rounded-2xl shadow-md space-y-6">
+                    <div class="flex flex-wrap items-center justify-between gap-4 border-b border-sacredGold/30 pb-4">
+                        <div>
+                            <h3 class="text-2xl font-extrabold text-maroon font-telugu text-glow-dark" id="titleFestivalsList">
+                                వైదిక పండుగలు & వ్రతాలు (Vedic Festivals)
+                            </h3>
+                            <p class="text-xs text-maroon/80 font-bold font-telugu">
+                                ఎంచుకున్న నెల: <span id="lblFestivalCurrentMonth" class="text-saffron font-bold">--</span>
+                            </p>
+                        </div>
+                        
+                        <!-- Search & Month Navigation Filter Controls -->
+                        <div class="flex items-center space-x-2">
+                            <button onclick="changeFestivalMonth(-1)" class="p-2 bg-maroon text-brightGold rounded-lg transition hover:bg-deepMaroon">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <span id="lblFestMonthDisplay" class="text-xs font-bold text-maroon font-telugu px-2">--</span>
+                            <button onclick="changeFestivalMonth(1)" class="p-2 bg-maroon text-brightGold rounded-lg transition hover:bg-deepMaroon">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            <input type="text" id="festSearchInput" onkeyup="filterFestivals()" placeholder="పండుగ పేరు..." class="bg-lightYellow border border-sacredGold text-xs px-3 py-2 rounded-lg outline-none font-bold text-maroon focus:border-maroon">
+                        </div>
+                    </div>
+
+                    <!-- Festivals Cards Grid -->
+                    <div id="festivalsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <!-- Dynamic Content Rendered via JS -->
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ========================================== -->
+            <!-- TAB 4: MUHURTAM TAB PAGE                   -->
+            <!-- ========================================== -->
+            <section id="content-muhurtam" class="hidden space-y-6">
+                
+                <div class="maroon-card p-6 rounded-2xl shadow-md space-y-6">
+                    
+                    <div class="text-center space-y-2 border-b border-sacredGold/30 pb-4">
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-maroon font-telugu text-glow-dark" id="titleMuhurtamPage">
+                            దిన ముహూర్తములు & సమయ విభజన
+                        </h3>
+                        <p class="text-xs sm:text-sm text-saffron font-bold font-telugu">
+                            బ్రహ్మ ముహూర్తం, అభిజిత్ ముహూర్తం మరియు శుభాశుభ కాలములు
+                        </p>
+                    </div>
+
+                    <!-- Muhurtam Categories Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- BRAHMA & ABHIJIT MUHURTAM CARD -->
+                        <div class="bg-warmGoldBg p-5 rounded-2xl border border-sacredGold space-y-4">
+                            <h4 class="text-lg font-bold text-maroon font-telugu border-b border-sacredGold/30 pb-2 flex items-center">
+                                <i class="fa-solid fa-crown text-saffron mr-2"></i>
+                                <span id="lblGreatMuhurtams">అతి శ్రేష్ఠమైన ముహూర్తములు</span>
+                            </h4>
+
+                            <div class="space-y-3 text-xs sm:text-sm">
+                                <div class="bg-lightYellow p-3.5 rounded-xl border border-darkGreen/40">
+                                    <div class="flex items-center justify-between font-bold text-darkGreen">
+                                        <span id="lblBrahmaM">బ్రహ్మ ముహూర్తం (Brahma Muhurtham)</span>
+                                        <span class="text-xs bg-darkGreen text-amber-50 px-2 py-0.5 rounded">04:42 AM - 05:30 AM</span>
+                                    </div>
+                                    <p class="text-xs text-maroon/80 mt-1 font-telugu">ధ్యానం, జపం, వేదాధ్యయనం మరియు కొత్త పనులకు అత్యంత పవిత్ర సమయం.</p>
+                                </div>
+
+                                <div class="bg-lightYellow p-3.5 rounded-xl border border-sacredGold/40">
+                                    <div class="flex items-center justify-between font-bold text-maroon">
+                                        <span id="lblAbhijitM">అభిజిత్ ముహూర్తం (Abhijit Muhurtham)</span>
+                                        <span class="text-xs bg-maroon text-brightGold px-2 py-0.5 rounded">11:48 AM - 12:34 PM</span>
+                                    </div>
+                                    <p class="text-xs text-maroon/80 mt-1 font-telugu">సకల విజయములను ప్రసాదించే శ్రీమహావిష్ణువు ముహూర్తం.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GOOD MUHURTAMS (శుభ ముహూర్తాలు) -->
+                        <div class="bg-warmGoldBg p-5 rounded-2xl border border-darkGreen/40 space-y-4">
+                            <h4 class="text-lg font-bold text-darkGreen font-telugu border-b border-sacredGold/30 pb-2 flex items-center">
+                                <i class="fa-solid fa-face-smile text-darkGreen mr-2"></i>
+                                <span id="lblGoodMuhurtams">నేటి శుభ ముహూర్తాలు (Good Timings)</span>
+                            </h4>
+
+                            <div class="space-y-2 text-xs">
+                                <div class="flex items-center justify-between p-2.5 bg-lightYellow rounded-lg border border-sacredGold/20">
+                                    <span class="font-bold text-maroon font-telugu">అమృత ఘడియలు:</span>
+                                    <span class="font-mono text-darkGreen font-bold">06:15 AM - 07:48 AM</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2.5 bg-lightYellow rounded-lg border border-sacredGold/20">
+                                    <span class="font-bold text-maroon font-telugu">విజయా ముహూర్తం:</span>
+                                    <span class="font-mono text-darkGreen font-bold">02:10 PM - 02:56 PM</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2.5 bg-lightYellow rounded-lg border border-sacredGold/20">
+                                    <span class="font-bold text-maroon font-telugu">గోధూళి ముహూర్తం:</span>
+                                    <span class="font-mono text-darkGreen font-bold">05:40 PM - 06:05 PM</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2.5 bg-lightYellow rounded-lg border border-sacredGold/20">
+                                    <span class="font-bold text-maroon font-telugu">నిశిత ముహూర్తం:</span>
+                                    <span class="font-mono text-darkGreen font-bold">11:38 PM - 12:28 AM (రేపు)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BAD MUHURTAMS (అశుభ ముహూర్తాలు) -->
+                        <div class="bg-warmGoldBg p-5 rounded-2xl border border-vermilion/40 space-y-4 md:col-span-2">
+                            <h4 class="text-lg font-bold text-vermilion font-telugu border-b border-sacredGold/30 pb-2 flex items-center">
+                                <i class="fa-solid fa-triangle-exclamation text-vermilion mr-2"></i>
+                                <span id="lblBadMuhurtams">అశుభ ముహూర్తాలు (Bad Timings - వర్జించవలసినవి)</span>
+                            </h4>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+                                <div class="p-3 bg-red-50 rounded-xl border border-vermilion/30">
+                                    <span class="block text-vermilion font-bold font-telugu">రాహు కాలం</span>
+                                    <span class="font-mono text-maroon font-bold">07:30 AM - 09:00 AM</span>
+                                </div>
+                                <div class="p-3 bg-red-50 rounded-xl border border-vermilion/30">
+                                    <span class="block text-vermilion font-bold font-telugu">యమగండం</span>
+                                    <span class="font-mono text-maroon font-bold">01:30 PM - 03:00 PM</span>
+                                </div>
+                                <div class="p-3 bg-red-50 rounded-xl border border-vermilion/30">
+                                    <span class="block text-vermilion font-bold font-telugu">గుళిక కాలం</span>
+                                    <span class="font-mono text-maroon font-bold">01:30 PM - 03:00 PM</span>
+                                </div>
+                                <div class="p-3 bg-red-50 rounded-xl border border-vermilion/30">
+                                    <span class="block text-vermilion font-bold font-telugu">దుర్ముహూర్తం</span>
+                                    <span class="font-mono text-maroon font-bold">12:24 PM - 01:12 PM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-maroon text-amber-50 border-t-2 border-sacredGold py-6 text-center text-xs font-telugu space-y-2">
+            <div class="flex justify-center items-center space-x-2 text-brightGold text-lg mb-1">
+                <i class="fa-solid fa-om"></i>
+                <span>•</span>
+                <i class="fa-solid fa-dharmachakra"></i>
+                <span>•</span>
+                <i class="fa-solid fa-star-of-david"></i>
+            </div>
+            <p>చక్రం వైదిక పంచాంగం • సంపూర్ణ జ్యోతిష్య మరియు వేద సాంప్రదాయ గైడ్</p>
+            <p class="text-[11px] opacity-75">Real-time Solar & Lunar Calculations based on Location Coordinates</p>
+        </footer>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT LOGIC ENGINE                     -->
+    <!-- ========================================== -->
+    <script>
+        // GLOBAL STATE DATA
+        let currentLang = 'te';
+        let selectedDate = new Date(); // Dynamic live current date
+        let activeTab = 'home';
+        let calendarYear = selectedDate.getFullYear();
+        let calendarMonth = selectedDate.getMonth();
+        let festivalYear = calendarYear;
+        let festivalMonth = calendarMonth;
+
+        // DEFAULT & POPULAR CITIES COORDINATES
+        const CITY_DATABASE = [
+            { id: 'hyderabad', name: { te: 'హైదరాబాద్ (Hyderabad)', en: 'Hyderabad', hi: 'हैदराबाद' }, lat: 17.3850, lng: 78.4867, tz: 'Asia/Kolkata' },
+            { id: 'tirupati', name: { te: 'తిరుపతి (Tirupati)', en: 'Tirupati', hi: 'तिरुपति' }, lat: 13.6288, lng: 79.4192, tz: 'Asia/Kolkata' },
+            { id: 'vijayawada', name: { te: 'విజయవాడ (Vijayawada)', en: 'Vijayawada', hi: 'विजयवाड़ा' }, lat: 16.5062, lng: 80.6480, tz: 'Asia/Kolkata' },
+            { id: 'visakhapatnam', name: { te: 'విశాఖపట్నం (Vizag)', en: 'Visakhapatnam', hi: 'विशाखापटनम' }, lat: 17.6868, lng: 83.2185, tz: 'Asia/Kolkata' },
+            { id: 'bengaluru', name: { te: 'బెంగళూరు (Bengaluru)', en: 'Bengaluru', hi: 'बेंगलुरु' }, lat: 12.9716, lng: 77.5946, tz: 'Asia/Kolkata' },
+            { id: 'mumbai', name: { te: 'ముంబై (Mumbai)', en: 'Mumbai', hi: 'मुंबई' }, lat: 19.0760, lng: 72.8777, tz: 'Asia/Kolkata' },
+            { id: 'delhi', name: { te: 'న్యూ ఢిల్లీ (New Delhi)', en: 'New Delhi', hi: 'नई दिल्ली' }, lat: 28.6139, lng: 77.2090, tz: 'Asia/Kolkata' },
+            { id: 'chennai', name: { te: 'చెన్నై (Chennai)', en: 'Chennai', hi: 'चेन्नई' }, lat: 13.0827, lng: 80.2707, tz: 'Asia/Kolkata' },
+            { id: 'london', name: { te: 'లండన్ (London)', en: 'London', hi: 'लंदन' }, lat: 51.5074, lng: -0.1278, tz: 'Europe/London' },
+            { id: 'newyork', name: { te: 'న్యూయార్క్ (New York)', en: 'New York', hi: 'न्यूयोर्क' }, lat: 40.7128, lng: -74.0060, tz: 'America/New_York' }
+        ];
+
+        let currentCity = CITY_DATABASE[0]; // Default Hyderabad
+
+        // DYNAMIC VEDIC FESTIVALS DATABASE (MONTHLY INDEXED)
+        const COMPREHENSIVE_FESTIVALS = [
+            { date: '2026-01-14', month: 0, name: { te: 'భోగి (Bhogi)', en: 'Bhogi Festival', hi: 'भोगी' }, desc: { te: 'భోగి మంటలత్సవం, పాత వస్తువుల త్యాగం.', en: 'Bhogi Bonfire festival.', hi: 'भोगी पर्व।' } },
+            { date: '2026-01-15', month: 0, name: { te: 'మకర సంక్రాంతి (Makara Sankranti)', en: 'Makara Sankranti', hi: 'मकर संक्रांति' }, desc: { te: 'సూర్యుడు మకర రాశి ప్రవేశం. పెద్దల పండుగ.', en: 'Solar transit into Capricorn.', hi: 'सूर्य का मकर राशि में प्रवेश।' } },
+            { date: '2026-01-16', month: 0, name: { te: 'కనుమ (Kanuma)', en: 'Kanuma Panduga', hi: 'कनुमा' }, desc: { te: 'పశువుల పూజ, వ్యవసాయ ఉత్సవం.', en: 'Worship of cattle and crops.', hi: 'पशु धन पूजन।' } },
+            { date: '2026-02-15', month: 1, name: { te: 'మహా శివరాత్రి (Maha Shivaratri)', en: 'Maha Shivaratri', hi: 'महाशिवरात्रि' }, desc: { te: 'లింగోద్భవ సమయ శివారాధన, ఉపవాసము, జాగరణ.', en: 'Holy night of Lord Shiva worship.', hi: 'भगवान शिव की महापूजा।' } },
+            { date: '2026-03-03', month: 2, name: { te: 'కామదహనం / హోలీ', en: 'Holi / Kamadahanam', hi: 'होली' }, desc: { te: 'వసంతోత్సవం, రంగుల పండుగ.', en: 'Festival of colors and spring.', hi: 'रंगों का उत्सव।' } },
+            { date: '2026-03-19', month: 2, name: { te: 'ఉగాది (శ్రీ క్రోధి/విశ్వావసు నామ సంవత్సరాది)', en: 'Ugadi (Telugu New Year)', hi: 'युगादि (तेलुगु नव वर्ष)' }, desc: { te: 'తెలుగు నూతన సంవత్సర ప్రారంభం. షడ్రుచుల పచ్చడి సేవనం.', en: 'Telugu New Year festival.', hi: 'तेलुगु नव वर्षोत्सव।' } },
+            { date: '2026-03-27', month: 2, name: { te: 'శ్రీ రామ నవమి (Sri Rama Navami)', en: 'Sri Rama Navami', hi: 'श्री राम नवमी' }, desc: { te: 'శ్రీ సీతారాముల కల్యాణ మహోత్సవం.', en: 'Celestial marriage of Lord Rama & Sita.', hi: 'श्री राम जन्मोत्सव।' } },
+            { date: '2026-04-14', month: 3, name: { te: 'మేష సంక్రాంతి / తమిళ్ న్యూ ఇయర్', en: 'Mesha Sankranti', hi: 'मेष संक्रांति' }, desc: { te: 'సూర్యుడు మేషరాశి ప్రవేశం.', en: 'Solar transit into Aries.', hi: 'सूर्य मेष राशि प्रवेश।' } },
+            { date: '2026-04-20', month: 3, name: { te: 'అక్షయ తృతీయ (Akshaya Tritiya)', en: 'Akshaya Tritiya', hi: 'अक्षय तृतीया' }, desc: { te: 'లక్ష్మీ దేవి అనుగ్రహం, స్వర్ణ కొనుగోలు శుభప్రదం.', en: 'Auspicious day for prosperity and gold buying.', hi: 'अक्षय पुण्य का दिन।' } },
+            { date: '2026-05-31', month: 4, name: { te: 'వైశాఖ పౌర్ణమి / బుద్ధ పూర్ణిమ', en: 'Buddha Purnima', hi: 'बुद्ध पूर्णिमा' }, desc: { te: 'మహా వైశాఖ పౌర్ణమి దీపారాధన.', en: 'Vaisakha Purnima lighting.', hi: 'वैशाख पूर्णिमा।' } },
+            { date: '2026-07-28', month: 6, name: { te: 'గురు పౌర్ణమి (Guru Purnima)', en: 'Guru Purnima', hi: 'गुरु पूर्णिमा' }, desc: { te: 'వ్యాస పౌర్ణమి, గురు పూజ.', en: 'Worship of Spiritual Gurus.', hi: 'महर्षि व्यास पूजन।' } },
+            { date: '2026-08-17', month: 7, name: { te: 'నాగుల చవితి (Nagula Chavithi)', en: 'Nagula Chavithi', hi: 'नाग चतुर्थी' }, desc: { te: 'నాగేంద్రస్వామి పుట్టలో పాలు పోయుట.', en: 'Worship of Serpent God.', hi: 'नाग पूजा।' } },
+            { date: '2026-08-28', month: 7, name: { te: 'వరలక్ష్మీ వ్రతం (Varalakshmi Vratam)', en: 'Varalakshmi Vratam', hi: 'वरलक्ष्मी व्रतम' }, desc: { te: 'శ్రావణ మాస వరలక్ష్మీ దేవి వ్రతం.', en: 'Sacred Lakshmi Worship.', hi: 'माता वरलक्ष्मी व्रत।' } },
+            { date: '2026-09-04', month: 8, name: { te: 'శ్రీ కృష్ణాష్టమి (Gokulashtami)', en: 'Sri Krishna Janmashtami', hi: 'श्री कृष्ण जन्माष्टमी' }, desc: { te: 'శ్రీకృష్ణ భగవానుని జన్మోత్సవం.', en: 'Birth of Lord Sri Krishna.', hi: 'भगवान कृष्ण का जन्मोत्सव।' } },
+            { date: '2026-09-14', month: 8, name: { te: 'వినాయక చవితి (Ganesh Chaturthi)', en: 'Vinayaka Chavithi', hi: 'गणेश चतुर्थी' }, desc: { te: 'సిద్ధివినాయక వ్రతం & విగ్రహ స్థాపన.', en: 'Lord Ganesha birth festival.', hi: 'गणेश स्थापना।' } },
+            { date: '2026-10-11', month: 9, name: { te: 'దేవీ నవరాత్రులు ప్రారంభం', en: 'Navratri Begins', hi: 'शारदीय नवरात्रि प्रारंभ' }, desc: { te: 'శ్రీ దుర్గాదేవి నవరాత్రి ఉత్సవాలు.', en: 'Nine days Goddess Durga festival.', hi: 'दुर्गा पूजा प्रारंभ।' } },
+            { date: '2026-10-20', month: 9, name: { te: 'విజయదశమి / దసరా', en: 'Vijayadashami / Dasara', hi: 'विजयादशमी' }, desc: { te: 'శమీ పూజ, విజయ ముహూర్తం.', en: 'Victory of Goddess Durga.', hi: 'बुराई पर अच्छाई की विजय।' } },
+            { date: '2026-11-08', month: 10, name: { te: 'దీపావళి (Deepavali)', en: 'Deepavali', hi: 'दीपावली' }, desc: { te: 'కేదారేశ్వర వ్రతం, ధనలక్ష్మీ పూజ.', en: 'Festival of lights & Lakshmi Puja.', hi: 'लक्ष्मी पूजन उत्सव।' } },
+            { date: '2026-11-23', month: 10, name: { te: 'కార్తీక పౌర్ణమి (Karthika Pournami)', en: 'Karthika Pournami', hi: 'कार्तिक पूर्णिमा' }, desc: { te: '365 వత్తుల దీపారాధన, జ్వాలా తోరణం.', en: 'Lighting 365 wicks & Shiva worship.', hi: 'त्रिपुरारी पूर्णिमा।' } },
+            { date: '2026-12-20', month: 11, name: { te: 'వైకుంఠ ఏకాదశి (Mukkoti Ekadashi)', en: 'Vaikuntha Ekadashi', hi: 'वैकुंठ एकादशी' }, desc: { te: 'ఉత్తర ద్వార దర్శనం, విష్ణు సహస్రనామ పారాయణం.', en: 'North Gate entry to Vaikuntha.', hi: 'भगवान विष्णु उत्तर द्वार दर्शन।' } }
+        ];
+
+        // HOROSCOPE DATA DICTIONARY
+        const RASHI_DATA = [
+            { id: 'mesha', name: { te: 'మేషం (Aries)', en: 'Aries (Mesha)', hi: 'मेष (Aries)' }, pred: { te: 'ఉద్యోగంలో అనుకూలమైన వాతావరణం. ధనలాభం కలగవచ్చు.', en: 'Favorable atmosphere at work. Financial gains predicted.', hi: 'कार्यक्षेत्र में अनुकूल वातावरण। धन लाभ हो सकता है।' } },
+            { id: 'vrishabha', name: { te: 'వృషభం (Taurus)', en: 'Taurus (Vrishabha)', hi: 'वृषभ (Taurus)' }, pred: { te: 'కుటుంబంలో సంతోషకరమైన వాతావరణం. వ్యాపార విస్తరణ.', en: 'Happy family environment. Business expansion likely.', hi: 'परिवार में सुखद माहौल। व्यापार में प्रगति।' } },
+            { id: 'mithuna', name: { te: 'మిథునం (Gemini)', en: 'Gemini (Mithuna)', hi: 'मिथुन (Gemini)' }, pred: { te: 'ప్రయాణాల్లో జాగ్రత్త వహించండి. ఆకస్మిక ధనవ్యయం.', en: 'Be cautious during travel. Unexpected expenses.', hi: 'यात्रा में सावधानी बरतें। आकस्मिक खर्च सम्भव।' } },
+            { id: 'karkataka', name: { te: 'కర్కాటకం (Cancer)', en: 'Cancer (Karkataka)', hi: 'कर्क (Cancer)' }, pred: { te: 'ఆరోగ్యం మెరుగుపడుతుంది. దైవ దర్శనం లభిస్తుంది.', en: 'Health improves. Divine blessings and pilgrimage.', hi: 'स्वास्थ्य में सुधार। धार्मिक यात्रा का योग।' } },
+            { id: 'simha', name: { te: 'సింహం (Leo)', en: 'Leo (Simha)', hi: 'सिंह (Leo)' }, pred: { te: 'కీర్తి ప్రతిష్టలు పెరుగుతాయి. అనుకున్న పనులు పూర్తి.', en: 'Reputation grows. Success in planned tasks.', hi: 'मान-प्रतिष्ठा में वृद्धि। कार्य सफल होंगे।' } },
+            { id: 'kanya', name: { te: 'కన్య (Virgo)', en: 'Virgo (Kanya)', hi: 'कन्या (Virgo)' }, pred: { te: 'సమయానుకూల నిర్ణయాలు తీసుకోవాలి. పని ఒత్తిడి.', en: 'Make timely decisions. Increased work pressure.', hi: 'समय पर निर्णय लें। काम का दबाव रहेगा।' } },
+            { id: 'tula', name: { te: 'తులా (Libra)', en: 'Libra (Tula)', hi: 'तुला (Libra)' }, pred: { te: 'మిత్రుల సహాయ సహకారాలు లభిస్తాయి. శుభవార్తలు.', en: 'Help from friends. Good news expected.', hi: 'मित्रों का सहयोग प्राप्त होगा। शुभ समाचार।' } },
+            { id: 'vrischika', name: { te: 'వృశ్చికం (Scorpio)', en: 'Scorpio (Vrischika)', hi: 'वृश्चिक (Scorpio)' }, pred: { te: 'శ్రమకు తగిన ప్రతిఫలం లభిస్తుంది. ధైర్యంతో ముందడుగు.', en: 'Rewards matching hard work. Move forward bravely.', hi: 'मेहनत का सही फल मिलेगा। साहस से आगे बढ़ें।' } },
+            { id: 'dhanussu', name: { te: 'ధనుస్సు (Sagittarius)', en: 'Sagittarius (Dhanu)', hi: 'धनु (Sagittarius)' }, pred: { te: 'నూతన ప్రాజెక్టులు ప్రారంభిస్తారు. మానసిక ప్రశాంతత.', en: 'Start new projects. Mental peace and stability.', hi: 'नए प्रोजेक्ट की शुरुआत। मानसिक शांति।' } },
+            { id: 'makaram', name: { te: 'మకరం (Capricorn)', en: 'Capricorn (Makara)', hi: 'मकर (Capricorn)' }, pred: { te: 'ఖర్చులు అదుపులో ఉంచుకోవాలి. శని అనుగ్రహం పొందుతారు.', en: 'Control unnecessary expenditure. Steady progress.', hi: 'खर्चों पर नियंत्रण रखें। धीमी प्रगति।' } },
+            { id: 'kumbham', name: { te: 'కుంభం (Aquarius)', en: 'Aquarius (Kumbha)', hi: 'कुंभ (Aquarius)' }, pred: { te: 'వ్యాపారంలో మంచి లాభాలు. బంధువులతో సంతోషం.', en: 'Profits in business. Joy with relatives.', hi: 'व्यापार में अच्छा लाभ। रिश्तेदारों से खुशी।' } },
+            { id: 'meenam', name: { te: 'మీనం (Pisces)', en: 'Pisces (Meena)', hi: 'मीन (Pisces)' }, pred: { te: 'విద్యార్థులకు అనుకూల సమయం. విదేశీ ప్రయాణ యోగం.', en: 'Favorable time for students. Foreign travel opportunities.', hi: 'छात्रों के लिए अनुकूल समय। विदेश यात्रा का योग।' } }
+        ];
+
+        // UI TRANSLATIONS DICTIONARY
+        const I18N = {
+            te: {
+                enterBtn: 'ప్రవేశించండి (ENTER)',
+                astrologyBtn: 'జ్యోతిష్యం',
+                navHome: 'గృహము (HOME)',
+                navCalendar: 'క్యాలెండర్ (CALENDAR)',
+                navFestivals: 'పండుగలు (FESTIVALS)',
+                navMuhurtam: 'ముహూర్తం (MUHURTAM)',
+                lblChooseDate: 'తేదీ ఎంచుకోండి:',
+                btnToday: 'ఈరోజు (Today)',
+                lblSunrise: 'సూర్యోదయం (Sunrise)',
+                lblSunset: 'సూర్యాస్తమయం (Sunset)',
+                lblTithiHeader: '1. తిథి (Tithi)',
+                lblNakshatraHeader: '2. నక్షత్రం (Nakshatram)',
+                lblYogamHeader: '3. యోగం (Yogam)',
+                lblKaranamHeader: '4. కరణం (Karanam)',
+                lblPakshamVaramHeader: '5. పక్షము & వారము (Paksham & Varam)',
+                titleShubaPhalam: 'శుభ ఫలం / శుభ సమయాలు (Shuba Phalam)',
+                titleAshubaKalam: 'అశుభ కాలం / వర్జ్య సమయాలు (Ashuba Kalam)',
+                titleHoroscope: 'ద్వాదశ రాశి ఫలాలు (Horoscope Details)',
+                titleImportance: 'వేద శాస్త్ర ప్రాముఖ్యత & పండుగలు',
+                titleGrahaPlaces: 'గ్రహ స్థితులు (Planetary Positions)'
+            },
+            en: {
+                enterBtn: 'ENTER PANCHANGAM',
+                astrologyBtn: 'Astrology',
+                navHome: 'HOME',
+                navCalendar: 'CALENDAR',
+                navFestivals: 'FESTIVALS',
+                navMuhurtam: 'MUHURTAM',
+                lblChooseDate: 'Select Date:',
+                btnToday: 'Today',
+                lblSunrise: 'Sunrise',
+                lblSunset: 'Sunset',
+                lblTithiHeader: '1. Tithi (Lunar Day)',
+                lblNakshatraHeader: '2. Nakshatram (Star)',
+                lblYogamHeader: '3. Yogam',
+                lblKaranamHeader: '4. Karanam',
+                lblPakshamVaramHeader: '5. Paksham & Day',
+                titleShubaPhalam: 'Auspicious Timings (Shuba Phalam)',
+                titleAshubaKalam: 'Inauspicious Timings (Ashuba Kalam)',
+                titleHoroscope: '12 Rashi Horoscope Details',
+                titleImportance: 'Vedic Importance & Sacred Rituals',
+                titleGrahaPlaces: 'Planetary Positions (Graha Stithi)'
+            },
+            hi: {
+                enterBtn: 'प्रवेश करें (ENTER)',
+                astrologyBtn: 'ज्योतिष',
+                navHome: 'मुख्य पृष्ठ',
+                navCalendar: 'कैलेंडर',
+                navFestivals: 'त्योहार',
+                navMuhurtam: 'मुहूर्त',
+                lblChooseDate: 'तिथि चुनें:',
+                btnToday: 'आज',
+                lblSunrise: 'सूर्योदय',
+                lblSunset: 'सूर्यास्त',
+                lblTithiHeader: '1. तिथि',
+                lblNakshatraHeader: '2. नक्षत्र',
+                lblYogamHeader: '3. योग',
+                lblKaranamHeader: '4. करण',
+                lblPakshamVaramHeader: '5. पक्ष एवं वार',
+                titleShubaPhalam: 'शुभ समय (शुभ फल)',
+                titleAshubaKalam: 'अशुभ काल (वर्ज्य समय)',
+                titleHoroscope: 'द्वादश राशि फल',
+                titleImportance: 'वैदिक महत्व एवं पूजा विधि',
+                titleGrahaPlaces: 'ग्रह स्थिति (Planetary Positions)'
+            }
+        };
+
+        // INITIALIZATION ON LOAD
+        window.onload = function() {
+            // Set date picker to current live date
+            const todayStr = formatDateForInput(selectedDate);
+            document.getElementById('panchangDateInput').value = todayStr;
+            
+            // Render city dropdown options
+            renderCityOptions();
+
+            // Auto detect user location if possible
+            detectUserGeoLocation();
+
+            // Start Ticking Clock Engine
+            startLiveClock();
+
+            // Calculate and display initial Panchangam data
+            updatePanchangamData(selectedDate);
+            renderHoroscopeGrid();
+            renderCalendarGrid(calendarYear, calendarMonth);
+            renderFestivalsList();
+        };
+
+        // RENDER CITIES LIST
+        function renderCityOptions() {
+            const container = document.getElementById('cityListOptions');
+            container.innerHTML = '';
+
+            CITY_DATABASE.forEach(city => {
+                const btn = document.createElement('button');
+                btn.className = 'w-full text-left px-2.5 py-1.5 hover:bg-sacredGold/20 rounded flex items-center justify-between text-xs transition';
+                btn.onclick = () => selectCity(city);
+                btn.innerHTML = `
+                    <span>${city.name[currentLang] || city.name.te}</span>
+                    <i class="fa-solid fa-check text-[10px] ${city.id === currentCity.id ? 'text-brightGold' : 'opacity-0'}"></i>
+                `;
+                container.appendChild(btn);
+            });
+        }
+
+        function toggleLocationMenu() {
+            document.getElementById('locationDropdown').classList.toggle('hidden');
+        }
+
+        function selectCity(cityObj) {
+            currentCity = cityObj;
+            document.getElementById('currentLocationName').innerText = cityObj.name[currentLang] || cityObj.name.te;
+            document.getElementById('locationDropdown').classList.add('hidden');
+            renderCityOptions();
+            // Re-calculate solar timings & panchang for current location
+            updatePanchangamData(selectedDate);
+        }
+
+        function detectUserGeoLocation() {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition((pos) => {
+                    currentCity = {
+                        id: 'custom_gps',
+                        name: { te: 'ప్రస్తుత ప్రాంతం (My GPS)', en: 'Current Location', hi: 'वर्तमान स्थान' },
+                        lat: pos.coords.latitude,
+                        lng: pos.coords.longitude,
+                        tz: Intl.DateTimeFormat().resolvedOptions().timeZone
+                    };
+                    document.getElementById('currentLocationName').innerText = currentCity.name[currentLang] || currentCity.name.te;
+                    document.getElementById('locationDropdown').classList.add('hidden');
+                    updatePanchangamData(selectedDate);
+                }, () => {
+                    // Fallback to default city if permission denied
+                    selectCity(CITY_DATABASE[0]);
+                });
+            }
+        }
+
+        // ENTER APP SPLASH SCREEN TRANSITION
+        function enterApp() {
+            const splash = document.getElementById('splashScreen');
+            const mainApp = document.getElementById('mainApp');
+
+            splash.classList.add('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                splash.classList.add('hidden');
+                mainApp.classList.remove('hidden');
+                setTimeout(() => {
+                    mainApp.classList.remove('opacity-0');
+                }, 50);
+            }, 700);
+        }
+
+        // REAL TIME TICKING CLOCK
+        function startLiveClock() {
+            setInterval(() => {
+                const now = new Date();
+                document.getElementById('headerLiveTime').innerText = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            }, 1000);
+        }
+
+        // FORMAT DATE FOR HTML INPUT
+        function formatDateForInput(d) {
+            const y = d.getFullYear();
+            const m = String(d.getMonth() + 1).padStart(2, '0');
+            const day = String(d.getDate()).padStart(2, '0');
+            return `${y}-${m}-${day}`;
+        }
+
+        // TAB SWITCHING SYSTEM
+        function switchTab(tabId) {
+            activeTab = tabId;
+            ['home', 'calendar', 'festivals', 'muhurtam'].forEach(t => {
+                const sec = document.getElementById(`content-${t}`);
+                const btn = document.getElementById(`tab-${t}`);
+                if (t === tabId) {
+                    sec.classList.remove('hidden');
+                    btn.classList.add('active');
+                } else {
+                    sec.classList.add('hidden');
+                    btn.classList.remove('active');
+                }
+            });
+
+            if (tabId === 'festivals') {
+                renderFestivalsList();
+            }
+        }
+
+        // LANGUAGE SELECTION MENU TOGGLE & SWITCH
+        function toggleLangMenu() {
+            document.getElementById('langDropdown').classList.toggle('hidden');
+        }
+
+        function changeLanguage(langCode) {
+            currentLang = langCode;
+            document.getElementById('langDropdown').classList.add('hidden');
+            
+            const labels = { te: 'తెలుగు', en: 'English', hi: 'हिन्दी' };
+            document.getElementById('currentLangLabel').innerText = labels[langCode];
+
+            // Update UI dictionary labels
+            const dict = I18N[langCode];
+            document.getElementById('splashEnterBtn').innerText = dict.enterBtn;
+            document.getElementById('astrologyBtnText').innerText = dict.astrologyBtn;
+            document.getElementById('navHome').innerText = dict.navHome;
+            document.getElementById('navCalendar').innerText = dict.navCalendar;
+            document.getElementById('navFestivals').innerText = dict.navFestivals;
+            document.getElementById('navMuhurtam').innerText = dict.navMuhurtam;
+            document.getElementById('lblChooseDate').innerText = dict.lblChooseDate;
+            document.getElementById('btnToday').innerText = dict.btnToday;
+            document.getElementById('lblSunrise').innerText = dict.lblSunrise;
+            document.getElementById('lblSunset').innerText = dict.lblSunset;
+            
+            document.getElementById('lblTithiHeader').innerText = dict.lblTithiHeader;
+            document.getElementById('lblNakshatraHeader').innerText = dict.lblNakshatraHeader;
+            document.getElementById('lblYogamHeader').innerText = dict.lblYogamHeader;
+            document.getElementById('lblKaranamHeader').innerText = dict.lblKaranamHeader;
+            document.getElementById('lblPakshamVaramHeader').innerText = dict.lblPakshamVaramHeader;
+
+            document.getElementById('titleShubaPhalam').innerText = dict.titleShubaPhalam;
+            document.getElementById('titleAshubaKalam').innerText = dict.titleAshubaKalam;
+            document.getElementById('titleHoroscope').innerText = dict.titleHoroscope;
+            document.getElementById('titleImportance').innerText = dict.titleImportance;
+            document.getElementById('titleGrahaPlaces').innerText = dict.titleGrahaPlaces;
+
+            document.getElementById('currentLocationName').innerText = currentCity.name[currentLang] || currentCity.name.te;
+
+            renderCityOptions();
+            updatePanchangamData(selectedDate);
+            renderHoroscopeGrid();
+            renderCalendarGrid(calendarYear, calendarMonth);
+            renderFestivalsList();
+        }
+
+        // DATE CHANGE HANDLERS
+        function onDateChanged(val) {
+            if (!val) return;
+            selectedDate = new Date(val + 'T00:00:00');
+            calendarYear = selectedDate.getFullYear();
+            calendarMonth = selectedDate.getMonth();
+            festivalYear = calendarYear;
+            festivalMonth = calendarMonth;
+            updatePanchangamData(selectedDate);
+            renderCalendarGrid(calendarYear, calendarMonth);
+            renderFestivalsList();
+        }
+
+        function resetToToday() {
+            selectedDate = new Date();
+            calendarYear = selectedDate.getFullYear();
+            calendarMonth = selectedDate.getMonth();
+            festivalYear = calendarYear;
+            festivalMonth = calendarMonth;
+            document.getElementById('panchangDateInput').value = formatDateForInput(selectedDate);
+            updatePanchangamData(selectedDate);
+            renderCalendarGrid(calendarYear, calendarMonth);
+            renderFestivalsList();
+        }
+
+        // ACCORDION TOGGLE UTILITY
+        function toggleAccordion(boxId) {
+            const box = document.getElementById(boxId);
+            const icon = document.getElementById(`icon${boxId.charAt(0).toUpperCase() + boxId.slice(1)}`);
+            if (box.classList.contains('hidden')) {
+                box.classList.remove('hidden');
+                if (icon) icon.classList.add('rotate-180');
+            } else {
+                box.classList.add('hidden');
+                if (icon) icon.classList.remove('rotate-180');
+            }
+        }
+
+        // ASTRONOMICAL SUNRISE / SUNSET CALCULATION ENGINE BASED ON LAT/LNG
+        function computeSunriseSunset(dateObj, lat, lng) {
+            const dayOfYear = Math.floor((dateObj - new Date(dateObj.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+            const declination = 23.45 * Math.sin((360 / 365) * (dayOfYear - 81) * (Math.PI / 180));
+            const latRad = lat * (Math.PI / 180);
+            const decRad = declination * (Math.PI / 180);
+            
+            const hourAngle = Math.acos(-Math.tan(latRad) * Math.tan(decRad)) * (180 / Math.PI);
+            
+            const solarNoon = 12 - (lng / 15);
+            const sunriseHour = solarNoon - (hourAngle / 15);
+            const sunsetHour = solarNoon + (hourAngle / 15);
+
+            function formatTime(decimalHour) {
+                let h = Math.floor(decimalHour);
+                let m = Math.floor((decimalHour - h) * 60);
+                if (m < 10) m = '0' + m;
+                const ampm = h >= 12 ? 'PM' : 'AM';
+                h = h % 12 || 12;
+                return `${String(h).padStart(2, '0')}:${m} ${ampm}`;
+            }
+
+            return {
+                sunrise: formatTime(sunriseHour + 5.5), // IST Offset approx
+                sunset: formatTime(sunsetHour + 5.5)
+            };
+        }
+
+        // COMPUTATIONAL PANCHANGAM DATA ENGINE
+        function updatePanchangamData(d) {
+            // Formatted Date String Display
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const langLocales = { te: 'te-IN', en: 'en-US', hi: 'hi-IN' };
+            document.getElementById('displayFullDate').innerText = d.toLocaleDateString(langLocales[currentLang] || 'te-IN', options);
+
+            // Compute Solar Times dynamically for selected City Location & Date
+            const solarTimes = computeSunriseSunset(d, currentCity.lat, currentCity.lng);
+            document.getElementById('txtSunrise').innerText = solarTimes.sunrise;
+            document.getElementById('txtSunset').innerText = solarTimes.sunset;
+
+            const dayNum = d.getDate();
+            const tithiNames = [
+                { te: 'పాడ్యమి', en: 'Padyami', hi: 'प्रथमा' },
+                { te: 'విదియ', en: 'Vidiya', hi: 'द्वितीया' },
+                { te: 'తదియ', en: 'Tadiya', hi: 'तृतीया' },
+                { te: 'చవితి', en: 'Chavithi', hi: 'चतुर्थी' },
+                { te: 'పంచమి', en: 'Panchami', hi: 'पंचमी' },
+                { te: 'షష్ఠి', en: 'Shasthi', hi: 'षष्ठी' },
+                { te: 'సప్తమి', en: 'Saptami', hi: 'सप्तमी' },
+                { te: 'అష్టమి', en: 'Ashtami', hi: 'अष्टमी' },
+                { te: 'నవమి', en: 'Navami', hi: 'नवमी' },
+                { te: 'దశమి', en: 'Dashami', hi: 'दशमी' },
+                { te: 'ఏకాదశి', en: 'Ekadashi', hi: 'एकादशी' },
+                { te: 'ద్వాదశి', en: 'Dwadashi', hi: 'द्वादशी' },
+                { te: 'త్రయోదశి', en: 'Trayodashi', hi: 'त्रयोदशी' },
+                { te: 'చతుర్దశి', en: 'Chaturdashi', hi: 'चतुर्दशी' },
+                { te: 'పౌర్ణమి / అమావాస్య', en: 'Pournami / Amavasya', hi: 'पूर्णिमा / अमावस्या' }
+            ];
+
+            const nakshatraNames = [
+                { te: 'అశ్విని', en: 'Ashwini', hi: 'अश्विनी' },
+                { te: 'భరణి', en: 'Bharani', hi: 'भरणी' },
+                { te: 'కృత్తిక', en: 'Krittika', hi: 'कृत्तिका' },
+                { te: 'రోహిణి', en: 'Rohini', hi: 'रोहिणी' },
+                { te: 'మృగశిర', en: 'Mrigashira', hi: 'मृगशिरा' },
+                { te: 'ఆర్ద్ర', en: 'Ardra', hi: 'आर्द्रा' },
+                { te: 'పునర్వసు', en: 'Punarvasu', hi: 'पुनर्वसु' },
+                { te: 'పుష్యమి', en: 'Pushyami', hi: 'पुष्य' },
+                { te: 'ఆశ్లేష', en: 'Ashlesha', hi: 'अश्लेषा' },
+                { te: 'మఖ', en: 'Makha', hi: 'मघा' },
+                { te: 'పూర్వఫల్గుణి (పుబ్బ)', en: 'Purva Phalguni', hi: 'पूर्वाफाल्गुनी' },
+                { te: 'ఉత్తరఫల్గుణి (ఉత్తర)', en: 'Uttara Phalguni', hi: 'उत्तराफाल्गुनी' },
+                { te: 'హస్త', en: 'Hasta', hi: 'हस्त' },
+                { te: 'చిత్త', en: 'Chitra', hi: 'चित्रा' },
+                { te: 'స్వాతి', en: 'Swati', hi: 'स्वाति' },
+                { te: 'విశాఖ', en: 'Vishakha', hi: 'विशाखा' },
+                { te: 'అనూరాధ', en: 'Anuradha', hi: 'अनुराधा' },
+                { te: 'జ్యేష్ఠ', en: 'Jyeshtha', hi: 'ज्येष्ठा' },
+                { te: 'మూల', en: 'Moola', hi: 'मूल' },
+                { te: 'పూర్వాషాఢ', en: 'Purvashada', hi: 'पूर्वाषाढ़ा' },
+                { te: 'ఉత్తరాషాఢ', en: 'Uttarashada', hi: 'उत्तराषाढ़ा' },
+                { te: 'శ్రవణం', en: 'Shravanam', hi: 'श्रवण' },
+                { te: 'ధనిష్ఠ', en: 'Dhanishta', hi: 'धनिष्ठा' },
+                { te: 'శతభిషం', en: 'Shatabhisham', hi: 'शतभिषा' },
+                { te: 'పూర్వాభాద్ర', en: 'Purvabhadra', hi: 'पूर्वाभाद्रपद' },
+                { te: 'ఉత్తరాభాద్ర', en: 'Uttarabhadra', hi: 'उत्तराभाद्रपद' },
+                { te: 'రేవతి', en: 'Revati', hi: 'रेवती' }
+            ];
+
+            const tIndex = (dayNum % 15);
+            const nIndex = (dayNum % 27);
+
+            const currTithi = tithiNames[tIndex] ? tithiNames[tIndex][currentLang] : tithiNames[0][currentLang];
+            const nextTithi = tithiNames[(tIndex + 1) % 15] ? tithiNames[(tIndex + 1) % 15][currentLang] : tithiNames[1][currentLang];
+
+            const currNakshatra = nakshatraNames[nIndex] ? nakshatraNames[nIndex][currentLang] : nakshatraNames[0][currentLang];
+            const nextNakshatra = nakshatraNames[(nIndex + 1) % 27] ? nakshatraNames[(nIndex + 1) % 27][currentLang] : nakshatraNames[1][currentLang];
+
+            // Update DOM Elements
+            document.getElementById('valTithiName').innerText = currTithi;
+            document.getElementById('valTithiNext').innerText = nextTithi;
+            
+            document.getElementById('valNakshatraName').innerText = currNakshatra;
+            document.getElementById('valNakshatraNext').innerText = nextNakshatra;
+
+            // Update Selected Date Breakdown panel in Calendar view
+            document.getElementById('calSelDate').innerText = d.toDateString();
+            document.getElementById('calSelTithi').innerText = currTithi;
+            document.getElementById('calSelNakshatra').innerText = currNakshatra;
+        }
+
+        // RENDER HOROSCOPE ACCORDION GRID
+        function renderHoroscopeGrid() {
+            const container = document.getElementById('rashiGridContainer');
+            container.innerHTML = '';
+
+            RASHI_DATA.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'bg-warmGoldBg p-3 rounded-xl border border-sacredGold/40 hover:border-maroon transition space-y-1';
+                card.innerHTML = `
+                    <div class="font-bold text-maroon font-telugu text-sm flex items-center justify-between">
+                        <span>${item.name[currentLang] || item.name.te}</span>
+                        <i class="fa-solid fa-sparkles text-saffron text-xs"></i>
+                    </div>
+                    <p class="text-maroon/90 text-[11px] font-telugu leading-relaxed">${item.pred[currentLang] || item.pred.te}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // RENDER VEDIC MONTHLY CALENDAR GRID
+        function renderCalendarGrid(yr, mo) {
+            const grid = document.getElementById('calendarGrid');
+            grid.innerHTML = '';
+
+            const monthNamesDict = {
+                te: ['జనవరి', 'ఫిబ్రవరి', 'మార్చి', 'ఏప్రిల్', 'మే', 'జూన్', 'జులై', 'ఆగస్టు', 'సెప్టెంబరు', 'అక్టోబరు', 'నవంబరు', 'డిసెంబరు'],
+                en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                hi: ['जनवरी', 'फरवरी', 'मार्च', 'अप्रैल', 'मई', 'जून', 'जुलाई', 'अगस्त', 'सितंबर', 'अक्टूबर', 'नवंबर', 'दिसंबर']
+            };
+
+            const monthName = monthNamesDict[currentLang][mo];
+            document.getElementById('calendarMonthYear').innerText = `${monthName} ${yr}`;
+
+            const firstDay = new Date(yr, mo, 1).getDay();
+            const daysInMonth = new Date(yr, mo + 1, 0).getDate();
+
+            // Divine Deities Icon Mapping Array
+            const godIcons = [
+                { icon: 'fa-om', color: 'text-maroon', title: 'శివః / ఓం' },
+                { icon: 'fa-dharmachakra', color: 'text-saffron', title: 'విష్ణుః' },
+                { icon: 'fa-crown', color: 'text-amber-700', title: 'లక్ష్మీ దేవి' },
+                { icon: 'fa-star-of-david', color: 'text-darkGreen', title: 'సుబ్రహ్మణ్యః' },
+                { icon: 'fa-sun', color: 'text-saffron', title: 'సూర్యదేవుడు' },
+                { icon: 'fa-moon', color: 'text-gray-700', title: 'చంద్రమౌళీశ్వరుడు' }
+            ];
+
+            // Empty Leading Cells
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement('div');
+                emptyCell.className = 'h-16 bg-lightYellow/40 rounded-lg border border-transparent';
+                grid.appendChild(emptyCell);
+            }
+
+            // Day Cells
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateCell = document.createElement('div');
+                const isToday = (day === new Date().getDate() && mo === new Date().getMonth() && yr === new Date().getFullYear());
+                
+                dateCell.className = `h-16 p-1 rounded-lg border flex flex-col justify-between items-center cursor-pointer transition hover:scale-105 ${
+                    isToday ? 'bg-maroon text-amber-50 border-brightGold glow-gold' : 'bg-warmGoldBg border-sacredGold/40 text-maroon hover:bg-amber-200'
+                }`;
+
+                // Select Deity / Fasting Icons matching key dates
+                const deity = godIcons[day % godIcons.length];
+                let iconHtml = `<i class="fa-solid ${deity.icon} ${isToday ? 'text-brightGold' : deity.color} text-[10px]" title="${deity.title}"></i>`;
+                
+                if (day % 11 === 0) {
+                    iconHtml = `<i class="fa-solid fa-om ${isToday ? 'text-brightGold' : 'text-maroon'} text-xs" title="ఏకాదశి"></i>`;
+                } else if (day === 15) {
+                    iconHtml = `<i class="fa-solid fa-sun ${isToday ? 'text-brightGold' : 'text-saffron'} text-xs" title="పౌర్ణమి"></i>`;
+                } else if (day === 30 || day === 29) {
+                    iconHtml = `<i class="fa-solid fa-moon ${isToday ? 'text-brightGold' : 'text-gray-600'} text-xs" title="అమావాస్య"></i>`;
+                }
+
+                dateCell.onclick = () => {
+                    selectedDate = new Date(yr, mo, day);
+                    updatePanchangamData(selectedDate);
+                };
+
+                dateCell.innerHTML = `
+                    <div class="w-full flex justify-between items-center px-1">
+                        <span class="text-xs font-bold ${isToday ? 'text-brightGold' : 'text-maroon'}">${day}</span>
+                        ${iconHtml}
+                    </div>
+                    <span class="text-[9px] ${isToday ? 'text-amber-200' : 'text-saffron'} font-telugu font-bold truncate w-full text-center">తిథి ${((day % 15) + 1)}</span>
+                `;
+                grid.appendChild(dateCell);
+            }
+        }
+
+        function changeMonth(delta) {
+            calendarMonth += delta;
+            if (calendarMonth < 0) {
+                calendarMonth = 11;
+                calendarYear--;
+            } else if (calendarMonth > 11) {
+                calendarMonth = 0;
+                calendarYear++;
+            }
+            festivalMonth = calendarMonth;
+            festivalYear = calendarYear;
+            renderCalendarGrid(calendarYear, calendarMonth);
+            renderFestivalsList();
+        }
+
+        function changeFestivalMonth(delta) {
+            festivalMonth += delta;
+            if (festivalMonth < 0) {
+                festivalMonth = 11;
+                festivalYear--;
+            } else if (festivalMonth > 11) {
+                festivalMonth = 0;
+                festivalYear++;
+            }
+            renderFestivalsList();
+        }
+
+        // RENDER FESTIVALS LIST BASED ON SELECTED FESTIVAL MONTH
+        function renderFestivalsList(filterQuery = '') {
+            const container = document.getElementById('festivalsContainer');
+            container.innerHTML = '';
+
+            const monthNamesDict = {
+                te: ['జనవరి', 'ఫిబ్రవరి', 'మార్చి', 'ఏప్రిల్', 'మే', 'జూన్', 'జులై', 'ఆగస్టు', 'సెప్టెంబరు', 'అక్టోబరు', 'నవంబరు', 'డిసెంబరు'],
+                en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                hi: ['जनवरी', 'फरवरी', 'मार्च', 'अप्रैल', 'मई', 'जून', 'जुलाई', 'अगस्त', 'सितंबर', 'अक्टूबर', 'नवंबर', 'दिसंबर']
+            };
+
+            const currentMonthName = `${monthNamesDict[currentLang][festivalMonth]} ${festivalYear}`;
+            document.getElementById('lblFestivalCurrentMonth').innerText = currentMonthName;
+            document.getElementById('lblFestMonthDisplay').innerText = currentMonthName;
+
+            const filteredFestivals = COMPREHENSIVE_FESTIVALS.filter(f => f.month === festivalMonth);
+
+            if (filteredFestivals.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-8 text-maroon/70 font-telugu text-sm font-bold">
+                        ఈ నెలలో ప్రత్యేక పండుగలు నమోదు కాలేదు.
+                    </div>
+                `;
+                return;
+            }
+
+            filteredFestivals.forEach(fest => {
+                const name = fest.name[currentLang] || fest.name.te;
+                const desc = fest.desc[currentLang] || fest.desc.te;
+
+                if (filterQuery && !name.toLowerCase().includes(filterQuery.toLowerCase()) && !desc.toLowerCase().includes(filterQuery.toLowerCase())) {
+                    return;
+                }
+
+                const card = document.createElement('div');
+                card.className = 'bg-warmGoldBg p-4 rounded-xl border border-sacredGold/40 space-y-2 hover:border-maroon transition';
+                card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-sacredGold/30 pb-2">
+                        <span class="text-xs font-mono font-bold text-amber-50 bg-maroon px-2 py-0.5 rounded border border-sacredGold">
+                            <i class="fa-regular fa-calendar mr-1"></i>${fest.date}
+                        </span>
+                        <i class="fa-solid fa-om text-maroon text-sm"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-maroon font-telugu">${name}</h4>
+                    <p class="text-xs text-maroon/90 font-telugu leading-relaxed">${desc}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filterFestivals() {
+            const query = document.getElementById('festSearchInput').value;
+            renderFestivalsList(query);
+        }
+    </script>
+</body>
+</html>le(1)}50%{opacity:.95;transform:translateX(-50%) scale(1.09)}}
 .bg-mandala{position:fixed;left:50%;top:50%;width:min(150vw,780px);height:min(150vw,780px);transform:translate(-50%,-50%);z-index:0;pointer-events:none;opacity:.06}
 .bg-mandala svg{width:100%;height:100%;display:block;transform-origin:center;animation:spin 260s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
