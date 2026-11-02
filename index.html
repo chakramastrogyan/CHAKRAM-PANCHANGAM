@@ -156,7 +156,7 @@
                 వేద బ్రాహ్మణులచే ప్రమాణీకరించబడిన సంపూర్ణ తిథి, నక్షత్ర, వివాహ & శుభ ముహూర్త సమాచారం.
             </p>
 
-            <button onclick="enterApp()" class="group relative inline-flex items-center justify-center px-10 py-4 text-xl font-bold text-amber-50 transition-all duration-300 bg-gradient-to-r from-maroon via-deepMaroon to-crimson rounded-full shadow-2xl hover:scale-105 border-2 border-brightGold">
+            <button type="button" onclick="enterApp()" class="group relative inline-flex items-center justify-center px-10 py-4 text-xl font-bold text-amber-50 transition-all duration-300 bg-gradient-to-r from-maroon via-deepMaroon to-crimson rounded-full shadow-2xl hover:scale-105 border-2 border-brightGold cursor-pointer">
                 <i class="fa-solid fa-om mr-3 text-2xl text-brightGold group-hover:rotate-180 transition-transform duration-500"></i>
                 <span id="splashEnterBtn" class="font-telugu">ప్రవేశించండి (ENTER)</span>
                 <i class="fa-solid fa-arrow-right ml-3 text-brightGold"></i>
@@ -194,7 +194,7 @@
 
                 <div class="flex items-center flex-wrap gap-2 sm:gap-3">
                     <div class="relative">
-                        <button onclick="toggleLocationMenu()" class="flex items-center space-x-1.5 bg-deepMaroon/80 border border-brightGold/50 px-2.5 py-1.5 rounded-lg text-xs font-semibold text-brightGold">
+                        <button type="button" onclick="toggleLocationMenu()" class="flex items-center space-x-1.5 bg-deepMaroon/80 border border-brightGold/50 px-2.5 py-1.5 rounded-lg text-xs font-semibold text-brightGold">
                             <i class="fa-solid fa-location-dot text-saffron animate-bounce"></i>
                             <span id="currentLocationName">హైదరాబాద్ (Hyderabad)</span>
                             <i class="fa-solid fa-chevron-down text-[10px]"></i>
@@ -202,7 +202,7 @@
                         <div id="locationDropdown" class="hidden absolute right-0 mt-2 w-56 bg-maroon border border-sacredGold rounded-xl shadow-2xl z-50 p-2 space-y-1 text-amber-50">
                             <div class="text-[10px] text-brightGold font-bold px-2 py-1 uppercase border-b border-sacredGold/30 flex justify-between items-center">
                                 <span>ప్రదేశము ఎంచుకోండి</span>
-                                <button onclick="detectUserGeoLocation()" class="text-brightGold hover:underline" title="GPS Auto Detect"><i class="fa-solid fa-crosshairs"></i> GPS</button>
+                                <button type="button" onclick="detectUserGeoLocation()" class="text-brightGold hover:underline" title="GPS Auto Detect"><i class="fa-solid fa-crosshairs"></i> GPS</button>
                             </div>
                             <div id="cityListOptions" class="max-h-48 overflow-y-auto space-y-0.5 text-xs text-amber-100 font-telugu"></div>
                         </div>
@@ -214,15 +214,15 @@
                     </div>
 
                     <div class="relative">
-                        <button onclick="toggleLangMenu()" class="flex items-center space-x-2 bg-deepMaroon/80 border border-brightGold/50 px-3 py-1.5 rounded-lg text-xs font-semibold text-brightGold">
+                        <button type="button" onclick="toggleLangMenu()" class="flex items-center space-x-2 bg-deepMaroon/80 border border-brightGold/50 px-3 py-1.5 rounded-lg text-xs font-semibold text-brightGold">
                             <i class="fa-solid fa-globe text-saffron"></i>
                             <span id="currentLangLabel">తెలుగు</span>
                             <i class="fa-solid fa-chevron-down text-[10px]"></i>
                         </button>
                         <div id="langDropdown" class="hidden absolute right-0 mt-2 w-32 bg-maroon border border-sacredGold rounded-lg shadow-2xl z-50 overflow-hidden text-amber-50">
-                            <button onclick="changeLanguage('te')" class="w-full text-left px-4 py-2 text-xs text-amber-100 hover:bg-sacredGold/20 font-telugu">తెలుగు</button>
-                            <button onclick="changeLanguage('en')" class="w-full text-left px-4 py-2 text-xs text-amber-100 hover:bg-sacredGold/20 font-sans">English</button>
-                            <button onclick="changeLanguage('hi')" class="w-full text-left px-4 py-2 text-xs text-amber-100 hover:bg-sacredGold/20 font-sans">हिन्दी</button>
+                            <button type="button" onclick="changeLanguage('te')" class="w-full text-left px-4 py-2 text-xs text-amber-100 hover:bg-sacredGold/20 font-telugu">తెలుగు</button>
+                            <button type="button" onclick="changeLanguage('en')" class="w-full text-left px-4 py-2 text-xs text-amber-100 hover:bg-sacredGold/20 font-sans">English</button>
+                            <button type="button" onclick="changeLanguage('hi')" class="w-full text-left px-4 py-2 text-xs text-amber-100 hover:bg-sacredGold/20 font-sans">हिन्दी</button>
                         </div>
                     </div>
 
@@ -236,23 +236,23 @@
             <!-- NAVIGATION TABS -->
             <nav class="bg-deepMaroon border-t border-sacredGold/40 px-2">
                 <div class="max-w-7xl mx-auto flex items-center justify-center sm:justify-start space-x-1 sm:space-x-3 overflow-x-auto py-2">
-                    <button onclick="switchTab('home')" id="tab-home" class="tab-btn active px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold flex items-center whitespace-nowrap">
+                    <button type="button" onclick="switchTab('home')" id="tab-home" class="tab-btn active px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold flex items-center whitespace-nowrap">
                         <i class="fa-solid fa-house-chimney text-base mr-2"></i>
                         <span id="navHome">పంచాంగము (PANCHANGAM)</span>
                     </button>
-                    <button onclick="switchTab('vivaha')" id="tab-vivaha" class="tab-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-amber-200 hover:bg-sacredGold/20 flex items-center whitespace-nowrap">
+                    <button type="button" onclick="switchTab('vivaha')" id="tab-vivaha" class="tab-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-amber-200 hover:bg-sacredGold/20 flex items-center whitespace-nowrap">
                         <i class="fa-solid fa-heart text-base mr-2 text-pink-400"></i>
                         <span id="navVivaha">వివాహ ముహూర్తములు (MARRIAGE DATES)</span>
                     </button>
-                    <button onclick="switchTab('calendar')" id="tab-calendar" class="tab-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-amber-200 hover:bg-sacredGold/20 flex items-center whitespace-nowrap">
+                    <button type="button" onclick="switchTab('calendar')" id="tab-calendar" class="tab-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-amber-200 hover:bg-sacredGold/20 flex items-center whitespace-nowrap">
                         <i class="fa-solid fa-calendar-days text-base mr-2"></i>
                         <span id="navCalendar">మాస క్యాలెండర్ (CALENDAR)</span>
                     </button>
-                    <button onclick="switchTab('festivals')" id="tab-festivals" class="tab-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-amber-200 hover:bg-sacredGold/20 flex items-center whitespace-nowrap">
+                    <button type="button" onclick="switchTab('festivals')" id="tab-festivals" class="tab-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-amber-200 hover:bg-sacredGold/20 flex items-center whitespace-nowrap">
                         <i class="fa-solid fa-om text-base mr-2"></i>
                         <span id="navFestivals">పండుగలు & వ్రతాలు (FESTIVALS)</span>
                     </button>
-                    <button onclick="switchTab('muhurtam')" id="tab-muhurtam" class="tab-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-amber-200 hover:bg-sacredGold/20 flex items-center whitespace-nowrap">
+                    <button type="button" onclick="switchTab('muhurtam')" id="tab-muhurtam" class="tab-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-amber-200 hover:bg-sacredGold/20 flex items-center whitespace-nowrap">
                         <i class="fa-solid fa-clock text-base mr-2"></i>
                         <span id="navMuhurtam">దిన ముహూర్తాలు (TIMINGS)</span>
                     </button>
@@ -278,7 +278,7 @@
                 <div class="flex items-center space-x-2">
                     <label for="panchangDateInput" class="text-xs text-maroon font-bold hidden sm:inline" id="lblChooseDate">తేదీ ఎంచుకోండి:</label>
                     <input type="date" id="panchangDateInput" onchange="onDateChanged(this.value)" class="bg-lightYellow border border-sacredGold text-maroon text-xs sm:text-sm rounded-lg px-3 py-2 outline-none font-bold">
-                    <button onclick="resetToToday()" class="bg-maroon text-brightGold border border-sacredGold px-3 py-2 rounded-lg text-xs font-semibold" id="btnToday">ఈరోజు (Today)</button>
+                    <button type="button" onclick="resetToToday()" class="bg-maroon text-brightGold border border-sacredGold px-3 py-2 rounded-lg text-xs font-semibold" id="btnToday">ఈరోజు (Today)</button>
                 </div>
             </div>
 
@@ -515,14 +515,13 @@
 
                     <!-- Vivaha Muhurtham Filter Tabs -->
                     <div class="flex items-center justify-center space-x-2 border-b border-sacredGold/20 pb-3">
-                        <button onclick="filterMarriageMonth('all')" class="px-3 py-1.5 bg-maroon text-brightGold rounded-lg text-xs font-bold font-telugu">అన్ని ముహూర్తములు</button>
-                        <button onclick="filterMarriageMonth('karthika')" class="px-3 py-1.5 bg-warmGoldBg text-maroon border border-sacredGold rounded-lg text-xs font-bold font-telugu">కార్తీక మాసము</button>
-                        <button onclick="filterMarriageMonth('magha')" class="px-3 py-1.5 bg-warmGoldBg text-maroon border border-sacredGold rounded-lg text-xs font-bold font-telugu">మాఘ మాసము</button>
+                        <button type="button" onclick="filterMarriageMonth('all')" class="px-3 py-1.5 bg-maroon text-brightGold rounded-lg text-xs font-bold font-telugu">అన్ని ముహూర్తములు</button>
+                        <button type="button" onclick="filterMarriageMonth('karthika')" class="px-3 py-1.5 bg-warmGoldBg text-maroon border border-sacredGold rounded-lg text-xs font-bold font-telugu">కార్తీక మాసము</button>
+                        <button type="button" onclick="filterMarriageMonth('magha')" class="px-3 py-1.5 bg-warmGoldBg text-maroon border border-sacredGold rounded-lg text-xs font-bold font-telugu">మాఘ మాసము</button>
                     </div>
 
                     <!-- Muhurtam List Container -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="vivahaMuhurthamContainer">
-                        <!-- Card 1 -->
                         <div class="bg-warmGoldBg p-4 rounded-xl border border-sacredGold space-y-3">
                             <div class="flex items-center justify-between border-b border-sacredGold/30 pb-2">
                                 <span class="text-xs font-bold bg-maroon text-brightGold px-2.5 py-0.5 rounded">2026 నవంబరు 21</span>
@@ -536,7 +535,6 @@
                             </div>
                         </div>
 
-                        <!-- Card 2 -->
                         <div class="bg-warmGoldBg p-4 rounded-xl border border-sacredGold space-y-3">
                             <div class="flex items-center justify-between border-b border-sacredGold/30 pb-2">
                                 <span class="text-xs font-bold bg-maroon text-brightGold px-2.5 py-0.5 rounded">2026 నవంబరు 26</span>
@@ -550,7 +548,6 @@
                             </div>
                         </div>
 
-                        <!-- Card 3 -->
                         <div class="bg-warmGoldBg p-4 rounded-xl border border-sacredGold space-y-3">
                             <div class="flex items-center justify-between border-b border-sacredGold/30 pb-2">
                                 <span class="text-xs font-bold bg-maroon text-brightGold px-2.5 py-0.5 rounded">2026 డిసెంబరు 04</span>
@@ -575,9 +572,9 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div class="lg:col-span-2 maroon-card p-4 sm:p-6 rounded-2xl shadow-md space-y-4">
                         <div class="flex items-center justify-between border-b border-sacredGold/30 pb-4">
-                            <button onclick="changeMonth(-1)" class="p-2 bg-maroon text-brightGold rounded-lg"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button type="button" onclick="changeMonth(-1)" class="p-2 bg-maroon text-brightGold rounded-lg"><i class="fa-solid fa-chevron-left"></i></button>
                             <h3 id="calendarMonthYear" class="text-xl sm:text-2xl font-extrabold text-maroon font-telugu text-glow-dark">కార్తీక మాసం 2026</h3>
-                            <button onclick="changeMonth(1)" class="p-2 bg-maroon text-brightGold rounded-lg"><i class="fa-solid fa-chevron-right"></i></button>
+                            <button type="button" onclick="changeMonth(1)" class="p-2 bg-maroon text-brightGold rounded-lg"><i class="fa-solid fa-chevron-right"></i></button>
                         </div>
 
                         <div class="grid grid-cols-7 gap-1 text-center font-bold text-xs sm:text-sm text-saffron py-2 border-b border-sacredGold/30">
@@ -627,9 +624,9 @@
                             <p class="text-xs text-maroon/80 font-bold font-telugu">ఎంచుకున్న నెల: <span id="lblFestivalCurrentMonth" class="text-saffron">--</span></p>
                         </div>
                         <div class="flex items-center space-x-2">
-                            <button onclick="changeFestivalMonth(-1)" class="p-2 bg-maroon text-brightGold rounded-lg"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button type="button" onclick="changeFestivalMonth(-1)" class="p-2 bg-maroon text-brightGold rounded-lg"><i class="fa-solid fa-chevron-left"></i></button>
                             <span id="lblFestMonthDisplay" class="text-xs font-bold text-maroon font-telugu px-2">--</span>
-                            <button onclick="changeFestivalMonth(1)" class="p-2 bg-maroon text-brightGold rounded-lg"><i class="fa-solid fa-chevron-right"></i></button>
+                            <button type="button" onclick="changeFestivalMonth(1)" class="p-2 bg-maroon text-brightGold rounded-lg"><i class="fa-solid fa-chevron-right"></i></button>
                             <input type="text" id="festSearchInput" onkeyup="filterFestivals()" placeholder="పండుగ పేరు..." class="bg-lightYellow border border-sacredGold text-xs px-3 py-2 rounded-lg text-maroon font-bold">
                         </div>
                     </div>
@@ -711,4 +708,149 @@
         let selectedDate = new Date();
         let activeTab = 'home';
         let calendarYear = selectedDate.getFullYear();
-        let calendarMonth = selectedDate.getMonth
+        let calendarMonth = selectedDate.getMonth();
+        let festivalYear = calendarYear;
+        let festivalMonth = calendarMonth;
+
+        const CITY_DATABASE = [
+            { id: 'hyderabad', name: { te: 'హైదరాబాద్ (Hyderabad)', en: 'Hyderabad', hi: 'हैदराबाद' }, lat: 17.3850, lng: 78.4867, tz: 'Asia/Kolkata' },
+            { id: 'tirupati', name: { te: 'తిరుపతి (Tirupati)', en: 'Tirupati', hi: 'तिरुपति' }, lat: 13.6288, lng: 79.4192, tz: 'Asia/Kolkata' },
+            { id: 'vijayawada', name: { te: 'విజయవాడ (Vijayawada)', en: 'Vijayawada', hi: 'विजयवाड़ा' }, lat: 16.5062, lng: 80.6480, tz: 'Asia/Kolkata' },
+            { id: 'visakhapatnam', name: { te: 'విశాఖపట్నం (Vizag)', en: 'Visakhapatnam', hi: 'विशाखापटनम' }, lat: 17.6868, lng: 83.2185, tz: 'Asia/Kolkata' },
+            { id: 'bengaluru', name: { te: 'బెంగళూరు (Bengaluru)', en: 'Bengaluru', hi: 'बेंगलुरु' }, lat: 12.9716, lng: 77.5946, tz: 'Asia/Kolkata' },
+            { id: 'mumbai', name: { te: 'ముంబై (Mumbai)', en: 'Mumbai', hi: 'मुंबई' }, lat: 19.0760, lng: 72.8777, tz: 'Asia/Kolkata' }
+        ];
+
+        let currentCity = CITY_DATABASE[0];
+
+        const COMPREHENSIVE_FESTIVALS = [
+            { date: '2026-01-15', month: 0, name: { te: 'మకర సంక్రాంతి', en: 'Makara Sankranti', hi: 'मकर संक्रांति' }, desc: { te: 'సూర్యుడు మకర రాశి ప్రవేశం.', en: 'Solar transit into Capricorn.', hi: 'सूर्य का मकर राशि में प्रवेश।' } },
+            { date: '2026-02-15', month: 1, name: { te: 'మహా శివరాత్రి', en: 'Maha Shivaratri', hi: 'महाशिवरात्रि' }, desc: { te: 'లింగోద్భవ సమయ శివారాధన, జాగరణ.', en: 'Holy night of Lord Shiva worship.', hi: 'भगवान शिव की महापूजा।' } },
+            { date: '2026-03-19', month: 2, name: { te: 'ఉగాది (శ్రీ క్రోధి నామ సంవత్సరాది)', en: 'Ugadi', hi: 'युगादि' }, desc: { te: 'తెలుగు నూతన సంవత్సర ప్రారంభం.', en: 'Telugu New Year.', hi: 'तेलुगु नव वर्षोत्सव।' } },
+            { date: '2026-11-08', month: 10, name: { te: 'दीपावली', en: 'Deepavali', hi: 'दीपावली' }, desc: { te: 'కేదారేశ్వర వ్రతం, ధనలక్ష్మీ పూజ.', en: 'Festival of lights.', hi: 'लक्ष्मी पूजन।' } }
+        ];
+
+        window.onload = function() {
+            document.getElementById('panchangDateInput').value = formatDateForInput(selectedDate);
+            renderCityOptions();
+            detectUserGeoLocation();
+            startLiveClock();
+            updatePanchangamData(selectedDate);
+            renderCalendarGrid(calendarYear, calendarMonth);
+            renderFestivalsList();
+        };
+
+        function renderCityOptions() {
+            const container = document.getElementById('cityListOptions');
+            container.innerHTML = '';
+            CITY_DATABASE.forEach(city => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'w-full text-left px-2.5 py-1.5 hover:bg-sacredGold/20 rounded flex items-center justify-between text-xs';
+                btn.onclick = () => selectCity(city);
+                btn.innerHTML = `<span>${city.name[currentLang] || city.name.te}</span>`;
+                container.appendChild(btn);
+            });
+        }
+
+        function toggleLocationMenu() { document.getElementById('locationDropdown').classList.toggle('hidden'); }
+        function selectCity(cityObj) {
+            currentCity = cityObj;
+            document.getElementById('currentLocationName').innerText = cityObj.name[currentLang] || cityObj.name.te;
+            document.getElementById('locationDropdown').classList.add('hidden');
+            updatePanchangamData(selectedDate);
+        }
+
+        function detectUserGeoLocation() {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition((pos) => {
+                    currentCity = {
+                        id: 'custom_gps',
+                        name: { te: 'ప్రస్తుత ప్రాంతం (GPS)', en: 'Current Location', hi: 'वर्तमान स्थान' },
+                        lat: pos.coords.latitude,
+                        lng: pos.coords.longitude,
+                        tz: Intl.DateTimeFormat().resolvedOptions().timeZone
+                    };
+                    document.getElementById('currentLocationName').innerText = currentCity.name[currentLang] || currentCity.name.te;
+                    updatePanchangamData(selectedDate);
+                });
+            }
+        }
+
+        function enterApp() {
+            const splash = document.getElementById('splashScreen');
+            const mainApp = document.getElementById('mainApp');
+            
+            if (splash && mainApp) {
+                splash.classList.add('opacity-0', 'pointer-events-none');
+                mainApp.classList.remove('hidden');
+                setTimeout(() => {
+                    mainApp.classList.remove('opacity-0');
+                    splash.style.display = 'none';
+                }, 500);
+            }
+        }
+
+        function startLiveClock() {
+            setInterval(() => {
+                const clockEl = document.getElementById('headerLiveTime');
+                if(clockEl) clockEl.innerText = new Date().toLocaleTimeString();
+            }, 1000);
+        }
+
+        function formatDateForInput(d) {
+            return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+        }
+
+        function switchTab(tabId) {
+            activeTab = tabId;
+            ['home', 'vivaha', 'calendar', 'festivals', 'muhurtam'].forEach(t => {
+                const sec = document.getElementById(`content-${t}`);
+                const btn = document.getElementById(`tab-${t}`);
+                if (t === tabId) {
+                    if(sec) sec.classList.remove('hidden');
+                    if (btn) btn.classList.add('active');
+                } else {
+                    if(sec) sec.classList.add('hidden');
+                    if (btn) btn.classList.remove('active');
+                }
+            });
+        }
+
+        function updatePanchangamData(d) {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const dateEl = document.getElementById('displayFullDate');
+            if(dateEl) dateEl.innerText = d.toLocaleDateString('te-IN', options);
+        }
+
+        function renderCalendarGrid(yr, mo) {
+            const grid = document.getElementById('calendarGrid');
+            if(!grid) return;
+            grid.innerHTML = '';
+            const daysInMonth = new Date(yr, mo + 1, 0).getDate();
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateCell = document.createElement('div');
+                dateCell.className = 'h-14 p-1 rounded-lg border bg-warmGoldBg border-sacredGold/40 text-maroon flex flex-col justify-between items-center cursor-pointer';
+                dateCell.innerHTML = `<span class="text-xs font-bold">${day}</span><span class="text-[9px] text-saffron">తిథి ${((day % 15) + 1)}</span>`;
+                grid.appendChild(dateCell);
+            }
+        }
+
+        function renderFestivalsList() {
+            const container = document.getElementById('festivalsContainer');
+            if(!container) return;
+            container.innerHTML = '';
+            COMPREHENSIVE_FESTIVALS.forEach(fest => {
+                const card = document.createElement('div');
+                card.className = 'bg-warmGoldBg p-4 rounded-xl border border-sacredGold/40 space-y-2';
+                card.innerHTML = `<h4 class="text-base font-bold text-maroon font-telugu">${fest.name.te}</h4><p class="text-xs text-maroon/90 font-telugu">${fest.desc.te}</p>`;
+                container.appendChild(card);
+            });
+        }
+
+        function filterMarriageMonth(type) {
+            // Marriage filter implementation
+        }
+    </script>
+</body>
+</html>
