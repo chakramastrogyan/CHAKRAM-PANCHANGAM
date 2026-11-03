@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chakram Astrogyan - Vaidic Panchangam</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              100: '#fffbeb',
+              200: '#fef3c7',
+              300: '#fde047',
+              400: '#facc15',
+              500: '#eab308',
+              600: '#ca8a04',
+              700: '#a16207',
+            },
+            crimson: {
+              50: '#fdf2f2',
+              100: '#fde8e8',
+              200: '#fbd5d5',
+              500: '#f05252',
+              600: '#e02424',
+              700: '#c81e1e',
+              800: '#9b1c1c',
+              900: '#771d1d',
+            }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffaf0;
+      color: #1f2937;
+      overflow-x: hidden;
+    }
+    
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #92400e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-border-glow {
+      box-shadow: 0 0 15px rgba(234, 179, 8, 0.3);
+      border: 1px solid rgba(234, 179, 8, 0.5);
+    }
+
+    .gold-button {
+      background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+      color: #771d1d;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      border: 1px solid #ca8a04;
+    }
+    
+    .gold-button:hover {
+      background: linear-gradient(135deg, #fde047 0%, #facc15 100%);
+      box-shadow: 0 0 15px rgba(234, 179, 8, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #fffaf0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #facc15;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #eab308;
+    }
+
+    /* Cosmic background glowing effect */
+    .cosmic-bg {
+      background: radial-gradient(circle at 50% 30%, #fff7ed 0%, #fffaf0 70%);
+    }
+
+    /* Accordion animation transition */
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+    }
+
+    .accordion-open {
+      max-height: 1200px;
+      transition: max-height 0.5s ease-in;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between bg-amber-50/40">
+
+  <!-- ================= LANDING SCREEN ================= -->
+  <div id="landingScreen" class="fixed inset-0 z-50 flex flex-col items-center justify-center p-6 bg-gradient-to-b from-amber-100 via-rose-50 to-white transition-opacity duration-700">
+    <div class="text-center max-w-xl mx-auto flex flex-col items-center">
+      
+      <!-- Logo Render (SVG Astro-Compass matching uploaded image concept) -->
+      <div class="relative w-48 h-48 sm:w-64 sm:h-64 mb-8 flex items-center justify-center">
+        <div class="absolute inset-0 rounded-full border-4 border-amber-500/30 animate-pulse"></div>
+        <div class="absolute inset-2 rounded-full border-2 border-dashed border-amber-400/50"></div>
+        
+        <!-- SVG Metallic Astro Compass Logo -->
+        <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-[0_0_20px_rgba(217,119,6,0.5)]">
+          <defs>
+            <radialGradient id="goldGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#fef08a" />
+              <stop offset="50%" stop-color="#eab308" />
+              <stop offset="100%" stop-color="#a16207" />
+            </radialGradient>
+            <radialGradient id="centerGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="70%" stop-color="#fde047" />
+              <stop offset="100%" stop-color="#ca8a04" />
+            </radialGradient>
+          </defs>
+
+          <!-- Outer Ring -->
+          <circle cx="100" cy="100" r="92" fill="none" stroke="url(#goldGrad)" stroke-width="6" />
+          <circle cx="100" cy="100" r="82" fill="none" stroke="url(#goldGrad)" stroke-width="2" />
+          <circle cx="100" cy="100" r="76" fill="#fffbeb" stroke="url(#goldGrad)" stroke-width="1.5" />
+
+          <!-- Outer Spheres/Nodes -->
+          <circle cx="100" cy="12" r="7" fill="url(#goldGrad)" />
+          <circle cx="100" cy="188" r="7" fill="url(#goldGrad)" />
+          <circle cx="12" cy="100" r="7" fill="url(#goldGrad)" />
+          <circle cx="188" cy="100" r="7" fill="url(#goldGrad)" />
+
+          <!-- Inner Zodiac Dots -->
+          <circle cx="100" cy="100" r="62" fill="none" stroke="#eab308" stroke-dasharray="2, 6" stroke-width="2" />
+
+          <!-- 8-Point Compass Star -->
+          <g fill="url(#goldGrad)">
+            <!-- Main Verticals/Horizontals -->
+            <polygon points="100,28 106,94 100,100 94,94" />
+            <polygon points="100,172 106,106 100,100 94,106" />
+            <polygon points="28,100 94,94 100,100 94,106" />
+            <polygon points="172,100 106,94 100,100 106,106" />
+            <!-- Diagonals -->
+            <polygon points="49,49 95,95 100,100 95,100" opacity="0.85"/>
+            <polygon points="151,49 105,95 100,100 100,95" opacity="0.85"/>
+            <polygon points="49,151 95,105 100,100 95,100" opacity="0.85"/>
+            <polygon points="151,151 105,105 100,100 100,105" opacity="0.85"/>
+          </g>
+
+          <!-- Center Glowing Sun -->
+          <circle cx="100" cy="100" r="12" fill="url(#centerGrad)" class="shadow-lg" />
+          <circle cx="100" cy="100" r="5" fill="#ffffff" />
+        </svg>
+      </div>
+
+      <!-- Title & Subtitle -->
+      <h1 class="font-cinzel text-3xl sm:text-5xl font-extrabold tracking-wider gold-gradient-text mb-1">
+        CHAKRAM ASTROGYAN
+      </h1>
+      <p class="font-cinzel text-xs sm:text-sm tracking-widest text-crimson-700 font-bold uppercase mb-2" style="font-size: 25%;">
+        Vaidic Panchangam
+      </p>
+      <p class="text-xs text-amber-800 font-semibold mb-8">
+        Shanker Sharma - Astrologer
+      </p>
+
+      <!-- Enter Button -->
+      <button onclick="enterHomePage()" class="gold-button px-10 py-3.5 rounded-full text-base sm:text-lg tracking-wider font-cinzel shadow-xl cursor-pointer flex items-center space-x-3">
+        <span>ENTER PANCHANGAM</span>
+        <i class="fa-solid fa-om text-lg"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= MAIN APP WRAPPER ================= -->
+  <div id="mainApp" class="hidden flex-col min-h-screen">
+
+    <!-- HEADER SECTION (TOP BAR) -->
+    <header class="bg-gradient-to-r from-amber-100 via-rose-50 to-amber-100 border-b border-amber-300 shadow-sm sticky top-0 z-40 px-4 sm:px-8 py-3">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        
+        <!-- Header Left: Language Selector & Astrology Link -->
+        <div class="flex items-center space-x-3">
+          <!-- Multi-language Dropdown -->
+          <div class="relative inline-block">
+            <div class="flex items-center bg-white border border-amber-400 rounded-lg px-3 py-1.5 text-xs sm:text-sm text-amber-900 shadow-sm">
+              <i class="fa-solid fa-globe text-amber-600 mr-2"></i>
+              <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-transparent text-amber-950 font-medium focus:outline-none cursor-pointer pr-1">
+                <option value="te">తెలుగు (Telugu)</option>
+                <option value="en">English</option>
+                <option value="hi">हिन्दी (Hindi)</option>
+                <option value="ta">தமிழ் (Tamil)</option>
+                <option value="kn">ಕನ್ನಡ (Kannada)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Astrology Website Button -->
+          <a href="https://chakramastrogyan.github.io/my-website/" target="_blank" rel="noopener noreferrer" class="gold-button px-3.5 py-1.5 rounded-lg text-xs sm:text-sm flex items-center space-x-1.5 shadow-md">
+            <span>Astrology</span>
+            <i class="fa-solid fa-up-right-from-square text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Header Center: Logo + Brand Name & Subtitle & Astrologer Details -->
+        <div class="flex items-center space-x-3 text-center md:text-left">
+          <div class="w-12 h-12 relative flex-shrink-0">
+            <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-[0_0_8px_rgba(217,119,6,0.4)]">
+              <circle cx="100" cy="100" r="90" fill="#fffef0" stroke="#ca8a04" stroke-width="8" />
+              <polygon points="100,20 108,92 100,100 92,92" fill="#ca8a04" />
+              <polygon points="100,180 108,108 100,100 92,108" fill="#ca8a04" />
+              <polygon points="20,100 92,92 100,100 92,108" fill="#ca8a04" />
+              <polygon points="180,100 108,92 100,100 108,108" fill="#ca8a04" />
+              <circle cx="100" cy="100" r="16" fill="#facc15" />
+            </svg>
+          </div>
+          <div>
+            <h1 class="font-cinzel text-lg sm:text-2xl font-bold gold-gradient-text leading-tight">
+              CHAKRAM ASTROGYAN
+            </h1>
+            <p class="font-cinzel text-[10px] text-crimson-700 font-bold tracking-wider uppercase" style="font-size: 25%;">
+              Vaidic Panchangam
+            </p>
+            <div class="text-xs text-amber-900 font-semibold tracking-wide mt-0.5">
+              Shanker Sharma - <span id="lblProfession">Astrologer</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- LINE BREAK 1: HEADER SEPARATOR -->
+    <div class="border-b border-amber-300 w-full"></div>
+
+    <!-- NAVIGATION BUTTONS SECTION (HOME, FESTIVALS, CALENDAR, MUHURTHAM) -->
+    <nav class="bg-amber-100/70 py-3.5 px-4 sm:px-8 border-b border-amber-200">
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-3">
+        <button id="btnHomeTab" onclick="switchTab('home')" class="gold-button px-6 py-2 rounded-full text-sm font-cinzel tracking-wider flex items-center space-x-2 shadow-md cursor-pointer">
+          <i class="fa-solid fa-house"></i>
+          <span id="txtTabHome">Home</span>
+        </button>
+
+        <button id="btnFestivalsTab" onclick="switchTab('festivals')" class="bg-white hover:bg-amber-50 text-amber-900 border border-amber-400 px-6 py-2 rounded-full text-sm font-cinzel tracking-wider flex items-center space-x-2 transition cursor-pointer shadow-sm">
+          <i class="fa-solid fa-calendar-day text-crimson-600"></i>
+          <span id="txtTabFestivals">Festivals</span>
+        </button>
+
+        <button id="btnCalendarTab" onclick="switchTab('calendar')" class="bg-white hover:bg-amber-50 text-amber-900 border border-amber-400 px-6 py-2 rounded-full text-sm font-cinzel tracking-wider flex items-center space-x-2 transition cursor-pointer shadow-sm">
+          <i class="fa-solid fa-calendar-days text-crimson-600"></i>
+          <span id="txtTabCalendar">Calendar</span>
+        </button>
+
+        <button id="btnMuhurthamTab" onclick="switchTab('muhurtham')" class="bg-white hover:bg-amber-50 text-amber-900 border border-amber-400 px-6 py-2 rounded-full text-sm font-cinzel tracking-wider flex items-center space-x-2 transition cursor-pointer shadow-sm">
+          <i class="fa-solid fa-clock text-crimson-600"></i>
+          <span id="txtTabMuhurtham">Muhurtham</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- LINE BREAK 2: NAVIGATION SEPARATOR -->
+    <div class="border-b border-amber-300 w-full"></div>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-8 py-8 flex-1 w-full space-y-8">
+
+      <!-- DYNAMIC LOCATION & TIME BAR -->
+      <div class="bg-white border border-amber-300 rounded-2xl p-4 mb-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm shadow-md">
+        <div class="flex items-center space-x-2 text-amber-900 font-medium">
+          <i class="fa-solid fa-location-dot text-base text-crimson-600 animate-bounce"></i>
+          <span id="lblLocation">Location: Dynamic (Auto-Detecting...)</span>
+          <button onclick="detectLocation()" class="ml-2 text-xs text-crimson-700 underline font-bold" id="lblRefreshLoc">(Refresh Location)</button>
+        </div>
+        <div class="flex items-center space-x-4 text-amber-950 font-medium">
+          <div><i class="fa-regular fa-clock text-amber-600 mr-1"></i> <span id="lblLiveTime">--:--:--</span></div>
+          <div><i class="fa-solid fa-earth-asia text-amber-600 mr-1"></i> IST (UTC+5:30)</div>
+        </div>
+      </div>
+
+
+      <!-- ================= VIEW 1: PANCHANGAM (HOME) ================= -->
+      <div id="viewHome" class="space-y-8">
+        
+        <!-- CARD 1: TODAY'S DATE & SAMVATSARA / MASAM / DASHA / SUNRISE & SUNSET -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-amber-300 shadow-xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-amber-400/10 rounded-full blur-2xl pointer-events-none"></div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+            
+            <!-- Date & Year -->
+            <div class="space-y-2 text-center lg:text-left">
+              <span id="lblVedicDateHeader" class="inline-block px-3 py-1 bg-rose-100 text-crimson-800 rounded-full text-xs font-bold uppercase tracking-widest border border-rose-200">
+                Today's Vedic Date
+              </span>
+              <h2 id="lblGregorianDate" class="text-2xl sm:text-3xl font-bold text-amber-950 font-cinzel">
+                Loading Date...
+              </h2>
+              <div class="text-amber-700 font-bold text-lg" id="lblSamvatsara">
+                Sri Krodhi Nama Samvatsaram
+              </div>
+              <div class="text-amber-900 text-sm font-medium" id="lblMasam">
+                Karthika Masam - Dakshinayanam
+              </div>
+            </div>
+
+            <!-- Dasha / Current Period -->
+            <div class="bg-amber-50/80 p-4 rounded-xl border border-amber-300 text-center space-y-1">
+              <div id="lblDashaHeader" class="text-xs text-crimson-800 font-cinzel font-bold uppercase tracking-wider">Current Dasha & Planetary Period</div>
+              <div id="lblDashaDetails" class="text-base font-bold text-amber-950">
+                Mahadasha: Guru (Jupiter) | Antardasha: Shukra
+              </div>
+              <div id="lblSiderealNote" class="text-xs text-amber-800">Calculated based on Vaidic Sidereal Position</div>
+            </div>
+
+            <!-- Sunrise & Sunset Timings -->
+            <div class="flex justify-around items-center bg-rose-50/70 p-4 rounded-xl border border-rose-200">
+              <div class="text-center space-y-1">
+                <i class="fa-solid fa-sun text-2xl text-amber-500"></i>
+                <div id="lblSunriseTitle" class="text-xs text-amber-900 font-medium">Sunrise (సూర్యోదయం)</div>
+                <div id="lblSunrise" class="font-bold text-crimson-800 text-sm sm:text-base">06:18 AM</div>
+              </div>
+              <div class="h-10 w-px bg-amber-300"></div>
+              <div class="text-center space-y-1">
+                <i class="fa-solid fa-moon text-2xl text-rose-500"></i>
+                <div id="lblSunsetTitle" class="text-xs text-amber-900 font-medium">Sunset (సూర్యాస్తమయం)</div>
+                <div id="lblSunset" class="font-bold text-crimson-800 text-sm sm:text-base">05:42 PM</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SECTION BREAK -->
+        <div class="flex items-center justify-center space-x-4 opacity-70">
+          <div class="h-px bg-amber-400 flex-1"></div>
+          <i class="fa-solid fa-star text-amber-600 text-xs"></i>
+          <div class="h-px bg-amber-400 flex-1"></div>
+        </div>
+
+        <!-- CARD 2: KARNAM, PAKSHAM, VARAM -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white p-5 rounded-xl border border-amber-300 shadow-md text-center">
+            <div id="lblPakshamHeader" class="text-xs text-crimson-800 font-cinzel font-bold mb-1">PAKSHAM (పక్షం)</div>
+            <div id="lblPaksham" class="text-lg font-bold text-amber-950">Shukla Paksham</div>
+          </div>
+          <div class="bg-white p-5 rounded-xl border border-amber-300 shadow-md text-center">
+            <div id="lblVaramHeader" class="text-xs text-crimson-800 font-cinzel font-bold mb-1">VARAM (వారం)</div>
+            <div id="lblVaram" class="text-lg font-bold text-amber-950">Indu Varam (Monday)</div>
+          </div>
+          <div class="bg-white p-5 rounded-xl border border-amber-300 shadow-md text-center">
+            <div id="lblKarnamHeader" class="text-xs text-crimson-800 font-cinzel font-bold mb-1">KARNAM (కరణం)</div>
+            <div id="lblKarnam" class="text-lg font-bold text-amber-950">Bava (Till 04:15 PM)</div>
+          </div>
+        </div>
+
+        <!-- SHUBA PHALAM & ASHUBA KALAM BOXES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- SHUBA PHALAM BOX -->
+          <div class="bg-white rounded-2xl p-6 border-l-4 border-l-emerald-600 border border-amber-300 shadow-xl space-y-4">
+            <div class="flex items-center space-x-3 text-emerald-700 font-cinzel font-bold text-lg border-b border-amber-200 pb-3">
+              <i class="fa-solid fa-circle-check text-xl"></i>
+              <span id="lblShubaTitle">SHUBA PHALAM (శుభ ఫలం)</span>
+            </div>
+            
+            <div class="space-y-3">
+              <div class="bg-emerald-50/70 p-3.5 rounded-lg flex justify-between items-center border border-emerald-200">
+                <div>
+                  <div id="lblAmrudhaTitle" class="text-sm font-bold text-emerald-950">Amrudha Kalam (అమృత కాలం)</div>
+                  <div id="lblAmrudhaSub" class="text-xs text-emerald-800">Auspicious period for new beginnings</div>
+                </div>
+                <div id="lblAmrudha" class="text-sm font-bold text-emerald-800 bg-white px-3 py-1 rounded-md border border-emerald-300 shadow-sm">
+                  07:24 AM - 08:58 AM
+                </div>
+              </div>
+
+              <div class="bg-emerald-50/70 p-3.5 rounded-lg flex justify-between items-center border border-emerald-200">
+                <div>
+                  <div id="lblBrahmaTitle" class="text-sm font-bold text-emerald-950">Brahma Murtham (బ్రహ్మ ముహూర్తం)</div>
+                  <div id="lblBrahmaSub" class="text-xs text-emerald-800">Best timing for meditation & prayer</div>
+                </div>
+                <div id="lblBrahma" class="text-sm font-bold text-emerald-800 bg-white px-3 py-1 rounded-md border border-emerald-300 shadow-sm">
+                  04:42 AM - 05:30 AM
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ASHUBA KALAM BOX -->
+          <div class="bg-white rounded-2xl p-6 border-l-4 border-l-rose-600 border border-amber-300 shadow-xl space-y-4">
+            <div class="flex items-center space-x-3 text-rose-700 font-cinzel font-bold text-lg border-b border-amber-200 pb-3">
+              <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+              <span id="lblAshubaTitle">ASHUBA KALAM (అశుభ కాలం)</span>
+            </div>
+
+            <div class="space-y-3">
+              <div class="bg-rose-50/70 p-3.5 rounded-lg flex justify-between items-center border border-rose-200">
+                <div>
+                  <div id="lblRahuTitle" class="text-sm font-bold text-rose-950">Rahu Kalam (రాహు కాలం)</div>
+                  <div id="lblRahuSub" class="text-xs text-rose-800">Inauspicious for major work</div>
+                </div>
+                <div id="lblRahu" class="text-sm font-bold text-rose-800 bg-white px-3 py-1 rounded-md border border-rose-300 shadow-sm">
+                  07:45 AM - 09:12 AM
+                </div>
+              </div>
+
+              <div class="bg-rose-50/70 p-3.5 rounded-lg flex justify-between items-center border border-rose-200">
+                <div>
+                  <div id="lblYamaTitle" class="text-sm font-bold text-rose-950">Yama Gandam (యమగండం)</div>
+                  <div id="lblYamaSub" class="text-xs text-rose-800">Avoid starting important journeys</div>
+                </div>
+                <div id="lblYama" class="text-sm font-bold text-rose-800 bg-white px-3 py-1 rounded-md border border-rose-300 shadow-sm">
+                  10:38 AM - 12:05 PM
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SECTION BREAK -->
+        <div class="flex items-center justify-center space-x-4 opacity-70">
+          <div class="h-px bg-amber-400 flex-1"></div>
+          <i class="fa-solid fa-om text-amber-600 text-xs"></i>
+          <div class="h-px bg-amber-400 flex-1"></div>
+        </div>
+
+        <!-- TWO EXPANDABLE / INTERACTIVE BOXES (HOROSCOPE DETAILS & VEDA SASTRA IMPORTANCE) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+          <!-- BOX 1: HOROSCOPE DETAILS (EXPANDABLE) -->
+          <div class="bg-white rounded-2xl border border-amber-300 shadow-xl overflow-hidden">
+            <button onclick="toggleAccordion('accHoroscope')" class="w-full p-6 text-left flex items-center justify-between bg-amber-50 hover:bg-amber-100/60 transition cursor-pointer">
+              <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-chart-pie text-crimson-600 text-xl"></i>
+                <span id="lblHoroscopeHeader" class="font-cinzel font-bold text-lg text-amber-950">Horoscope Details (రాశి ఫలాలు)</span>
+              </div>
+              <i id="accHoroscopeIcon" class="fa-solid fa-chevron-down text-amber-700 transition-transform duration-300"></i>
+            </button>
+
+            <div id="accHoroscope" class="accordion-content">
+              <div class="p-6 border-t border-amber-200 space-y-4">
+                <p id="lblSelectRasiPrompt" class="text-xs text-amber-900 font-medium">Select your Rasi (Zodiac Sign) to view detailed daily prediction:</p>
+
+                <!-- Rasi Selector Buttons -->
+                <div class="grid grid-cols-3 sm:grid-cols-4 gap-2" id="rasiBtnContainer">
+                  <!-- Dynamically populated per language -->
+                </div>
+
+                <!-- Displayed Rasi Result -->
+                <div id="rasiOutputBox" class="bg-amber-50 p-4 rounded-xl border border-amber-300 space-y-2 mt-4 shadow-sm">
+                  <div id="selectedRasiTitle" class="font-cinzel text-base font-bold text-crimson-800">
+                    Mesham (Aries)
+                  </div>
+                  <p id="selectedRasiText" class="text-xs sm:text-sm text-amber-950 leading-relaxed font-medium">
+                    Today brings favorable planetary support for career advancements and family harmony.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- BOX 2: TODAY'S IMPORTANCE ACCORDING TO VEDA SASTRA & FESTIVALS -->
+          <div class="bg-white rounded-2xl border border-amber-300 shadow-xl overflow-hidden">
+            <div class="p-6 bg-amber-50 border-b border-amber-200 flex items-center space-x-3">
+              <i class="fa-solid fa-scroll text-crimson-600 text-xl"></i>
+              <span id="lblVedaImportanceHeader" class="font-cinzel font-bold text-lg text-amber-950">Today's Importance & Veda Sastra</span>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <div class="bg-rose-50/60 p-4 rounded-xl border border-rose-200 space-y-2">
+                <div id="lblVedicSubHeader" class="text-xs text-crimson-800 font-cinzel font-bold uppercase tracking-wider">Vedic Significance & Rituals</div>
+                <h3 id="lblVedicTitle" class="font-bold text-amber-950 text-sm sm:text-base">
+                  Karthika Somavaram & Special Ekadashi Vratam
+                </h3>
+                <p id="lblVedicDesc" class="text-xs sm:text-sm text-amber-900 leading-relaxed font-medium">
+                  According to ancient Veda Sastras, performing Abhishekam for Lord Shiva today bestows peace and spiritual enlightenment.
+                </p>
+              </div>
+
+              <div class="flex items-center space-x-2 text-xs text-crimson-800 font-bold">
+                <i class="fa-solid fa-sun-plant-wilt text-amber-600"></i>
+                <span id="lblDeityWorship">Deity Worship: Lord Shiva & Goddess Lakshmi</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SECTION BREAK -->
+        <div class="flex items-center justify-center space-x-4 opacity-70">
+          <div class="h-px bg-amber-400 flex-1"></div>
+          <i class="fa-solid fa-dharmachakra text-amber-600 text-xs"></i>
+          <div class="h-px bg-amber-400 flex-1"></div>
+        </div>
+
+        <!-- GRAHA POSITIONS (PLANETARY ALIGNMENTS) - EXPANDABLE -->
+        <div class="bg-white rounded-2xl border border-amber-300 shadow-xl overflow-hidden">
+          <button onclick="toggleAccordion('accGraha')" class="w-full p-6 text-left flex items-center justify-between bg-amber-50 hover:bg-amber-100/60 transition cursor-pointer">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-globe-asia text-crimson-600 text-xl"></i>
+              <span id="lblGrahaHeader" class="font-cinzel font-bold text-lg text-amber-950">Graha Places & Planetary Alignments (గ్రహ స్థానాలు)</span>
+            </div>
+            <i id="accGrahaIcon" class="fa-solid fa-chevron-down text-amber-700 transition-transform duration-300"></i>
+          </button>
+
+          <div id="accGraha" class="accordion-content">
+            <div class="p-6 border-t border-amber-200">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="grahaGrid">
+                <!-- Dynamically populated Graha Positions -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= VIEW 2: FESTIVALS VIEW ================= -->
+      <div id="viewFestivals" class="hidden space-y-8">
+        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-amber-300 shadow-xl space-y-6">
+          <div class="border-b border-amber-200 pb-4 flex items-center justify-between">
+            <div>
+              <h2 id="lblFestivalsTitle" class="font-cinzel text-xl sm:text-2xl font-bold gold-gradient-text">
+                Current Month Festivals & Vaidec Significance
+              </h2>
+              <p id="lblFestivalsSubtitle" class="text-xs text-amber-900 mt-1 font-medium">As per Vaidec Panchangam traditions</p>
+            </div>
+            <i class="fa-solid fa-kaaba text-crimson-600 text-2xl"></i>
+          </div>
+
+          <!-- Festival Cards Container -->
+          <div id="festivalsContainer" class="space-y-4">
+            <!-- Dynamic Festivals Loaded Here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW 3: VAIDIC CALENDAR VIEW ================= -->
+      <div id="viewCalendar" class="hidden space-y-8">
+        <!-- VAIDIC TELUGU MODEL CALENDAR GRID -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-amber-300 shadow-xl space-y-6">
+          
+          <!-- Month Header Controls -->
+          <div class="flex items-center justify-between border-b border-amber-200 pb-4">
+            <button onclick="changeCalMonth(-1)" class="bg-amber-100 hover:bg-amber-200 text-amber-950 font-bold p-2.5 rounded-lg border border-amber-400 text-sm flex items-center space-x-1 shadow-sm">
+              <i class="fa-solid fa-chevron-left"></i>
+              <span class="hidden sm:inline" id="lblPrevMonth">Prev</span>
+            </button>
+            <div class="text-center">
+              <h2 id="lblCalMonthYear" class="font-cinzel text-lg sm:text-2xl font-bold gold-gradient-text">
+                November 2026
+              </h2>
+              <p id="lblCalVedicMonth" class="text-xs text-crimson-800 font-bold mt-0.5">
+                Karthika Masam - Dakshinayanam
+              </p>
+            </div>
+            <button onclick="changeCalMonth(1)" class="bg-amber-100 hover:bg-amber-200 text-amber-950 font-bold p-2.5 rounded-lg border border-amber-400 text-sm flex items-center space-x-1 shadow-sm">
+              <span class="hidden sm:inline" id="lblNextMonth">Next</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <!-- Calendar Days of Week Header -->
+          <div class="grid grid-cols-7 gap-1 text-center font-cinzel text-xs font-bold text-crimson-800 border-b border-amber-200 pb-2">
+            <div>ఆది (Sun)</div>
+            <div>సోమ (Mon)</div>
+            <div>మంగళ (Tue)</div>
+            <div>బుధ (Wed)</div>
+            <div>గురు (Thu)</div>
+            <div>శుక్ర (Fri)</div>
+            <div>శని (Sat)</div>
+          </div>
+
+          <!-- Calendar Days Grid -->
+          <div class="grid grid-cols-7 gap-1 sm:gap-2" id="calGrid">
+            <!-- Dynamically Rendered Calendar Days -->
+          </div>
+        </div>
+
+        <!-- SELECTED DATE DETAILED PANCHANGAM BOX -->
+        <div class="bg-white rounded-2xl p-6 border border-amber-300 shadow-xl space-y-6">
+          <div class="flex items-center space-x-3 border-b border-amber-200 pb-3">
+            <i class="fa-solid fa-star-of-david text-crimson-600 text-xl"></i>
+            <h3 id="lblSelectedDateHeader" class="font-cinzel text-lg font-bold text-amber-950">Selected Date Panchangam Details</h3>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4" id="calSelectedDateDetails">
+            <!-- Dynamically Populated Date Details -->
+          </div>
+        </div>
+
+        <!-- DAILY RASHI CHART (SOUTH INDIAN STYLE KUNDALI) -->
+        <div class="bg-white rounded-2xl p-6 border border-amber-300 shadow-xl space-y-6">
+          <div class="flex items-center justify-between border-b border-amber-200 pb-3">
+            <div>
+              <h3 id="lblRasiChartTitle" class="font-cinzel text-lg sm:text-xl font-bold gold-gradient-text">Daily Vedic Rashi Chart</h3>
+              <p id="lblRasiChartSubtitle" class="text-xs text-amber-900 font-medium">South Indian Sidereal Layout</p>
+            </div>
+            <i class="fa-solid fa-chart-line text-crimson-600 text-2xl"></i>
+          </div>
+
+          <!-- 4x4 Grid South Indian Rasi Chart -->
+          <div class="max-w-md mx-auto aspect-square grid grid-cols-4 grid-rows-4 gap-1 p-2 bg-amber-100 border-2 border-amber-400 rounded-xl shadow-inner">
+            <!-- Row 1 -->
+            <div id="house_Meenam" class="bg-white border border-amber-300 rounded p-1.5 flex flex-col justify-between text-[10px] relative overflow-hidden shadow-sm">
+              <span class="text-crimson-800 font-bold font-cinzel">మీనం (Pisces)</span>
+              <div id="planets_Meenam" class="text-xs font-semibold text-emerald-800 flex flex-wrap gap-1 mt-1"></div>
+            </div>
+            <div id="house_Mesham" class="bg-white border border-amber-300 rounded p-1.5 flex flex-col justify-between text-[10px] relative overflow-hidden shadow-sm">
+              <span class="text-crimson-800 font-bold font-cinzel">మేషం (Aries)</span>
+              <div id="planets_Mesham" class="text-xs font-semibold text-emerald-800 flex flex-wrap gap-1 mt-1"></div>
+            </div>
+            <div id="house_Vrushabham" class="bg-white border border-amber-300 rounded p-1.5 flex flex-col justify-between text-[10px] relative overflow-hidden shadow-sm">
+              <span class="text-crimson-800 font-bold font-cinzel">వృషభం (Taurus)</span>
+              <div id="planets_Vrushabham" class="text-xs font-semibold text-emerald-800 flex flex-wrap gap-1 mt-1"></div>
+            </div>
+            <div id="house_Mithunam" class="bg-white border border-amber-300 rounded p-1.5 flex flex-col justify-between text-[10px] relative overflow-hidden shadow-sm">
+              <span class="text-crimson-800 font-bold font-cinzel">మిథునం (Gemini)</span>
+              <div id="planets_Mithunam" class="text-xs font-semibold text-emerald-800 flex flex-wrap gap-1 mt-1"></div>
+            </div>
+
+            <!-- Row 2 -->
+            <div id="house_Kumbham" class="bg-white border border-amber-300 rounded p-1.5 flex flex-col justify-between text-[10px] relative overflow-hidden shadow-sm">
+              <span class="text-crimson-800 font-bold font-cinzel">కుంభం (Aquarius)</span>
+              <div id="planets_Kumbham" class="text-xs font-semibold text-emerald-800 flex flex-wrap gap-1 mt-1"></div>
+            </div>
+            <div class="col-span-2 row-span-2 bg-rose-50 border border-amber-300 rounded flex flex-col items-center justify-center p-2 text-center">
+              <div class="w-10 h-10 mb-1 opacity-90">
+                <svg viewBox="0 0 200 200" class="w-full h-full"><circle cx="100" cy="100" r="90" fill="none" stroke="#ca8a04" stroke-width="6"/><polygon points="100,20 108,92 100,100 92,92" fill="#ca8a04"/><circle cx="100" cy="100" r="16" fill="#facc15"/></svg>
+              </div>
+              <span class="font-cinzel text-xs font-bold gold-gradient-text" id="lblCenterChartText">Rashi Chakra</span>
+              <span class="text-[9px] text-amber-900 font-semibold mt-1" id="lblChartDateDisplay">Nov 2, 2026</span>
+            </div>
+            <div id="house_Karkatakam" class="bg-white border border-amber-300 rounded p-1.5 flex flex-col justify-between text-[10px] relative overflow-hidden shadow-sm">
+              <span class="text-crimson-800 font-bold font-cinzel">కర్కాటకం (Cancer)</span>
+              <div id="planets_Karkatakam" class="text-xs font-semibold text-emerald-800 flex flex-wrap gap-1 mt-1"></div>
+            </div>
+
+            <!-- Row 3 -->
+            <div id="house_Makaram" class="bg-white border border-amber-300 rounded p-1.5 flex flex-col justify-between text-[10px] relative overflow-hidden shadow-sm">
+              <span class="text-crimson-800 font-bold font-cinzel">మకరం (Capricorn)</span>
+              <div id="planets_Makaram" class="text-xs font-semibold text-emerald-800 flex flex-wrap gap-1 mt-1"></div>
+            </div>
+            <div id="house_Simham" class="bg-white border border-amber-300 rounded p-1.5 flex flex-col justify-between text-[10px] relative overflow-hidden shadow-sm">
+              <span class="text-crimson-800 font-bold font-cinzel">సింహం (Leo)</span>
+              <div id="planets_Simham" class="text-xs font-semibold text-emerald-800 flex flex-wrap gap-1 mt-1"></div>
+            </div>
+
+            <!-- Row 4 -->
+            <div id="house_Dhanussu" class="bg-white border border-amber-300 rounded p-1.5 flex flex-col justify-between text-[10px] relative overflow-hidden shadow-sm">
+              <span class="text-crimson-800 font-bold font-cinzel">ధనుస్సు (Sagittarius)</span>
+              <div id="planets_Dhanussu" class="text-xs font-semibold text-emerald-800 flex flex-wrap gap-1 mt-1"></div>
+            </div>
+            <div id="house_Vruschikam" class="bg-white border border-amber-300 rounded p-1.5 flex flex-col justify-between text-[10px] relative overflow-hidden shadow-sm">
+              <span class="text-crimson-800 font-bold font-cinzel">వృశ్చికం (Scorpio)</span>
+              <div id="planets_Vruschikam" class="text-xs font-semibold text-emerald-800 flex flex-wrap gap-1 mt-1"></div>
+            </div>
+            <div id="house_Thula" class="bg-white border border-amber-300 rounded p-1.5 flex flex-col justify-between text-[10px] relative overflow-hidden shadow-sm">
+              <span class="text-crimson-800 font-bold font-cinzel">తులా (Libra)</span>
+              <div id="planets_Thula" class="text-xs font-semibold text-emerald-800 flex flex-wrap gap-1 mt-1"></div>
+            </div>
+            <div id="house_Kanya" class="bg-white border border-amber-300 rounded p-1.5 flex flex-col justify-between text-[10px] relative overflow-hidden shadow-sm">
+              <span class="text-crimson-800 font-bold font-cinzel">కన్య (Virgo)</span>
+              <div id="planets_Kanya" class="text-xs font-semibold text-emerald-800 flex flex-wrap gap-1 mt-1"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TODAY'S AUSPICIOUS DEITY & SHLOKA SECTION -->
+        <div class="bg-white rounded-2xl p-6 border-l-4 border-l-amber-500 border border-amber-300 shadow-xl space-y-4">
+          <div class="flex items-center justify-between border-b border-amber-200 pb-3">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-hands-praying text-crimson-600 text-2xl"></i>
+              <div>
+                <h3 id="lblDeityHeader" class="font-cinzel text-lg font-bold text-amber-950">Today's Auspicious Deity & Sacred Shloka</h3>
+                <p id="lblDeitySub" class="text-xs text-amber-900 font-medium">Vedic Mantra & Spiritual Chanting for the day</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div class="bg-amber-50 p-4 rounded-xl border border-amber-300 text-center space-y-1">
+              <span class="text-xs text-crimson-800 font-cinzel font-bold uppercase" id="lblDeityNameLabel">Presiding Deity</span>
+              <div class="font-bold text-amber-950 text-sm sm:text-base" id="lblDeityName">Lord Shiva & Goddess Parvati</div>
+            </div>
+
+            <div class="md:col-span-2 bg-rose-50/70 p-5 rounded-xl border border-rose-200 space-y-2 text-center md:text-left">
+              <div class="text-xs font-bold text-crimson-800 font-cinzel" id="lblShlokaTitle">Sacred Daily Vedic Mantra</div>
+              <div class="text-base sm:text-lg font-bold gold-gradient-text font-cinzel" id="lblShlokaSanskrit">
+                ॥ ॐ नमः शिवाय ॥ नमः शिवाय च शिवतराय च ॥
+              </div>
+              <p class="text-xs text-amber-950 leading-relaxed font-medium" id="lblShlokaMeaning">
+                Meaning: Salutations to Lord Shiva, the bestower of supreme auspiciousness. Chanting this sacred mantra wards off negative influences and brings harmony and peace.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW 4: MUHURTHAM VIEW ================= -->
+      <div id="viewMuhurtham" class="hidden space-y-8">
+        <!-- Sub-Navigation for Good / Bad Muhurtham -->
+        <div class="flex justify-center space-x-4">
+          <button id="btnSubGoodMuhurtham" onclick="switchMuhurthamSubTab('good')" class="px-6 py-2.5 rounded-xl border border-emerald-500 bg-emerald-600 text-white font-cinzel font-bold text-sm sm:text-base flex items-center space-x-2 shadow-md cursor-pointer">
+            <i class="fa-solid fa-circle-check"></i>
+            <span id="lblGoodMuhurthamBtn">Good Muhurtham (శుభ ముహూర్తములు)</span>
+          </button>
+          <button id="btnSubBadMuhurtham" onclick="switchMuhurthamSubTab('bad')" class="px-6 py-2.5 rounded-xl border border-rose-300 bg-white text-rose-900 font-cinzel font-semibold text-sm sm:text-base flex items-center space-x-2 hover:border-rose-500 transition cursor-pointer shadow-sm">
+            <i class="fa-solid fa-triangle-exclamation text-rose-600"></i>
+            <span id="lblBadMuhurthamBtn">Bad Muhurtham (అశుభ ముహూర్తములు)</span>
+          </button>
+        </div>
+
+        <!-- GOOD MUHURTHAM CONTAINER -->
+        <div id="subGoodMuhurtham" class="space-y-6">
+          <div class="bg-white rounded-2xl p-6 border-l-4 border-l-emerald-600 border border-amber-300 shadow-xl space-y-4">
+            <div class="flex items-center justify-between border-b border-amber-200 pb-4">
+              <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-sun text-amber-500 text-2xl"></i>
+                <div>
+                  <h2 id="lblGoodMuhurthamHeading" class="font-cinzel text-lg sm:text-2xl font-bold text-emerald-800">
+                    Auspicious Muhurthams (శుభ ముహూర్తములు)
+                  </h2>
+                  <p id="lblGoodMuhurthamSub" class="text-xs text-amber-900 font-medium">Calculated according to ancient Vedic literature & Shastras</p>
+                </div>
+              </div>
+              <span class="text-xs font-bold bg-emerald-100 border border-emerald-300 text-emerald-900 px-3 py-1 rounded-full">Shubha Time</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="goodMuhurthamGrid">
+              <!-- Dynamically Populated Good Muhurthams -->
+            </div>
+          </div>
+        </div>
+
+        <!-- BAD MUHURTHAM CONTAINER -->
+        <div id="subBadMuhurtham" class="hidden space-y-6">
+          <div class="bg-white rounded-2xl p-6 border-l-4 border-l-rose-600 border border-amber-300 shadow-xl space-y-4">
+            <div class="flex items-center justify-between border-b border-amber-200 pb-4">
+              <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-triangle-exclamation text-rose-600 text-2xl"></i>
+                <div>
+                  <h2 id="lblBadMuhurthamHeading" class="font-cinzel text-lg sm:text-2xl font-bold text-rose-800">
+                    Inauspicious Muhurthams (అశుభ ముహూర్తములు)
+                  </h2>
+                  <p id="lblBadMuhurthamSub" class="text-xs text-amber-900 font-medium">Timings to avoid for important rituals & new initiatives</p>
+                </div>
+              </div>
+              <span class="text-xs font-bold bg-rose-100 border border-rose-300 text-rose-900 px-3 py-1 rounded-full">Asubha Time</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="badMuhurthamGrid">
+              <!-- Dynamically Populated Bad Muhurthams -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- LINE BREAK 3: FOOTER SEPARATOR -->
+    <div class="border-b border-amber-300 w-full mt-8"></div>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-gradient-to-r from-amber-100 via-rose-50 to-amber-100 py-8 px-4 sm:px-8 border-t border-amber-300">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Copyright Text -->
+        <div class="text-center md:text-left space-y-1">
+          <div id="lblCopyright" class="font-cinzel font-bold text-amber-950 text-sm">
+            © 2026 Chakram Astrogyan. All Rights Reserved.
+          </div>
+          <div id="lblFooterSub" class="text-xs text-amber-900 font-medium">
+            Vaidic Panchangam & Astrological Services by Shanker Sharma
+          </div>
+        </div>
+
+        <!-- Social Media & Contact Links -->
+        <div class="flex items-center space-x-6 text-xl">
+          <!-- WhatsApp -->
+          <a href="https://wa.me/919848000818" target="_blank" rel="noopener noreferrer" title="WhatsApp: 9848000818" class="text-emerald-600 hover:text-emerald-700 transition hover:scale-110">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@chakramAstrogyan" target="_blank" rel="noopener noreferrer" title="YouTube Channel" class="text-red-600 hover:text-red-700 transition hover:scale-110">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/chakramastrogyan/" target="_blank" rel="noopener noreferrer" title="Instagram Profile" class="text-pink-600 hover:text-pink-700 transition hover:scale-110">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=61593985231914" target="_blank" rel="noopener noreferrer" title="Facebook Page" class="text-blue-600 hover:text-blue-700 transition hover:scale-110">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Global State & Language translations dictionary
+    let currentLang = 'te';
+    let activeRasiKey = 'Mesham';
+    let calDate = new Date(2026, 10, 2); // Default Nov 2, 2026
+    let selectedCalDay = 2;
+    let activeMuhurthamSub = 'good';
+
+    const translations = {
+      te: {
+        tabHome: "Home",
+        tabFestivals: "పండుగలు",
+        tabCalendar: "క్యాలెండర్",
+        tabMuhurtham: "ముహూర్తం",
+        goodMuhurthamBtn: "శుభ ముహూర్తములు",
+        badMuhurthamBtn: "అశుభ ముహూర్తములు",
+        goodMuhurthamHeading: "శుభ ముహూర్తములు (Good Muhurtham)",
+        goodMuhurthamSub: "వేద శాస్త్రముల ప్రకారం ప్రతిరోజూ గణించబడిన శుభ సమయాలు",
+        badMuhurthamHeading: "అశుభ ముహూర్తములు (Bad Muhurtham)",
+        badMuhurthamSub: "ముఖ్యమైన మరియు నూతన కార్యాలకు వర్జించవలసిన సమయాలు",
+        muhurthams: {
+          brahma: { title: "బ్రహ్మ ముహూర్తం (Brahma Muhurtham)", desc: "సూర్యోదయానికి ముందు లభించే అత్యంత పవిత్రమైన సాత్విక సమయం. ఈ సమయంలో ధ్యానము, జపము, చదువు మరియు దైవ ప్రార్థన చేయడం వల్ల బుద్ధి వికాసం, మనఃశాంతి లభిస్తాయి." },
+          abhijit: { title: "అభిజిత్ ముహూర్తం (Abhijit Muhurtham)", desc: "మిధ్యాహ్నం సూర్యుడు నడినెత్తిపై ఉండే సమయం. శ్రీమహావిష్ణువు అనుగ్రహంతో సమస్త దోషాలను పరిహరించే అత్యంత శక్తివంతమైన విజయ ముహూర్తం." },
+          vijaya: { title: "విజయ ముహూర్తం (Vijaya Muhurtham)", desc: "అపరాహ్న కాలంలో వచ్చే విజయ ముహూర్తం నూతన వ్యాపారాలు, ప్రయాణాలు, కోర్టు వ్యవహారాలు మరియు నూతన పనులకు విజయాన్ని ప్రసాదిస్తుంది." },
+          godhuli: { title: "గోధూళి ముహూర్తం (Godhuli Muhurtham)", desc: "సాయంత్రం సూర్యాస్తమయ సమయం. ఆవులు అడవి నుండి తిరిగి వచ్చే ఈ పవిత్ర వేళ మహాలక్ష్మి దేవి అనుగ్రహం లభిస్తుంది." },
+          nishitha: { title: "నిశీథ కాలం (Nishitha Kalam)", desc: "అర్థరాత్రి వేళ లభించే శివపూజ ముహూర్తం. లింగోద్భవ సమయమైన ఈ కాలంలో ఈశ్వరారాధన మరియు మంత్ర సాధన అనంత ఫలాన్ని ఇస్తాయి." },
+          rahu: { title: "రాహు కాలం (Rahu Kalam)", desc: "రాహు గ్రహ ప్రభావం ఉండే సమయం. ఈ సమయంలో ప్రారంభించే పనులలో ఆటంకాలు, ఆలస్యాలు మరియు నష్టాలు ఎదురవుతాయి. కావున నూతన కార్యాలు వర్జించాలి." },
+          yama: { title: "యమగండం (Yama Gandam)", desc: "యమధర్మరాజు అధిపత్యం వహించే కాలం. ఈ సమయంలో ప్రారంభించిన పనులు వైఫల్యానికి దారితీస్తాయి. ప్రయాణాలు చేయడం శ్రేయస్కరం కాదు." },
+          gulika: { title: "గుళిక కాలం (Gulika Kalam)", desc: "శని పుత్రుడైన గుళికడి ప్రభావ సమయం. ఈ సమయంలో చేసిన పని మళ్లీ మళ్లీ పునరావృతమవుతుంది. అశుభ పనులు, దహన సంస్కారాలు చేయకూడదు." },
+          dhur: { title: "దుర్ముహూర్తం (Dhurmurtham)", desc: "గ్రహముల క్రూర దృక్కులు ప్రసరించే సమయం. శుభకార్యములకు, నిశ్చితార్థములకు, నూతన ప్రవేశములకు ఈ సమయం అత్యంత అశుభకరమైనది." },
+          varjyam: { title: "వర్జ్యం (Varjyam)", desc: "నక్షత్ర త్యాజ్య భాగము నుండి ఉద్భవించే విష ఘడియలు. వేద శాస్త్రముల ప్రకారం ఏ రకమైన శుభకార్యములు చేసినా విఘ్నాలు కలిగిస్తుంది." }
+        },
+        profession: "జ్యోతిష్కులు (Astrologer)",
+        refreshLoc: "(స్థానాన్ని రిఫ్రెష్ చేయండి)",
+        vedicDateHeader: "నేటి వైదిక తేదీ",
+        samvatsara: "శ్రీ క్రోధి నామ సంవత్సరం",
+        masam: "కార్తీక మాసము - దక్షిణాయనం",
+        dashaHeader: "ప్రస్తుత దశా పీరియడ్",
+        dasha: "మహాదశ: గురు (గురు దశ) | అంతర్దశ: శుక్ర",
+        siderealNote: "వైదిక సిద్ధాంత ప్రకారం గణించబడింది",
+        sunriseTitle: "సూర్యోదయం",
+        sunsetTitle: "సూర్యాస్తమయం",
+        pakshamHeader: "పక్షం",
+        varamHeader: "వారం",
+        karnamHeader: "కరణం",
+        paksham: "శుక్ల పక్షం",
+        varam: "ఇందు వారం (సోమవారం)",
+        karnam: "బవ కరణం (సాయంత్రం 04:15 వరకు)",
+        shubaTitle: "శుభ ఫలం",
+        amrudhaTitle: "అమృత కాలం",
+        amrudhaSub: "నూతన పనులకు అనుకూల సమయం",
+        brahmaTitle: "బ్రహ్మ ముహూర్తం",
+        brahmaSub: "ధ్యానం మరియు ప్రార్థనకు ఉత్తమ సమయం",
+        ashubaTitle: "అశుభ కాలం",
+        rahuTitle: "రాహు కాలం",
+        rahuSub: "ముఖ్యమైన పనులు ప్రారంభించవద్దు",
+        yamaTitle: "యమగండం",
+        yamaSub: "ప్రయాణాలు వాయిదా వేయడం శ్రేయస్కరం",
+        horoscopeHeader: "రాశి ఫలాలు (Horoscope Details)",
+        selectRasiPrompt: "మీ రాశిని ఎంచుకొని నేటి ఫలితాలను చూడండి:",
+        vedaImportanceHeader: "నేటి విశిష్టత & వేద శాస్త్రం",
+        vedicSubHeader: "వైదిక ప్రాముఖ్యత మరియు పూజా విధానం",
+        vedicTitle: "కార్తీక సోమవారం & ప్రత్యేక ఏకాదశి వ్రతం",
+        vedicDesc: "వేద శాస్త్రాల ప్రకారం, ఈ రోజు పరమశివునికి అభిషేకం చేయడం వల్ల శాంతి మరియు ఆధ్యాత్మిక అభివృద్ధి కలుగుతాయి. ప్రదోష వేళలో దీపారాధన చేయడం శుభకరం.",
+        deityWorship: "పూజించాల్సిన దైవం: శ్రీ పరమశివుడు & లక్ష్మీదేవి",
+        grahaHeader: "గ్రహ స్థానాలు (Planetary Positions)",
+        festivalsTitle: "ఈ నెల పండుగలు & వైదిక ప్రాముఖ్యత",
+        festivalsSubtitle: "వైదిక పంచాంగ సాంప్రదాయం ప్రకారం",
+        copyright: "© 2026 చక్రం ఆస్ట్రోజ్ఞాన్. సర్వహక్కులూ ప్రత్యేకించబడినవి.",
+        footerSub: "శంకర్ శర్మ గారి వైదిక పంచాంగం & జ్యోతిష్య సేవలు",
+        prevMonth: "క్రితం",
+        nextMonth: "తరువాత",
+        selectedDateHeader: "ఎంచుకున్న తేదీ పంచాంగ వివరాలు",
+        calTithiHeader: "తిథి",
+        calNakshatraHeader: "నక్షత్రం",
+        calYogamHeader: "యోగం",
+        calKarnamHeader: "కరణం",
+        calAmrudhaLabel: "అమృత కాలం (శుభం)",
+        calRahuLabel: "రాహు కాలం (అశుభం)",
+        rasiChartTitle: "గోచార రాశి చక్రం (Rashi Chart)",
+        rasiChartSubtitle: "వైదిక దక్షిణ భారత పద్ధతి",
+        centerChartText: "రాశి చక్రం",
+        deityHeader: "నేటి దైవం & విశిష్ట మంత్ర పారాయణం",
+        deitySub: "దైవ ప్రార్థన మరియు నిత్య శ్లోకం",
+        deityNameLabel: "అధిష్టాన దేవత",
+        deityName: "శ్రీ పరమశివుడు & పార్వతీ దేవి",
+        shlokaTitle: "నేటి వైదిక మంత్రం (పారాయణ శ్లోకం)",
+        shlokaSanskrit: "॥ ॐ नमः शिवाय ॥ नमः शिवाय च शिवतराय च ॥",
+        shlokaMeaning: "భావం: సమస్త శ్రేయస్సులను ప్రసాదించే పరమశివునికి నమస్కారములు. ఈ పవిత్ర మంత్రాన్ని జపించడం వల్ల మానసిక ప్రశాంతత, అరిష్ట నివారణ మరియు ఆధ్యాత్మిక సుఖం లభిస్తాయి.",
+        planetsShort: {
+          Sun: "సూ (Sun)",
+          Moon: "చం (Moon)",
+          Mars: "కు (Mars)",
+          Mercury: "బు (Merc)",
+          Jupiter: "గు (Jup)",
+          Venus: "శు (Ven)",
+          Saturn: "శని (Sat)",
+          Rahu: "రా (Rahu)",
+          Ketu: "కే (Ketu)"
+        },
+        rasis: {
+          Mesham: { title: "మేష రాశి (Aries)", text: "నూతన ఉత్సాహంతో పనులు పూర్తి చేస్తారు. వృత్తి పరంగా ప్రశంసలు అందుతాయి. ఆర్థిక స్థితి మెరుగ్గా ఉంటుంది." },
+          Vrushabham: { title: "వృషభ రాశి (Taurus)", text: "కుటుంబ సౌఖ్యం లభిస్తుంది. దూర ప్రయాణాలు అనుకూలిస్తాయి. దైవ దర్శనం చేసుకోవడం శ్రేయస్కరం." },
+          Mithunam: { title: "మిథున రాశి (Gemini)", text: "వ్యాపారంలో మంచి లాభాలు ఆర్జిస్తారు. ఉద్యోగంలో అనుకూల వాతావరణం ఉంటుంది." },
+          Karkatakam: { title: "కర్కాటక రాశి (Cancer)", text: "మానసిక ప్రశాంతత లభిస్తుంది. ముఖ్యమైన నిర్ణయాలలో అనుభవజ్ఞుల సలహా తీసుకోండి." },
+          Simham: { title: "సింహ రాశి (Leo)", text: "కీలకమైన వ్యవహారాలలో విజయం సాధిస్తారు. బంధుమిత్రుల మద్దతు లభిస్తుంది." },
+          Kanya: { title: "కన్యా రాశి (Virgo)", text: "ఆర్థిక రాబడి పెరిగే సూచనలు ఉన్నాయి. ఆరోగ్య విషయాల్లో శ్రద్ధ వహించండి." },
+          Thula: { title: "తులా రాశి (Libra)", text: "వృత్తి వ్యాపారాలలో అనుకూల మార్పులు వస్తాయి. లక్ష్మీదేవి ఉపాసన శుభకరం." },
+          Vruschikam: { title: "వృశ్చిక రాశి (Scorpio)", text: "ధైర్యంతో తీసుకునే నిర్ణయాలు సత్ఫలితాలను ఇస్తాయి. కుటుంబంలో సంతోషం నిండుతుంది." },
+          Dhanussu: { title: "ధనుస్సు రాశి (Sagittarius)", text: "విద్యార్థులకు మంచి సమయం. విష్ణు సహస్రనామ పారాయణం శ్రేయస్కరం." },
+          Makaram: { title: "మకర రాశి (Capricorn)", text: "శ్రమకు తగిన ప్రతిఫలం లభిస్తుంది. ఆస్తికి సంబంధించిన విషయాల్లో పురోగతి." },
+          Kumbham: { title: "కుంభ రాశి (Aquarius)", text: "నూతన పరిచయాలు ఏర్పడతాయి. సమాజంలో గౌరవ మర్యాదలు పెరుగుతాయి." },
+          Meenam: { title: "మీన రాశి (Pisces)", text: "అనుకున్న పనులు సమయానికి పూర్తవుతాయి. ధనలాభం కలిగే అవకాశం ఉంది." }
+        }
+      },
+      en: {
+        tabHome: "Home",
+        tabFestivals: "Festivals",
+        tabCalendar: "Calendar",
+        tabMuhurtham: "Muhurtham",
+        goodMuhurthamBtn: "Good Muhurtham",
+        badMuhurthamBtn: "Bad Muhurtham",
+        goodMuhurthamHeading: "Good Muhurthams (Subha Muhurtham)",
+        goodMuhurthamSub: "Calculated dynamically based on Vedic scriptures for prosperity and success",
+        badMuhurthamHeading: "Bad Muhurthams (Asubha Muhurtham)",
+        badMuhurthamSub: "Inauspicious periods to strictly avoid for major works & ceremonies",
+        muhurthams: {
+          brahma: { title: "Brahma Muhurtham", desc: "A highly sacred Sattvic period before sunrise. Ideal for meditation, chanting, and study as mental clarity and divine energies are at their peak." },
+          abhijit: { title: "Abhijit Muhurtham", desc: "Occurs during midday centered on solar noon. Blessed by Lord Vishnu, it neutralizes all doshas and guarantees victory in new endeavors." },
+          vijaya: { title: "Vijaya Muhurtham", desc: "Afternoon auspicious period fostering success, victory in travel, legal matters, and business ventures." },
+          godhuli: { title: "Godhuli Muhurtham", desc: "Dusk/twilight period when cattle return home. Sacred time invoking Goddess Lakshmi's blessing and marital harmony." },
+          nishitha: { title: "Nishitha Kalam", desc: "Midnight period auspicious for Shiva Abhishekam, Tantric Sadhana, and profound spiritual meditation." },
+          rahu: { title: "Rahu Kalam", desc: "Period governed by Rahu causing obstacles, losses, and delays. Avoid starting new journeys, purchases, or major deals." },
+          yama: { title: "Yama Gandam", desc: "Ruled by Yamaraj. Activities initiated during this period lead to failure, debt, or unfavorable outcomes." },
+          gulika: { title: "Gulika Kalam", desc: "Ruled by Saturn's son Gulika. Any action performed recurs repeatedly. Avoid funerals and bad deeds." },
+          dhur: { title: "Dhurmurtham", desc: "Inauspicious planetary alignment creating friction and conflicts. Avoid house warming, weddings, and investments." },
+          varjyam: { title: "Varjyam", desc: "Toxic lunar passage hours. Highly detrimental for Shubha Karya and important decisions." }
+        },
+        profession: "Astrologer",
+        refreshLoc: "(Refresh Location)",
+        vedicDateHeader: "Today's Vedic Date",
+        samvatsara: "Sri Krodhi Nama Samvatsaram",
+        masam: "Karthika Masam - Dakshinayanam",
+        dashaHeader: "Current Dasha Period",
+        dasha: "Mahadasha: Guru (Jupiter) | Antardasha: Venus",
+        siderealNote: "Calculated based on Vaidic Sidereal Position",
+        sunriseTitle: "Sunrise",
+        sunsetTitle: "Sunset",
+        pakshamHeader: "PAKSHAM",
+        varamHeader: "VARAM",
+        karnamHeader: "KARNAM",
+        paksham: "Shukla Paksham (Waxing Moon)",
+        varam: "Monday (Indu Varam)",
+        karnam: "Bava Karnam (Till 04:15 PM)",
+        shubaTitle: "SHUBA PHALAM",
+        amrudhaTitle: "Amrudha Kalam",
+        amrudhaSub: "Auspicious period for new beginnings",
+        brahmaTitle: "Brahma Murtham",
+        brahmaSub: "Best timing for meditation & prayer",
+        ashubaTitle: "ASHUBA KALAM",
+        rahuTitle: "Rahu Kalam",
+        rahuSub: "Inauspicious for starting major work",
+        yamaTitle: "Yama Gandam",
+        yamaSub: "Avoid starting important journeys",
+        horoscopeHeader: "Horoscope Details",
+        selectRasiPrompt: "Select your Rasi (Zodiac Sign) to view detailed daily prediction:",
+        vedaImportanceHeader: "Today's Importance & Veda Sastra",
+        vedicSubHeader: "Vedic Significance & Worship",
+        vedicTitle: "Karthika Somavaram & Special Ekadashi Vratam",
+        vedicDesc: "According to ancient Veda Sastras, performing Abhishekam for Lord Shiva today bestows peace and spiritual enlightenment. Lighting ghee lamps during Pradosha time brings prosperity.",
+        deityWorship: "Deity Worship: Lord Shiva & Goddess Lakshmi",
+        grahaHeader: "Planetary Positions (Graha Places)",
+        festivalsTitle: "Current Month Festivals & Vaidec Significance",
+        festivalsSubtitle: "As per Vaidec Panchangam traditions",
+        copyright: "© 2026 Chakram Astrogyan. All Rights Reserved.",
+        footerSub: "Vaidic Panchangam & Astrological Services by Shanker Sharma",
+        prevMonth: "Prev",
+        nextMonth: "Next",
+        selectedDateHeader: "Selected Date Panchangam Details",
+        calTithiHeader: "TITHI",
+        calNakshatraHeader: "NAKSHATRAM",
+        calYogamHeader: "YOGAM",
+        calKarnamHeader: "KARNAM",
+        calAmrudhaLabel: "Amrudha Kalam (Auspicious)",
+        calRahuLabel: "Rahu Kalam (Inauspicious)",
+        rasiChartTitle: "Daily Vedic Rashi Chart",
+        rasiChartSubtitle: "South Indian Sidereal Layout",
+        centerChartText: "Rashi Chakra",
+        deityHeader: "Today's Auspicious Deity & Sacred Shloka / Mantra",
+        deitySub: "Vedic Mantra & Spiritual Chanting for the day",
+        deityNameLabel: "Presiding Deity",
+        deityName: "Lord Shiva & Goddess Parvati",
+        shlokaTitle: "Sacred Daily Vedic Mantra",
+        shlokaSanskrit: "॥ Om Namah Shivaya ॥ Namah Shivaya Cha Shivataraya Cha ॥",
+        shlokaMeaning: "Meaning: Salutations to Lord Shiva, the bestower of supreme auspiciousness. Chanting this sacred mantra wards off negative influences and brings harmony and peace.",
+        planetsShort: {
+          Sun: "Sun",
+          Moon: "Moon",
+          Mars: "Mars",
+          Mercury: "Merc",
+          Jupiter: "Jup",
+          Venus: "Ven",
+          Saturn: "Sat",
+          Rahu: "Rahu",
+          Ketu: "Ketu"
+        },
+        rasis: {
+          Mesham: { title: "Aries (Mesham)", text: "Today brings favorable planetary support for career advancements and family harmony." },
+          Vrushabham: { title: "Taurus (Vrushabham)", text: "Family happiness prevails. Long distance travel is favored." },
+          Mithunam: { title: "Gemini (Mithunam)", text: "Good business profits expected. Smooth workplace environment." },
+          Karkatakam: { title: "Cancer (Karkatakam)", text: "Mental peace achieved. Seek elder advice for major decisions." },
+          Simham: { title: "Leo (Simham)", text: "Victory in crucial undertakings. Full support from friends." },
+          Kanya: { title: "Virgo (Kanya)", text: "Financial gains predicted. Pay attention to dietary habits." },
+          Thula: { title: "Libra (Thula)", text: "Favorable career changes. Worshiping Goddess Lakshmi yields gains." },
+          Vruschikam: { title: "Scorpio (Vruschikam)", text: "Bold decisions lead to great success and joy in the family." },
+          Dhanussu: { title: "Sagittarius (Dhanussu)", text: "Excellent day for students. Chanting Vishnu Sahasranamam is auspicious." },
+          Makaram: { title: "Capricorn (Makaram)", text: "Hard work brings rewarding results. Progress in property matters." },
+          Kumbham: { title: "Aquarius (Kumbham)", text: "New beneficial contacts formed. Social reputation increases." },
+          Meenam: { title: "Pisces (Meenam)", text: "All planned tasks completed on schedule. Financial inflow expected." }
+        }
+      },
+      hi: {
+        tabHome: "Home",
+        tabFestivals: "त्यौहार",
+        tabCalendar: "कैलेंडर",
+        tabMuhurtham: "मुहूर्त",
+        goodMuhurthamBtn: "शुभ मुहूर्त",
+        badMuhurthamBtn: "अशुभ मुहूर्त",
+        goodMuhurthamHeading: "शुभ मुहूर्त (Good Muhurtham)",
+        goodMuhurthamSub: "वैदिक शास्त्रों के अनुसार प्रतिदिन गणना किए गए शुभ समय",
+        badMuhurthamHeading: "अशुभ मुहूर्त (Bad Muhurtham)",
+        badMuhurthamSub: "महत्वपूर्ण कार्यों एवं नवीन शुरुआत के लिए वर्जित समय",
+        muhurthams: {
+          brahma: { title: "ब्रह्म मुहूर्त (Brahma Muhurtham)", desc: "सूर्योदय से पूर्व का अत्यंत पवित्र सात्विक काल। ध्यान, जप और विद्याभ्यास के लिए श्रेष्ठ समय।" },
+          abhijit: { title: "अभिजीत मुहूर्त (Abhijit Muhurtham)", desc: "मध्याह्न काल का समय जो सर्व दोषों का निवारण कर विजय प्रदान करता है।" },
+          vijaya: { title: "विजय मुहूर्त (Vijaya Muhurtham)", desc: "अपराह्न काल का शुभ समय जो यात्राओं एवं नवीन कार्यों में विजय दिलाता है।" },
+          godhuli: { title: "गोधूलि मुहूर्त (Godhuli Muhurtham)", desc: "संध्या का समय जो माँ लक्ष्मी का आशीर्वाद और सुख-शांति प्रदान करता है।" },
+          nishitha: { title: "निशीथ काल (Nishitha Kalam)", desc: "मध्यरात्रि का समय जो शिव पूजा एवं मंत्र साधना के लिए अत्यंत फलदायी है।" },
+          rahu: { title: "राहु काल (Rahu Kalam)", desc: "राहु ग्रह का प्रभाव काल। नए कार्यों में बाधाएं उत्पन्न होती हैं, अतः वर्जित है।" },
+          yama: { title: "यमगंडम (Yama Gandam)", desc: "यमराज द्वारा शासित काल। इस समय शुरू किए कार्य निष्फल होते हैं।" },
+          gulika: { title: "गुलिक काल (Gulika Kalam)", desc: "शनि पुत्र गुलिक का काल। इस समय किया गया कार्य बार-बार दोहराता है।" },
+          dhur: { title: "दुर्मुहूर्त (Dhurmurtham)", desc: "अशुभ ग्रह दृष्टि का समय। शुभ कार्यों एवं नए प्रवेश के लिए वर्जित।" },
+          varjyam: { title: "वर्ज्यम (Varjyam)", desc: "अत्यंत विषैली घड़ियां जो कार्यों में विघ्न उत्पन्न करती हैं।" }
+        },
+        profession: "ज्योतिषी (Astrologer)",
+        refreshLoc: "(स्थान रिफ्रेश करें)",
+        vedicDateHeader: "आज की वैदिक तिथि",
+        samvatsara: "श्री क्रोधी नाम संवत्सर",
+        masam: "कार्तिक मास - दक्षिणायन",
+        dashaHeader: "वर्तमान दशा अवधि",
+        dasha: "महादशा: गुरु (बृहस्पति) | अंतर्दशा: शुक्र",
+        siderealNote: "वैदिक निरयण पद्धति अनुसार गणना",
+        sunriseTitle: "सूर्योदय",
+        sunsetTitle: "सूर्यास्त",
+        pakshamHeader: "पक्ष",
+        varamHeader: "वार",
+        karnamHeader: "करण",
+        paksham: "शुक्ल पक्ष",
+        varam: "सोमवार (इन्दु वासर)",
+        karnam: "बव करण (सायं 04:15 तक)",
+        shubaTitle: "शुभ फल",
+        amrudhaTitle: "अमृत काल",
+        amrudhaSub: "शुभ कार्यों के लिए उत्तम समय",
+        brahmaTitle: "ब्रह्म मुहूर्त",
+        brahmaSub: "ध्यान और ईश्वर आराधना का श्रेष्ठ समय",
+        ashubaTitle: "अशुभ काल",
+        rahuTitle: "राहु काल",
+        rahuSub: "महत्वपूर्ण कार्य प्रारंभ न करें",
+        yamaTitle: "यमगंडम",
+        yamaSub: "यात्राएं स्थगित रखना हितकर है",
+        horoscopeHeader: "राशि फल (Horoscope Details)",
+        selectRasiPrompt: "दैनिक राशिफल देखने के लिए अपनी राशि चुनें:",
+        vedaImportanceHeader: "आज का महत्व एवं वेद शास्त्र",
+        vedicSubHeader: "वैदिक महत्व और पूजा विधान",
+        vedicTitle: "कार्तिक सोमवार एवं विशेष एकादशी व्रत",
+        vedicDesc: "वेद शास्त्रों के अनुसार आज भगवान शिव का अभिषेक करने से मानसिक शांति प्राप्त होती है। प्रदोष काल में दीपदान अत्यंत शुभ है।",
+        deityWorship: "पूज्य देव: भगवान शिव एवं माँ लक्ष्मी",
+        grahaHeader: "ग्रह स्थिति (Planetary Positions)",
+        festivalsTitle: "इस माह के त्यौहार एवं वैदिक महत्व",
+        festivalsSubtitle: "वैदिक पंचांग परंपरा के अनुसार",
+        copyright: "© 2026 चक्रम् एस्ट्रोज्ञान। सर्वाधिकार सुरक्षित।",
+        footerSub: "शंकर शर्मा द्वारा वैदिक पंचांग एवं ज्योतिष सेवाएं",
+        prevMonth: "पिछला",
+        nextMonth: "अगला",
+        selectedDateHeader: "चयनित तिथि पंचांग विवरण",
+        calTithiHeader: "तिथि",
+        calNakshatraHeader: "नक्षत्र",
+        calYogamHeader: "योग",
+        calKarnamHeader: "करण",
+        calAmrudhaLabel: "अमृत काल (शुभ)",
+        calRahuLabel: "राहु काल (अशुभ)",
+        rasiChartTitle: "गोचर राशि चक्र (Rashi Chart)",
+        rasiChartSubtitle: "दक्षिण भारतीय पद्धति",
+        centerChartText: "राशि चक्र",
+        deityHeader: "आज के आराध्य देव एवं पवित्र मंत्र",
+        deitySub: "दैनिक वैदिक मंत्र जप",
+        deityNameLabel: "प्रमुख देव",
+        deityName: "भगवान शिव एवं माता पार्वती",
+        shlokaTitle: "दैनिक वैदिक मंत्र",
+        shlokaSanskrit: "॥ ॐ नमः शिवाय ॥ नमः शिवाय च शिवतराय च ॥",
+        shlokaMeaning: "अर्थ: कल्याणकारी भगवान शिव को नमस्कार है। इस मंत्र का जप करने से मानसिक शांति एवं आध्यात्मिक शक्ति की प्राप्ति होती है।",
+        planetsShort: {
+          Sun: "सूर्य",
+          Moon: "चंद्र",
+          Mars: "मंगल",
+          Mercury: "बुध",
+          Jupiter: "गुरु",
+          Venus: "शुक्र",
+          Saturn: "शनि",
+          Rahu: "राहु",
+          Ketu: "केतु"
+        },
+        rasis: {
+          Mesham: { title: "मेष राशि (Aries)", text: "आज करियर में प्रगति और पारिवारिक सुख-समृद्धि का शुभ योग है।" },
+          Vrushabham: { title: "वृषभ राशि (Taurus)", text: "पारिवारिक शांति बनी रहेगी। धार्मिक यात्रा का योग है।" },
+          Mithunam: { title: "मिथुन राशि (Gemini)", text: "व्यापार में अच्छा लाभ मिलेगा। कार्यक्षेत्र में अनुकूलता रहेगी।" },
+          Karkatakam: { title: "कर्क राशि (Cancer)", text: "मानसिक शांति प्राप्त होगी। बड़ों की सलाह से निर्णय लें।" },
+          Simham: { title: "सिंह राशि (Leo)", text: "महत्वपूर्ण कार्यों में सफलता मिलेगी। मित्रों का सहयोग प्राप्त होगा।" },
+          Kanya: { title: "कन्या राशि (Virgo)", text: "धन लाभ की संभावना है। स्वास्थ्य का ध्यान रखें।" },
+          Thula: { title: "तुला राशि (Libra)", text: "करियर में सकारात्मक बदलाव आएंगे। माँ लक्ष्मी की पूजा करें।" },
+          Vruschikam: { title: "वृश्चिक राशि (Scorpio)", text: "साहसिक निर्णयों से सफलता और परिवार में प्रसन्नता मिलेगी।" },
+          Dhanussu: { title: "धनु राशि (Sagittarius)", text: "विद्यार्थियों के लिए उत्तम समय। विष्णु सहस्रनाम का पाठ करें।" },
+          Makaram: { title: "मकर राशि (Capricorn)", text: "कठिन परिश्रम का शुभ फल मिलेगा। संपत्ति के मामलों में प्रगति होगी।" },
+          Kumbham: { title: "कुंभ राशि (Aquarius)", text: "नए लाभदायक संपर्क बनेंगे। समाज में सम्मान बढ़ेगा।" },
+          Meenam: { title: "मीन राशि (Pisces)", text: "सभी सोचे हुए कार्य समय पर पूर्ण होंगे। धन लाभ का योग है।" }
+        }
+      },
+      ta: {
+        tabHome: "Home",
+        tabFestivals: "பண்டிகைகள்",
+        tabCalendar: "கேலெண்டர்",
+        tabMuhurtham: "முகூர்த்தம்",
+        goodMuhurthamBtn: "சுப முகூர்த்தம்",
+        badMuhurthamBtn: "அசுப முகூர்த்தம்",
+        goodMuhurthamHeading: "சுப முகூர்த்தங்கள் (Good Muhurtham)",
+        goodMuhurthamSub: "வேத சாஸ்திரங்களின்படி தினமும் கணக்கிடப்பட்ட சுப நேரம்",
+        badMuhurthamHeading: "அசுப முகூர்த்தங்கள் (Bad Muhurtham)",
+        badMuhurthamSub: "முக்கிய காரியங்களுக்கு தவிர்க்கப்பட வேண்டிய நேரம்",
+        muhurthams: {
+          brahma: { title: "பிரம்மா முகூர்த்தம்", desc: "சூரியோதயத்திற்கு முந்தைய சாத்வீக நேரம். தியானத்திற்கும் இறை வழிபாட்டிற்கும் உகந்தது." },
+          abhijit: { title: "அபிஜித் முகூர்த்தம்", desc: "மதிய நேரத்தில் வரும் தோஷங்களை போக்கி வெற்றி தரும் முகூர்த்தம்." },
+          vijaya: { title: "விஜய முகூர்த்தம்", desc: "பயணங்கள் மற்றும் புதிய முயற்சிகளில் வெற்றி தரும் நேரம்." },
+          godhuli: { title: "கோதூளி முகூர்த்தம்", desc: "மாலை சூரிய அஸ்தமன நேரம். லட்சுமி தேவியின் அருள் கிடைக்கும்." },
+          nishitha: { title: "நிசீத காலம்", desc: "நள்ளிரவு நேரம். சிவ வழிபாடு மற்றும் தியானத்திற்கு ஏற்றது." },
+          rahu: { title: "ராகு காலம்", desc: "ராகுவின் தாக்கத்தால் தடைகள் வரும் நேரம். சுப காரியங்களைத் தவிர்க்கவும்." },
+          yama: { title: "எமகண்டம்", desc: "எமனின் ஆதிக்கம் கொண்ட நேரம். காரியங்கள் தோல்வியடையும்." },
+          gulika: { title: "குளிகை காலம்", desc: "சனி புத்திரன் குளிகனின் நேரம். செய்யும் செயல் மீண்டும் திரும்பும்." },
+          dhur: { title: "துர்முகூர்த்தம்", desc: "அசுப கிரக பார்வைகள் உள்ள நேரம். புதிய காரியங்களைத் தவிர்க்கவும்." },
+          varjyam: { title: "வர்ஜியம்", desc: "விஷ கடிகைகள் கொண்ட நேரம். சுப காரியங்களுக்கு தவிர்க்கவும்." }
+        },
+        profession: "ஜோதிடர் (Astrologer)",
+        refreshLoc: "(இடத்தை புதுப்பிக்கவும்)",
+        vedicDateHeader: "இன்றைய வைதீக தேதி",
+        samvatsara: "ஸ்ரீ க்ரோதி நாம சம்வத்சரம்",
+        masam: "கார்த்திகை மாதம் - தக்ஷிணாயனம்",
+        dashaHeader: "தற்போதைய தசா காலம்",
+        dasha: "மஹா தசா: குரு | அந்தர் தசா: சுக்ரன்",
+        siderealNote: "வைதீக கணிதப்படி கணக்கிடப்பட்டது",
+        sunriseTitle: "சூரியோதயம்",
+        sunsetTitle: "சூரிய அஸ்தமனம்",
+        pakshamHeader: "பக்ஷம்",
+        varamHeader: "வாசம்",
+        karnamHeader: "கரணம்",
+        paksham: "சுக்ல பக்ஷம்",
+        varam: "திங்கள் (இந்து வாரம்)",
+        karnam: "பவ கரணம் (மாலை 04:15 வரை)",
+        shubaTitle: "சுப பலன்",
+        amrudhaTitle: "அமிர்த காலம்",
+        amrudhaSub: "புதிய காரியங்களுக்கு உகந்த நேரம்",
+        brahmaTitle: "பிரம்மா முகூர்த்தம்",
+        brahmaSub: "தியானத்திற்கு மிகச் சிறந்த நேரம்",
+        ashubaTitle: "அசுப காலம்",
+        rahuTitle: "ராகு காலம்",
+        rahuSub: "முக்கிய வேலைகளைத் தவிர்க்கவும்",
+        yamaTitle: "எமகண்டம்",
+        yamaSub: "பயணங்களைத் தவிர்ப்பது நல்லது",
+        horoscopeHeader: "ராசி பலன்",
+        selectRasiPrompt: "உங்கள் ராசியைத் தேர்ந்தெடுத்து இன்றைய பலனைக் காணவும்:",
+        vedaImportanceHeader: "இன்றைய சிறப்பு & வேத சாஸ்திரம்",
+        vedicSubHeader: "வைதீக முக்கியத்துவம்",
+        vedicTitle: "கார்த்திகை சோமவாரம் & ஏகாதசி விரதம்",
+        vedicDesc: "சிவபெருமானுக்கு அபிஷேகம் செய்வதும் தீபம் ஏற்றுவதும் அமைதியும் செல்வமும் தரும்.",
+        deityWorship: "வழிபாடு: சிவபெருமான் & லட்சுமி தேவி",
+        grahaHeader: "கிரக நிலைகள்",
+        festivalsTitle: "இந்த மாத பண்டிகைகள்",
+        festivalsSubtitle: "வைதீக பஞ்சாங்கத்தின்படி",
+        copyright: "© 2026 சக்ரம் ஆஸ்ட்ரோஞான். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+        footerSub: "சங்கர் சர்மா அவர்களின் ஜோதிட சேவைகள்",
+        prevMonth: "முந்தைய",
+        nextMonth: "அடுத்த",
+        selectedDateHeader: "தேர்ந்தெடுக்கப்பட்ட தேதி பஞ்சாங்க விவரங்கள்",
+        calTithiHeader: "திதி",
+        calNakshatraHeader: "நட்சத்திரம்",
+        calYogamHeader: "யோகம்",
+        calKarnamHeader: "கரணம்",
+        calAmrudhaLabel: "அமிர்த காலம் (சுபம்)",
+        calRahuLabel: "ராகு காலம் (அசுபம்)",
+        rasiChartTitle: "கோச்சார ராசி சக்கரம்",
+        rasiChartSubtitle: "தென்னிந்திய முறை",
+        centerChartText: "ராசி சக்கரம்",
+        deityHeader: "இன்றைய தெய்வம் & புனித மந்திரம்",
+        deitySub: "தினசரி வேத மந்திரம்",
+        deityNameLabel: "முக்கிய தெய்வம்",
+        deityName: "சிவபெருமான் & பார்வதி தேவி",
+        shlokaTitle: "தினசரி வேத மந்திரம்",
+        shlokaSanskrit: "॥ ஓம் நம சிவாய ॥",
+        shlokaMeaning: "பொருள்: சிவபெருமானுக்கு வணக்கங்கள். இந்த மந்திரம் மன அமைதியும் நன்மையும் தரும்.",
+        planetsShort: {
+          Sun: "சூரி",
+          Moon: "சந்",
+          Mars: "செவ்",
+          Mercury: "புத",
+          Jupiter: "குரு",
+          Venus: "சுக்",
+          Saturn: "சனி",
+          Rahu: "ராகு",
+          Ketu: "கேது"
+        },
+        rasis: {
+          Mesham: { title: "மேஷம் (Aries)", text: "இன்று தொழிலில் நல்ல முன்னேற்றமும் குடும்பத்தில் மகிழ்ச்சியும் உண்டாகும்." },
+          Vrushabham: { title: "ரிஷபம் (Taurus)", text: "குடும்ப அமைதி நிலவும். ஆன்மீக பயணங்கள் சாதகமாகும்." },
+          Mithunam: { title: "மிதுனம் (Gemini)", text: "வியாபாரத்தில் நல்ல லாபம் கிடைக்கும். வேலை சூழல் சாதகமாகும்." },
+          Karkatakam: { title: "கடகம் (Cancer)", text: "மன அமைதி கிடைக்கும். பெரியோர்களின் ஆலோசனையைப் பெறவும்." },
+          Simham: { title: "சிம்மம் (Leo)", text: "முக்கிய காரியங்களில் வெற்றி கிடைக்கும். நண்பர்களின் ஆதரவு உண்டு." },
+          Kanya: { title: "கன்னி (Virgo)", text: "பண வரவு அதிகரிக்கும். ஆரோக்கியத்தில் கவனம் தேவை." },
+          Thula: { title: "துலாம் (Libra)", text: "தொழிலில் சாதகமான மாற்றங்கள் வரும். லட்சுமி வழிபாடு நன்மை தரும்." },
+          Vruschikam: { title: "விருச்சிகம் (Scorpio)", text: "தைரியமான முடிவுகள் நல்ல பலனைத் தரும்." },
+          Dhanussu: { title: "தனுசு (Sagittarius)", text: "மாணவர்களுக்கு சிறந்த நாள். விஷ்ணு சகஸ்ரநாமம் படிக்கவும்." },
+          Makaram: { title: "மகரம் (Capricorn)", text: "கடின உழைப்பிற்கு ஏற்ற பலன் கிடைக்கும்." },
+          Kumbham: { title: "கும்பம் (Aquarius)", text: "புதிய தொடர்புகள் உருவாகும். சமூகத்தில் மதிப்பு கூடும்." },
+          Meenam: { title: "மீனம் (Pisces)", text: "நினைத்த காரியங்கள் தடையின்றி முடியும்." }
+        }
+      },
+      kn: {
+        tabHome: "Home",
+        tabFestivals: "ಹಬ್ಬಗಳು",
+        tabCalendar: "ಕ್ಯಾಲೆಂಡರ್",
+        tabMuhurtham: "ಮುಹೂರ್ತ",
+        goodMuhurthamBtn: "ಶುಭ ಮುಹೂರ್ತ",
+        badMuhurthamBtn: "ಅಶುಭ ಮುಹೂರ್ತ",
+        goodMuhurthamHeading: "ಶುಭ ಮುಹೂರ್ತಗಳು (Good Muhurtham)",
+        goodMuhurthamSub: "ವೈದಿಕ ಶಾಸ್ತ್ರಗಳಂತೆ ದಿನಂಪ್ರತಿ ಗಣಿಸಲಾದ ಶುಭ ಸಮಯಗಳು",
+        badMuhurthamHeading: "ಅಶುಭ ಮುಹೂರ್ತಗಳು (Bad Muhurtham)",
+        badMuhurthamSub: "ಪ್ರಮುಖ ಕಾರ್ಯಗಳಿಗೆ ವರ್ಜಿಸಬೇಕಾದ ಸಮಯಗಳು",
+        muhurthams: {
+          brahma: { title: "ಬ್ರಹ್ಮ ಮುಹೂರ್ತ", desc: "ಸೂರ್ಯೋದಯಕ್ಕಿಂತ ಮುಂಚಿನ ಸಾತ್ವಿಕ ಸಮಯ. ಧ್ಯಾನ ಮತ್ತು ಪ್ರಾರ್ಥನೆಗೆ ಶ್ರೇಷ್ಠ." },
+          abhijit: { title: "ಅಭಿಜಿತ್ ಮುಹೂರ್ತ", desc: "ಮಧ್ಯಾಹ್ನದ ಸಮಯ. ಸರ್ವ ದೋಷಗಳನ್ನು ಪರಿಹರಿಸಿ ಜಯ ನೀಡುತ್ತದೆ." },
+          vijaya: { title: "ವಿಜಯ ಮುಹೂರ್ತ", desc: "ಪ್ರಯಾಣ ಮತ್ತು ಹೊಸ ಕಾರ್ಯಗಳಲ್ಲಿ ಯಶಸ್ಸು ನೀಡುವ ಸಮಯ." },
+          godhuli: { title: "ಗೋಧೂಳಿ ಮುಹೂರ್ತ", desc: "ಸಂಜೆ ಸೂರ್ಯಾಸ್ತಮಯ ಸಮಯ. ಲಕ್ಷ್ಮೀ ದೇವಿಯ ಅನುಗ್ರಹ ದೊರೆಯುತ್ತದೆ." },
+          nishitha: { title: "ನಿಶೀಥ ಕಾಲ", desc: "ಮಧ್ಯರಾತ್ರಿ ಸಮಯ. ಶಿವ ಪೂಜೆ ಮತ್ತು ಜಪಕ್ಕೆ ಉತ್ತಮ." },
+          rahu: { title: "ರಾಹು ಕಾಲ", desc: "ರಾಹು ಗ್ರಹದ ಪ್ರಭಾವದ ಸಮಯ. ಅಡೆತಡೆಗಳು ಉಂಟಾಗುತ್ತವೆ." },
+          yama: { title: "ಯಮಗಂಡ", desc: "ಯಮನ ಆಧಿಪತ್ಯದ ಸಮಯ. ಕಾರ್ಯಗಳು ವಿಫಲವಾಗುತ್ತವೆ." },
+          gulika: { title: "ಗುಳಿಕ ಕಾಲ", desc: "ಶನಿ ಪುತ್ರ ಗುಳಿಕನ ಸಮಯ. ಮಾಡಿದ ಕೆಲಸ ಪುನರಾವರ್ತನೆಯಾಗುತ್ತದೆ." },
+          dhur: { title: "ದುರ್ಮುಹೂರ್ತ", desc: "ಅಶುಭ ಗ್ರಹ ದೃಷ್ಟಿಯ ಸಮಯ. ಶುಭ ಕಾರ್ಯಗಳನ್ನು ಮಾಡಬೇಡಿ." },
+          varjyam: { title: "ವರ್ಜ್ಯಂ", desc: "ವಿಷ ಗಳಿಗೆಗಳ ಸಮಯ. ಶುಭ ಕಾರ್ಯಗಳಿಗೆ ವರ್ಜಿತ." }
+        },
+        profession: "ಜ್ಯೋತಿಷಿಗಳು (Astrologer)",
+        refreshLoc: "(ಸ್ಥಳ ನವೀಕರಿಸಿ)",
+        vedicDateHeader: "ಇಂದಿನ ವೈದಿಕ ದಿನಾಂಕ",
+        samvatsara: "ಶ್ರೀ ಕ್ರೋಧಿ ನಾಮ ಸಂವತ್ಸರ",
+        masam: "ಕಾರ್ತಿಕ ಮಾಸ - ದಕ್ಷಿಣಾಯನ",
+        dashaHeader: "ಪ್ರಸ್ತುತ ದಶಾ ಅವಧಿ",
+        dasha: "ಮಹಾದಶಾ: ಗುರು | ಅಂತರ್ದಶಾ: ಶುಕ್ರ",
+        siderealNote: "ವೈದಿಕ ಪಂಚಾಂಗದಂತೆ ಗಣಿಸಲಾಗಿದೆ",
+        sunriseTitle: "ಸೂರ್ಯೋದಯ",
+        sunsetTitle: "ಸೂರ್ಯಾಸ್ತಮಯ",
+        pakshamHeader: "ಪಕ್ಷ",
+        varamHeader: "ವಾರ",
+        karnamHeader: "ಕರಣ",
+        paksham: "ಶುಕ್ಲ ಪಕ್ಷ",
+        varam: "ಸೋಮವಾರ (ಇಂದು ವಾರ)",
+        karnam: "ಬವ ಕರಣ (ಸಂಜೆ 04:15 ರವರೆಗೆ)",
+        shubaTitle: "ಶುಭ ಫಲ",
+        amrudhaTitle: "ಅಮೃತ ಕಾಲ",
+        amrudhaSub: "ಶುಭ ಕಾರ್ಯಗಳಿಗೆ ಉತ್ತಮ ಸಮಯ",
+        brahmaTitle: "ಬ್ರಹ್ಮ ಮುಹೂರ್ತ",
+        brahmaSub: "ಧ್ಯಾನ ಮತ್ತು ಪ್ರಾರ್ಥನೆಗೆ ಶ್ರೇಷ್ಠ ಸಮಯ",
+        ashubaTitle: "ಅಶುಭ ಕಾಲ",
+        rahuTitle: "ರಾಹು ಕಾಲ",
+        rahuSub: "ಮುಖ್ಯ ಕಾರ್ಯಗಳನ್ನು ಪ್ರಾರಂಭಿಸಬೇಡಿ",
+        yamaTitle: "ಯಮಗಂಡ",
+        yamaSub: "ಪ್ರಯಾಣ ಮುಂದೂಡುವುದು ಒಳಿತು",
+        horoscopeHeader: "ರಾಶಿ ಫಲ",
+        selectRasiPrompt: "ನಿಮ್ಮ ರಾಶಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ ದಿನ ಭವಿಷ್ಯ ನೋಡಿ:",
+        vedaImportanceHeader: "ಇಂದಿನ ಮಹತ್ವ ಮತ್ತು ವೇದ ಶಾಸ್ತ್ರ",
+        vedicSubHeader: "ವೈದಿಕ ಮಹತ್ವ",
+        vedicTitle: "ಕಾರ್ತಿಕ ಸೋಮವಾರ ಮತ್ತು ಏಕಾದಶಿ ವ್ರತ",
+        vedicDesc: "ಶಿವನಿಗೆ ಅಭಿಷೇಕ ಮಾಡುವುದು ಮತ್ತು ದೀಪ ಹಚ್ಚುವುದು ಶಾಂತಿ ನೀಡುತ್ತದೆ.",
+        deityWorship: "ಪೂಜಿಸಬೇಕಾದ ದೇವರು: ಶಿವ ಮತ್ತು ಲಕ್ಷ್ಮೀದೇವಿ",
+        grahaHeader: "ಗ್ರಹಗಳ ಸ್ಥಿತಿ",
+        festivalsTitle: "ಈ ತಿಂಗಳ ಹಬ್ಬಗಳು",
+        festivalsSubtitle: "ವೈದಿಕ ಪಂಚಾಂಗದ ಪ್ರಕಾರ",
+        copyright: "© 2026 ಚಕ್ರಂ ಆಸ್ಟ್ರೋಜ್ಞಾನ್. ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.",
+        footerSub: "ಶಂಕರ್ ಶರ್ಮ ಅವರ ಜ್ಯೋತಿಷ್ಯ ಸೇವೆಗಳು",
+        prevMonth: "ಹಿಂದಿನ",
+        nextMonth: "ಮುಂದಿನ",
+        selectedDateHeader: "ಆಯ್ಕೆಮಾಡಿದ ದಿನಾಂಕದ ಪಂಚಾಂಗ",
+        calTithiHeader: "ತಿಥಿ",
+        calNakshatraHeader: "ನಕ್ಷತ್ರ",
+        calYogamHeader: "ಯೋಗ",
+        calKarnamHeader: "ಕರಣ",
+        calAmrudhaLabel: "ಅಮೃತ ಕಾಲ (ಶುಭ)",
+        calRahuLabel: "ರಾಹು ಕಾಲ (ಅಶುಭ)",
+        rasiChartTitle: "ಗೋಚಾರ ರಾಶಿ ಚಕ್ರ",
+        rasiChartSubtitle: "ದಕ್ಷಿಣ ಭಾರತೀಯ ಶೈಲಿ",
+        centerChartText: "ರಾಶಿ ಚಕ್ರ",
+        deityHeader: "ಇಂದಿನ ದೇವರು ಮತ್ತು ಪವಿತ್ರ ಮಂತ್ರ",
+        deitySub: "ದೈನಂದಿನ ವೈದಿಕ ಮಂತ್ರ",
+        deityNameLabel: "ಪ್ರಮುಖ ದೇವರು",
+        deityName: "ಶಿವ ಮತ್ತು ಪಾರ್ವತಿ ದೇವಿ",
+        shlokaTitle: "ದೈನಂದಿನ ವೈದಿಕ ಮಂತ್ರ",
+        shlokaSanskrit: "॥ ಓಂ ನಮಃ ಶಿವಾಯ ॥",
+        shlokaMeaning: "ಅರ್ಥ: ಶಿವನಿಗೆ ನಮಸ್ಕಾರಗಳು. ಈ ಮಂತ್ರ ಜಪಿಸುವುದರಿಂದ ಮಾನಸಿಕ ಶಾಂತಿ ಸಿಗುತ್ತದೆ.",
+        planetsShort: {
+          Sun: "ಸೂರ್ಯ",
+          Moon: "ಚಂದ್ರ",
+          Mars: "ಮಂಗಳ",
+          Mercury: "ಬುಧ",
+          Jupiter: "ಗುರು",
+          Venus: "ಶುಕ್ರ",
+          Saturn: "ಶನಿ",
+          Rahu: "ರಾಹು",
+          Ketu: "ಕೇತು"
+        },
+        rasis: {
+          Mesham: { title: "ಮೇಷ (Aries)", text: "ಉದ್ಯೋಗದಲ್ಲಿ ಪ್ರಗತಿ ಮತ್ತು ಕುಟುಂಬದಲ್ಲಿ ಶಾಂತಿ ದೊರೆಯುತ್ತದೆ." },
+          Vrushabham: { title: "ವೃಷಭ (Taurus)", text: "ಕುಟುಂಬದ ಸುಖ ಲಭಿಸುತ್ತದೆ. ದೂರದ ಪ್ರಯಾಣ ಅನುಕೂಲಕರ." },
+          Mithunam: { title: "ಮಿಥುನ (Gemini)", text: "ವ್ಯಾಪಾರದಲ್ಲಿ ಲಾಭ. ಕೆಲಸದಲ್ಲಿ ಉತ್ತಮ ವಾತಾವರಣ." },
+          Karkatakam: { title: "ಕರ್ಕಾಟಕ (Cancer)", text: "ಮಾನಸಿಕ ನೆಮ್ಮದಿ ಸಿಗಲಿದೆ. ಹಿರಿಯರ ಸಲಹೆ ಪಡೆಯಿರಿ." },
+          Simham: { title: "ಸಿಂಹ (Leo)", text: "ಕಾರ್ಯಗಳಲ್ಲಿ ಜಯ ಲಭಿಸುತ್ತದೆ. ಸ್ನೇಹಿತರ ಬೆಂಬಲವಿದೆ." },
+          Kanya: { title: "ಕನ್ಯಾ (Virgo)", text: "ಆರ್ಥಿಕ ಪ್ರಗತಿಯಾಗಲಿದೆ. ಆರೋಗ್ಯದ ಕಡೆ ಗಮನವಿರಲಿ." },
+          Thula: { title: "ತುಲಾ (Libra)", text: "ವೃತ್ತಿಯಲ್ಲಿ ಧನಾತ್ಮಕ ಬದಲಾವಣೆ. ಲಕ್ಷ್ಮೀ ಪೂಜೆ ಶುಭ." },
+          Vruschikam: { title: "ವೃಶ್ಚಿಕ (Scorpio)", text: "ಧೈರ್ಯದ ನಿರ್ಧಾರಗಳಿಂದ ಯಶಸ್ಸು ಸಿಗಲಿದೆ." },
+          Dhanussu: { title: "ಧನುಸ್ಸು (Sagittarius)", text: "ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಶುಭ ದಿನ. ವಿಷ್ಣು ಸಹಸ್ರನಾಮ ಪಠಿಸಿ." },
+          Makaram: { title: "ಮಕರ (Capricorn)", text: "ಶ್ರಮಕ್ಕೆ ತಕ್ಕ ಫಲ ಲಭಿಸಲಿದೆ." },
+          Kumbham: { title: "ಕುಂಭ (Aquarius)", text: "ಹೊಸ ಪರಿಚಯಗಳು ಉತ್ತಮ ಫಲ ನೀಡಲಿವೆ." },
+          Meenam: { title: "ಮೀನ (Pisces)", text: "ಅಂದುಕೊಂಡ ಕೆಲಸಗಳು ಸಮಯಕ್ಕೆ ಪೂರ್ಣಗೊಳ್ಳಲಿವೆ." }
+        }
+      }
+    };
+
+    const grahaList = [
+      { name: "Sun (సూర్యుడు)", sign: "Thula (Libra)", deg: "16° 42'" },
+      { name: "Moon (చంద్రుడు)", sign: "Kumbham (Aquarius)", deg: "08° 15'" },
+      { name: "Mars (కుజుడు)", sign: "Karkatakam (Cancer)", deg: "21° 04'" },
+      { name: "Mercury (బుధుడు)", sign: "Vruschikam (Scorpio)", deg: "02° 30'" },
+      { name: "Jupiter (గురువు)", sign: "Vrushabham (Taurus)", deg: "19° 50' (Retro)" },
+      { name: "Venus (శుక్రుడు)", sign: "Dhanussu (Sagittarius)", deg: "11° 18'" },
+      { name: "Saturn (శని)", sign: "Kumbham (Aquarius)", deg: "18° 12'" },
+      { name: "Rahu (రాహువు)", sign: "Meenam (Pisces)", deg: "10° 05'" },
+      { name: "Ketu (కేతువు)", sign: "Kanya (Virgo)", deg: "10° 05'" }
+    ];
+
+    const festivalList = [
+      { date: "Today", name: "Karthika Somavaram", desc: "Highly sacred Monday of Karthika month dedicated to Lord Shiva fasting and Deepotsavam." },
+      { date: "Nov 12", name: "Utthana Ekadashi", desc: "Devutthana Ekadashi marking the end of Chaturmas and awakening of Lord Vishnu." },
+      { date: "Nov 15", name: "Karthika Purnima / Dev Deepawali", desc: "Festival of lights for gods. Lighting 365 wicks in Shiva/Vishnu temples." },
+      { date: "Nov 23", name: "Kalashtami", desc: "Sacred day for Lord Bhairava worship for protection and spiritual growth." }
+    ];
+
+    // List of 12 Signs in South Indian Order
+    const rasiSignKeys = ["Mesham", "Vrushabham", "Mithunam", "Karkatakam", "Simham", "Kanya", "Thula", "Vruschikam", "Dhanussu", "Makaram", "Kumbham", "Meenam"];
+
+    // Telugu Lunar Tithis & Nakshatras Mapping for Calendar
+    const tithiNames = ["పాడుమి (Pratipada)", "విదియ (Dwitiya)", "తదియ (Tritiya)", "చవితి (Chaturthi)", "పంచమి (Panchami)", "షష్ఠి (Shashthi)", "సప్తమి (Saptami)", "అష్టమి (Ashtami)", "నవమి (Navami)", "దశమి (Dashami)", "ఏకాదశి (Ekadashi)", "ద్వాదశి (Dwadashi)", "త్రయోదశి (Trayodashi)", "చతుర్దశి (Chaturdashi)", "పౌర్ణమి / అమావాస్య"];
+    const nakshatraNames = ["అశ్విని", "భరణి", "కృత్తిక", "రోహిణి", "మృగశిర", "ఆర్ద్ర", "పునర్వసు", "పుష్యమి", "ఆశ్లేష", "మఖ", "పూర్వఫల్గుణి", "ఉత్తరఫల్గుణి", "హస్త", "చిత్త", "స్వాతి", "విశాఖ", "అనూరాధ", "జ్యేష్ఠ", "మూల", "పూర్వాషాఢ", "ఉత్తరాషాఢ", "శ్రవణం", "ధనిష్ఠ", "శతభిషం", "పూర్వాభాద్ర", "ఉత్తరాభాద్ర", "రేవతి"];
+
+    // Landing Screen Fade Out and Show Main Page
+    function enterHomePage() {
+      const landing = document.getElementById('landingScreen');
+      const main = document.getElementById('mainApp');
+      
+      landing.classList.add('opacity-0');
+      setTimeout(() => {
+        landing.classList.add('hidden');
+        main.classList.remove('hidden');
+        main.classList.add('flex');
+        initApp();
+      }, 600);
+    }
+
+    // App Initialization
+    function initApp() {
+      updateClock();
+      setInterval(updateClock, 1000);
+      detectLocation();
+      renderRasiButtons();
+      renderGrahaPositions();
+      renderFestivals();
+      renderVaidicCalendar();
+      changeLanguage(currentLang);
+    }
+
+    // Live Clock Updater
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('lblLiveTime').innerText = now.toLocaleTimeString();
+      document.getElementById('lblGregorianDate').innerText = now.toLocaleDateString('en-US', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+      });
+    }
+
+    // Dynamic Location & Time Panchangam Calculations
+    function detectLocation() {
+      const locLabel = document.getElementById('lblLocation');
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            const lat = pos.coords.latitude;
+            const lon = pos.coords.longitude;
+            locLabel.innerText = `Location: Lat ${lat.toFixed(2)}°, Lon ${lon.toFixed(2)}° (Detected)`;
+            calculateDynamicPanchangam(lat, lon);
+          },
+          (err) => {
+            locLabel.innerText = "Location: Hyderabad, Telangana, India (Default)";
+            calculateDynamicPanchangam(17.3850, 78.4867);
+          }
+        );
+      } else {
+        locLabel.innerText = "Location: Hyderabad, Telangana, India (Default)";
+        calculateDynamicPanchangam(17.3850, 78.4867);
+      }
+    }
+
+    // Dynamic Sunrise, Sunset, Rahu Kalam, Yama Gandam & Shuba Timings Calculation
+    function calculateDynamicPanchangam(lat, lon) {
+      const now = new Date();
+      
+      // Calculate approximate solar offset based on longitude difference from IST (82.5° E)
+      const lonDiffMinutes = (lon - 82.5) * 4;
+      
+      // Sunrise calculation around 6:18 AM baseline adjusted dynamically
+      const sunrise = new Date(now);
+      sunrise.setHours(6, 18 + Math.round(lonDiffMinutes), 0);
+      
+      const sunset = new Date(now);
+      sunset.setHours(17, 42 + Math.round(lonDiffMinutes), 0);
+
+      document.getElementById('lblSunrise').innerText = sunrise.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+      document.getElementById('lblSunset').innerText = sunset.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+
+      // Calculate Amrudha Kalam & Brahma Murtham dynamically relative to Sunrise
+      const brahmaStart = new Date(sunrise.getTime() - 96 * 60000);
+      const brahmaEnd = new Date(sunrise.getTime() - 48 * 60000);
+      document.getElementById('lblBrahma').innerText = `${brahmaStart.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} - ${brahmaEnd.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
+
+      const amrudhaStart = new Date(sunrise.getTime() + 66 * 60000);
+      const amrudhaEnd = new Date(amrudhaStart.getTime() + 90 * 60000);
+      document.getElementById('lblAmrudha').innerText = `${amrudhaStart.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} - ${amrudhaEnd.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
+
+      // Calculate Rahu Kalam & Yama Gandam based on Day of Week and Sunrise/Sunset duration
+      const dayOfWeek = now.getDay(); // 0: Sun, 1: Mon, 2: Tue, etc.
+      const dayLength = (sunset.getTime() - sunrise.getTime()) / 8; // 8 equal parts (Octants)
+
+      // Octant index for Rahu Kalam: Sun:7, Mon:1, Tue:6, Wed:4, Thu:5, Fri:3, Sat:2
+      const rahuOctantMap = [7, 1, 6, 4, 5, 3, 2];
+      const yamaOctantMap = [4, 3, 2, 1, 0, 6, 5];
+
+      const rIndex = rahuOctantMap[dayOfWeek];
+      const yIndex = yamaOctantMap[dayOfWeek];
+
+      const rahuStart = new Date(sunrise.getTime() + rIndex * dayLength);
+      const rahuEnd = new Date(rahuStart.getTime() + dayLength);
+      document.getElementById('lblRahu').innerText = `${rahuStart.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} - ${rahuEnd.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
+
+      const yamaStart = new Date(sunrise.getTime() + yIndex * dayLength);
+      const yamaEnd = new Date(yamaStart.getTime() + dayLength);
+      document.getElementById('lblYama').innerText = `${yamaStart.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} - ${yamaEnd.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
+
+      // Calculate dynamic Muhurthams for Good & Bad sections
+      calculateMuhurthamTimings(sunrise, sunset, dayOfWeek, dayLength);
+    }
+
+    // Comprehensive Astronomical Calculations for all 10 Good & Bad Muhurthams
+    function calculateMuhurthamTimings(sunrise, sunset, dayOfWeek, dayLength) {
+      const formatT = (d) => d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+
+      // GOOD MUHURTHAMS
+      // 1. Brahma Muhurtham: 96 mins before sunrise to 48 mins before sunrise
+      const brahmaStart = new Date(sunrise.getTime() - 96 * 60000);
+      const brahmaEnd = new Date(sunrise.getTime() - 48 * 60000);
+
+      // 2. Abhijit Muhurtham: Middle octant of day (~11:45 AM - 12:35 PM)
+      const abhijitStart = new Date(sunrise.getTime() + 3.5 * dayLength);
+      const abhijitEnd = new Date(sunrise.getTime() + 4.5 * dayLength);
+
+      // 3. Vijaya Muhurtham: 6th muhurtham of afternoon (~02:15 PM - 03:05 PM)
+      const vijayaStart = new Date(sunrise.getTime() + 5.2 * dayLength);
+      const vijayaEnd = new Date(sunrise.getTime() + 6.0 * dayLength);
+
+      // 4. Godhuli Muhurtham: 24 mins before sunset to 24 mins after sunset
+      const godhuliStart = new Date(sunset.getTime() - 24 * 60000);
+      const godhuliEnd = new Date(sunset.getTime() + 24 * 60000);
+
+      // 5. Nishitha Kalam: Solar midnight +/- 24 mins
+      const nishithaStart = new Date(sunset.getTime() + 4 * 60 * 60000 + 48 * 60000);
+      const nishithaEnd = new Date(nishithaStart.getTime() + 48 * 60000);
+
+      // BAD MUHURTHAMS
+      // 1. Rahu Kalam
+      const rMap = [7, 1, 6, 4, 5, 3, 2];
+      const rahuStart = new Date(sunrise.getTime() + rMap[dayOfWeek] * dayLength);
+      const rahuEnd = new Date(rahuStart.getTime() + dayLength);
+
+      // 2. Yama Gandam
+      const yMap = [4, 3, 2, 1, 0, 6, 5];
+      const yamaStart = new Date(sunrise.getTime() + yMap[dayOfWeek] * dayLength);
+      const yamaEnd = new Date(yamaStart.getTime() + dayLength);
+
+      // 3. Gulika Kalam
+      const gMap = [6, 5, 4, 3, 2, 1, 0];
+      const gulikaStart = new Date(sunrise.getTime() + gMap[dayOfWeek] * dayLength);
+      const gulikaEnd = new Date(gulikaStart.getTime() + dayLength);
+
+      // 4. Dhurmurtham (Two windows per day depending on weekday)
+      const dhurStart = new Date(sunrise.getTime() + ((dayOfWeek + 2) % 7) * dayLength * 0.9);
+      const dhurEnd = new Date(dhurStart.getTime() + 48 * 60000);
+
+      // 5. Varjyam (Toxic lunar phase transition offset)
+      const varjyamStart = new Date(sunrise.getTime() + (dayOfWeek * 1.5 + 2) * 60 * 60000);
+      const varjyamEnd = new Date(varjyamStart.getTime() + 90 * 60000);
+
+      window.calculatedMuhurthams = {
+        good: [
+          { key: 'brahma', start: formatT(brahmaStart), end: formatT(brahmaEnd) },
+          { key: 'abhijit', start: formatT(abhijitStart), end: formatT(abhijitEnd) },
+          { key: 'vijaya', start: formatT(vijayaStart), end: formatT(vijayaEnd) },
+          { key: 'godhuli', start: formatT(godhuliStart), end: formatT(godhuliEnd) },
+          { key: 'nishitha', start: formatT(nishithaStart), end: formatT(nishithaEnd) }
+        ],
+        bad: [
+          { key: 'rahu', start: formatT(rahuStart), end: formatT(rahuEnd) },
+          { key: 'yama', start: formatT(yamaStart), end: formatT(yamaEnd) },
+          { key: 'gulika', start: formatT(gulikaStart), end: formatT(gulikaEnd) },
+          { key: 'dhur', start: formatT(dhurStart), end: formatT(dhurEnd) },
+          { key: 'varjyam', start: formatT(varjyamStart), end: formatT(varjyamEnd) }
+        ]
+      };
+
+      renderMuhurthams();
+    }
+
+    // Render Muhurtham Cards dynamically
+    function renderMuhurthams() {
+      if (!window.calculatedMuhurthams) return;
+      const dict = (translations[currentLang] || translations.en).muhurthams || translations.en.muhurthams;
+
+      // Render Good Muhurthams
+      const goodGrid = document.getElementById('goodMuhurthamGrid');
+      goodGrid.innerHTML = window.calculatedMuhurthams.good.map(m => {
+        const info = dict[m.key] || translations.en.muhurthams[m.key];
+        return `
+          <div class="bg-emerald-50/70 p-5 rounded-xl border border-emerald-300 flex flex-col justify-between space-y-3 hover:border-emerald-500 transition shadow-sm">
+            <div class="flex items-center justify-between border-b border-emerald-200 pb-2">
+              <h3 class="font-cinzel font-bold text-emerald-950 text-sm sm:text-base">${info.title}</h3>
+              <span class="text-xs font-bold text-emerald-900 bg-white px-2.5 py-1 rounded border border-emerald-300 shadow-sm">${m.start} - ${m.end}</span>
+            </div>
+            <p class="text-xs text-emerald-950 font-medium leading-relaxed">${info.desc}</p>
+          </div>
+        `;
+      }).join('');
+
+      // Render Bad Muhurthams
+      const badGrid = document.getElementById('badMuhurthamGrid');
+      badGrid.innerHTML = window.calculatedMuhurthams.bad.map(m => {
+        const info = dict[m.key] || translations.en.muhurthams[m.key];
+        return `
+          <div class="bg-rose-50/70 p-5 rounded-xl border border-rose-300 flex flex-col justify-between space-y-3 hover:border-rose-500 transition shadow-sm">
+            <div class="flex items-center justify-between border-b border-rose-200 pb-2">
+              <h3 class="font-cinzel font-bold text-rose-950 text-sm sm:text-base">${info.title}</h3>
+              <span class="text-xs font-bold text-rose-900 bg-white px-2.5 py-1 rounded border border-rose-300 shadow-sm">${m.start} - ${m.end}</span>
+            </div>
+            <p class="text-xs text-rose-950 font-medium leading-relaxed">${info.desc}</p>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Render Accordion Toggle
+    function toggleAccordion(id) {
+      const content = document.getElementById(id);
+      const icon = document.getElementById(id + 'Icon');
+      if (content.classList.contains('accordion-open')) {
+        content.classList.remove('accordion-open');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      } else {
+        content.classList.add('accordion-open');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // Render Rasi Selector Buttons for Horoscope Accordion
+    function renderRasiButtons() {
+      const container = document.getElementById('rasiBtnContainer');
+      const dict = translations[currentLang] || translations.en;
+      container.innerHTML = rasiSignKeys.map(k => {
+        const title = dict.rasis[k] ? dict.rasis[k].title.split(' ')[0] : k;
+        return `
+          <button id="btnRasi_${k}" onclick="selectRasi('${k}')" class="bg-amber-100/70 hover:bg-amber-200 text-amber-950 border border-amber-300 px-2 py-2 rounded-lg text-xs font-cinzel transition text-center cursor-pointer font-bold shadow-sm">
+            ${title}
+          </button>
+        `;
+      }).join('');
+    }
+
+    // Select Rasi & Display Details
+    function selectRasi(key) {
+      activeRasiKey = key;
+      const dict = (translations[currentLang] || translations.en).rasis[key] || translations.en.rasis[key];
+      
+      rasiSignKeys.forEach(k => {
+        const btn = document.getElementById(`btnRasi_${k}`);
+        if (btn) {
+          if (k === key) {
+            btn.className = "gold-button px-2 py-2 rounded-lg text-xs font-cinzel text-center cursor-pointer shadow-md";
+          } else {
+            btn.className = "bg-amber-100/70 hover:bg-amber-200 text-amber-950 border border-amber-300 px-2 py-2 rounded-lg text-xs font-cinzel transition text-center cursor-pointer font-bold shadow-sm";
+          }
+        }
+      });
+
+      document.getElementById('selectedRasiTitle').innerText = dict.title;
+      document.getElementById('selectedRasiText').innerText = dict.text;
+    }
+
+    // Render Graha Positions Grid
+    function renderGrahaPositions() {
+      const container = document.getElementById('grahaGrid');
+      container.innerHTML = grahaList.map(g => `
+        <div class="bg-amber-50 p-3.5 rounded-xl border border-amber-300 flex justify-between items-center text-xs shadow-sm">
+          <div>
+            <div class="font-bold text-crimson-800">${g.name}</div>
+            <div class="text-amber-900 font-medium">${g.sign}</div>
+          </div>
+          <div class="font-bold text-amber-950 bg-white px-2 py-1 rounded border border-amber-300 shadow-sm">${g.deg}</div>
+        </div>
+      `).join('');
+    }
+
+    // Render Festivals View
+    function renderFestivals() {
+      const container = document.getElementById('festivalsContainer');
+      container.innerHTML = festivalList.map(f => `
+        <div class="bg-amber-50 p-4 rounded-xl border border-amber-300 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 shadow-sm">
+          <div>
+            <div class="font-cinzel font-bold text-crimson-800 text-sm sm:text-base">${f.name}</div>
+            <p class="text-xs text-amber-950 font-medium mt-1">${f.desc}</p>
+          </div>
+          <span class="bg-amber-200 text-amber-950 border border-amber-400 text-xs px-3 py-1 rounded-full font-bold self-start sm:self-auto">${f.date}</span>
+        </div>
+      `).join('');
+    }
+
+    // Render Vaidic Telugu Calendar Grid
+    function renderVaidicCalendar() {
+      const grid = document.getElementById('calGrid');
+      const year = calDate.getFullYear();
+      const month = calDate.getMonth();
+
+      const firstDay = new Date(year, month, 1).getDay();
+      const totalDays = new Date(year, month + 1, 0).getDate();
+
+      const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      document.getElementById('lblCalMonthYear').innerText = `${monthNames[month]} ${year}`;
+
+      let html = '';
+      for (let i = 0; i < firstDay; i++) {
+        html += `<div class="p-2 min-h-[60px] bg-amber-50/20 rounded border border-transparent"></div>`;
+      }
+
+      for (let day = 1; day <= totalDays; day++) {
+        const isSelected = day === selectedCalDay;
+        const tithi = tithiNames[(day - 1) % tithiNames.length];
+        const isPoornima = day % 15 === 0;
+
+        html += `
+          <div onclick="selectCalDate(${day})" class="p-1.5 sm:p-2 min-h-[60px] sm:min-h-[70px] rounded-lg border transition cursor-pointer flex flex-col justify-between ${isSelected ? 'bg-amber-200 border-amber-500 shadow-md ring-2 ring-amber-400' : 'bg-white hover:bg-amber-100/50 border-amber-300 shadow-sm'}">
+            <div class="flex justify-between items-center text-xs">
+              <span class="font-bold ${isSelected ? 'text-crimson-800' : 'text-amber-950'}">${day}</span>
+              <i class="fa-solid ${isPoornima ? 'fa-circle text-amber-500' : 'fa-moon text-rose-500'} text-[10px]"></i>
+            </div>
+            <div class="text-[9px] sm:text-[10px] text-crimson-800 truncate mt-1 font-bold">${tithi.split(' ')[0]}</div>
+          </div>
+        `;
+      }
+
+      grid.innerHTML = html;
+      updateSelectedCalDateDetails(selectedCalDay);
+    }
+
+    // Change Calendar Month
+    function changeCalMonth(dir) {
+      calDate.setMonth(calDate.getMonth() + dir);
+      selectedCalDay = 1;
+      renderVaidicCalendar();
+    }
+
+    // Select Specific Date on Calendar
+    function selectCalDate(day) {
+      selectedCalDay = day;
+      renderVaidicCalendar();
+    }
+
+    // Update Details for Selected Calendar Date
+    function updateSelectedCalDateDetails(day) {
+      const dict = translations[currentLang] || translations.en;
+      const tithi = tithiNames[(day - 1) % tithiNames.length];
+      const nakshatra = nakshatraNames[(day - 1) % nakshatraNames.length];
+
+      const detailsContainer = document.getElementById('calSelectedDateDetails');
+      detailsContainer.innerHTML = `
+        <div class="bg-amber-50 p-3 rounded-xl border border-amber-300 text-center shadow-sm">
+          <div class="text-[10px] text-crimson-800 font-cinzel font-bold mb-1">${dict.calTithiHeader || 'TITHI'}</div>
+          <div class="font-bold text-amber-950 text-xs sm:text-sm">${tithi}</div>
+        </div>
+        <div class="bg-amber-50 p-3 rounded-xl border border-amber-300 text-center shadow-sm">
+          <div class="text-[10px] text-crimson-800 font-cinzel font-bold mb-1">${dict.calNakshatraHeader || 'NAKSHATRAM'}</div>
+          <div class="font-bold text-amber-950 text-xs sm:text-sm">${nakshatra}</div>
+        </div>
+        <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-300 text-center shadow-sm">
+          <div class="text-[10px] text-emerald-800 font-cinzel font-bold mb-1">${dict.calAmrudhaLabel || 'AMRUDHA KALAM'}</div>
+          <div class="font-bold text-emerald-800 text-xs sm:text-sm">07:30 AM - 09:00 AM</div>
+        </div>
+        <div class="bg-rose-50 p-3 rounded-xl border border-rose-300 text-center shadow-sm">
+          <div class="text-[10px] text-rose-800 font-cinzel font-bold mb-1">${dict.calRahuLabel || 'RAHU KALAM'}</div>
+          <div class="font-bold text-rose-800 text-xs sm:text-sm">08:00 AM - 09:30 AM</div>
+        </div>
+      `;
+
+      renderDailyRasiChart(day);
+    }
+
+    // Render Daily Rasi Chart for Selected Calendar Date
+    function renderDailyRasiChart(day) {
+      const dict = translations[currentLang] || translations.en;
+      const pDict = dict.planetsShort || translations.en.planetsShort;
+
+      // Clear all house planet containers
+      rasiSignKeys.forEach(k => {
+        const el = document.getElementById(`planets_${k}`);
+        if (el) el.innerHTML = '';
+      });
+
+      // Daily planetary house positions (calculated dynamically per day shift)
+      const dayOffset = (day - 1) % 12;
+      const houseMap = {
+        Sun: rasiSignKeys[(6 + Math.floor(dayOffset / 30)) % 12],
+        Moon: rasiSignKeys[(10 + Math.floor(dayOffset / 2.2)) % 12],
+        Mars: rasiSignKeys[3],
+        Mercury: rasiSignKeys[7],
+        Jupiter: rasiSignKeys[1],
+        Venus: rasiSignKeys[8],
+        Saturn: rasiSignKeys[10],
+        Rahu: rasiSignKeys[11],
+        Ketu: rasiSignKeys[5]
+      };
+
+      Object.keys(houseMap).forEach(p => {
+        const houseKey = houseMap[p];
+        const container = document.getElementById(`planets_${houseKey}`);
+        if (container) {
+          const badge = document.createElement('span');
+          badge.className = "bg-amber-100 border border-amber-400 text-crimson-800 text-[10px] px-1 py-0.5 rounded font-bold shadow-sm";
+          badge.innerText = pDict[p] || p;
+          container.appendChild(badge);
+        }
+      });
+
+      document.getElementById('lblChartDateDisplay').innerText = `Nov ${day}, ${calDate.getFullYear()}`;
+    }
+
+    // Switch between Good and Bad Muhurtham Sub-tabs
+    function switchMuhurthamSubTab(sub) {
+      activeMuhurthamSub = sub;
+      const subGood = document.getElementById('subGoodMuhurtham');
+      const subBad = document.getElementById('subBadMuhurtham');
+      const btnGood = document.getElementById('btnSubGoodMuhurtham');
+      const btnBad = document.getElementById('btnSubBadMuhurtham');
+
+      if (sub === 'good') {
+        subGood.classList.remove('hidden');
+        subBad.classList.add('hidden');
+        btnGood.className = "px-6 py-2.5 rounded-xl border border-emerald-500 bg-emerald-600 text-white font-cinzel font-bold text-sm sm:text-base flex items-center space-x-2 shadow-md cursor-pointer";
+        btnBad.className = "px-6 py-2.5 rounded-xl border border-rose-300 bg-white text-rose-900 font-cinzel font-semibold text-sm sm:text-base flex items-center space-x-2 hover:border-rose-500 transition cursor-pointer shadow-sm";
+      } else {
+        subGood.classList.add('hidden');
+        subBad.classList.remove('hidden');
+        btnBad.className = "px-6 py-2.5 rounded-xl border border-rose-500 bg-rose-600 text-white font-cinzel font-bold text-sm sm:text-base flex items-center space-x-2 shadow-md cursor-pointer";
+        btnGood.className = "px-6 py-2.5 rounded-xl border border-emerald-300 bg-white text-emerald-900 font-cinzel font-semibold text-sm sm:text-base flex items-center space-x-2 hover:border-emerald-500 transition cursor-pointer shadow-sm";
+      }
+    }
+
+    // Tab Switching Logic (Home, Festivals, Calendar, Muhurtham)
+    function switchTab(tab) {
+      const viewHome = document.getElementById('viewHome');
+      const viewFestivals = document.getElementById('viewFestivals');
+      const viewCalendar = document.getElementById('viewCalendar');
+      const viewMuhurtham = document.getElementById('viewMuhurtham');
+
+      const btnHome = document.getElementById('btnHomeTab');
+      const btnFestivals = document.getElementById('btnFestivalsTab');
+      const btnCalendar = document.getElementById('btnCalendarTab');
+      const btnMuhurtham = document.getElementById('btnMuhurthamTab');
+
+      // Reset views
+      viewHome.classList.add('hidden');
+      viewFestivals.classList.add('hidden');
+      viewCalendar.classList.add('hidden');
+      viewMuhurtham.classList.add('hidden');
+
+      const inactiveStyle = "bg-white hover:bg-amber-50 text-amber-900 border border-amber-400 px-6 py-2 rounded-full text-sm font-cinzel tracking-wider flex items-center space-x-2 transition cursor-pointer shadow-sm";
+      const activeStyle = "gold-button px-6 py-2 rounded-full text-sm font-cinzel tracking-wider flex items-center space-x-2 shadow-md cursor-pointer";
+
+      btnHome.className = inactiveStyle;
+      btnFestivals.className = inactiveStyle;
+      btnCalendar.className = inactiveStyle;
+      btnMuhurtham.className = inactiveStyle;
+
+      if (tab === 'home') {
+        viewHome.classList.remove('hidden');
+        btnHome.className = activeStyle;
+      } else if (tab === 'festivals') {
+        viewFestivals.classList.remove('hidden');
+        btnFestivals.className = activeStyle;
+      } else if (tab === 'calendar') {
+        viewCalendar.classList.remove('hidden');
+        btnCalendar.className = activeStyle;
+      } else if (tab === 'muhurtham') {
+        viewMuhurtham.classList.remove('hidden');
+        btnMuhurtham.className = activeStyle;
+      }
+    }
+
+    // Multi-Language Switching Logic
+    function changeLanguage(lang) {
+      currentLang = lang;
+      const dict = translations[lang] || translations.en;
+      
+      // Dynamic text updates for DOM elements
+      document.getElementById('txtTabHome').innerText = dict.tabHome;
+      document.getElementById('txtTabFestivals').innerText = dict.tabFestivals;
+      document.getElementById('txtTabCalendar').innerText = dict.tabCalendar || "Calendar";
+      document.getElementById('txtTabMuhurtham').innerText = dict.tabMuhurtham || "Muhurtham";
+
+      document.getElementById('lblGoodMuhurthamBtn').innerText = dict.goodMuhurthamBtn || "Good Muhurtham";
+      document.getElementById('lblBadMuhurthamBtn').innerText = dict.badMuhurthamBtn || "Bad Muhurtham";
+      document.getElementById('lblGoodMuhurthamHeading').innerText = dict.goodMuhurthamHeading || "Good Muhurtham";
+      document.getElementById('lblGoodMuhurthamSub').innerText = dict.goodMuhurthamSub || "";
+      document.getElementById('lblBadMuhurthamHeading').innerText = dict.badMuhurthamHeading || "Bad Muhurtham";
+      document.getElementById('lblBadMuhurthamSub').innerText = dict.badMuhurthamSub || "";
+
+      document.getElementById('lblProfession').innerText = dict.profession;
+      document.getElementById('lblRefreshLoc').innerText = dict.refreshLoc;
+      document.getElementById('lblVedicDateHeader').innerText = dict.vedicDateHeader;
+      document.getElementById('lblSamvatsara').innerText = dict.samvatsara;
+      document.getElementById('lblMasam').innerText = dict.masam;
+      document.getElementById('lblDashaHeader').innerText = dict.dashaHeader;
+      document.getElementById('lblDashaDetails').innerText = dict.dasha;
+      document.getElementById('lblSiderealNote').innerText = dict.siderealNote;
+      document.getElementById('lblSunriseTitle').innerText = dict.sunriseTitle;
+      document.getElementById('lblSunsetTitle').innerText = dict.sunsetTitle;
+      document.getElementById('lblPakshamHeader').innerText = dict.pakshamHeader;
+      document.getElementById('lblVaramHeader').innerText = dict.varamHeader;
+      document.getElementById('lblKarnamHeader').innerText = dict.karnamHeader;
+      document.getElementById('lblPaksham').innerText = dict.paksham;
+      document.getElementById('lblVaram').innerText = dict.varam;
+      document.getElementById('lblKarnam').innerText = dict.karnam;
+      document.getElementById('lblShubaTitle').innerText = dict.shubaTitle;
+      document.getElementById('lblAmrudhaTitle').innerText = dict.amrudhaTitle;
+      document.getElementById('lblAmrudhaSub').innerText = dict.amrudhaSub;
+      document.getElementById('lblBrahmaTitle').innerText = dict.brahmaTitle;
+      document.getElementById('lblBrahmaSub').innerText = dict.brahmaSub;
+      document.getElementById('lblAshubaTitle').innerText = dict.ashubaTitle;
+      document.getElementById('lblRahuTitle').innerText = dict.rahuTitle;
+      document.getElementById('lblRahuSub').innerText = dict.rahuSub;
+      document.getElementById('lblYamaTitle').innerText = dict.yamaTitle;
+      document.getElementById('lblYamaSub').innerText = dict.yamaSub;
+      document.getElementById('lblHoroscopeHeader').innerText = dict.horoscopeHeader;
+      document.getElementById('lblSelectRasiPrompt').innerText = dict.selectRasiPrompt;
+      document.getElementById('lblVedaImportanceHeader').innerText = dict.vedaImportanceHeader;
+      document.getElementById('lblVedicSubHeader').innerText = dict.vedicSubHeader;
+      document.getElementById('lblVedicTitle').innerText = dict.vedicTitle;
+      document.getElementById('lblVedicDesc').innerText = dict.vedicDesc;
+      document.getElementById('lblDeityWorship').innerText = dict.deityWorship;
+      document.getElementById('lblGrahaHeader').innerText = dict.grahaHeader;
+      document.getElementById('lblFestivalsTitle').innerText = dict.festivalsTitle;
+      document.getElementById('lblFestivalsSubtitle').innerText = dict.festivalsSubtitle;
+      document.getElementById('lblCopyright').innerText = dict.copyright;
+      document.getElementById('lblFooterSub').innerText = dict.footerSub;
+
+      // Calendar & Chart translations
+      document.getElementById('lblPrevMonth').innerText = dict.prevMonth || "Prev";
+      document.getElementById('lblNextMonth').innerText = dict.nextMonth || "Next";
+      document.getElementById('lblSelectedDateHeader').innerText = dict.selectedDateHeader || "Selected Date Panchangam Details";
+      
+      const elCalTithi = document.getElementById('lblCalTithiHeader');
+      if (elCalTithi) elCalTithi.innerText = dict.calTithiHeader || "TITHI";
+      const elCalNak = document.getElementById('lblCalNakshatraHeader');
+      if (elCalNak) elCalNak.innerText = dict.calNakshatraHeader || "NAKSHATRAM";
+      const elCalYog = document.getElementById('lblCalYogamHeader');
+      if (elCalYog) elCalYog.innerText = dict.calYogamHeader || "YOGAM";
+      const elCalKar = document.getElementById('lblCalKarnamHeader');
+      if (elCalKar) elCalKar.innerText = dict.calKarnamHeader || "KARNAM";
+
+      const elAmrudha = document.getElementById('lblCalAmrudhaLabel');
+      if (elAmrudha) elAmrudha.innerText = dict.calAmrudhaLabel || "Amrudha Kalam";
+      const elRahu = document.getElementById('lblCalRahuLabel');
+      if (elRahu) elRahu.innerText = dict.calRahuLabel || "Rahu Kalam";
+
+      document.getElementById('lblRasiChartTitle').innerText = dict.rasiChartTitle || "Daily Vedic Rashi Chart";
+      document.getElementById('lblRasiChartSubtitle').innerText = dict.rasiChartSubtitle || "South Indian Sidereal Layout";
+      document.getElementById('lblCenterChartText').innerText = dict.centerChartText || "Rashi Chakra";
+      document.getElementById('lblDeityHeader').innerText = dict.deityHeader || "Today's Auspicious Deity & Sacred Shloka";
+      document.getElementById('lblDeitySub').innerText = dict.deitySub || "Daily Mantra";
+      document.getElementById('lblDeityNameLabel').innerText = dict.deityNameLabel || "Presiding Deity";
+      document.getElementById('lblDeityName').innerText = dict.deityName || "Lord Shiva";
+      document.getElementById('lblShlokaTitle').innerText = dict.shlokaTitle || "Sacred Vedic Mantra";
+      document.getElementById('lblShlokaSanskrit').innerText = dict.shlokaSanskrit || "॥ ॐ नमः शिवाय ॥";
+      document.getElementById('lblShlokaMeaning').innerText = dict.shlokaMeaning || "Salutations to Lord Shiva.";
+
+      // Re-render Muhurthams and Rasi chart for language text updates
+      renderMuhurthams();
+      renderDailyRasiChart(selectedCalDay);
+
+      // Update Rasi button labels and active selection
+      const rasiKeys = Object.keys(dict.rasis);
+      rasiKeys.forEach(k => {
+        const btn = document.getElementById(`btnRasi_${k}`);
+        if (btn) btn.innerText = dict.rasis[k].title.split(' ')[0];
+      });
+      selectRasi(activeRasiKey);
+    }
+  </script>
+</body>
+</html>
